@@ -12,7 +12,7 @@ public class OrderQueue : MonoBehaviour
 
     private void Start()
     {
-        SetCurrentOrderList();
+        currentLevelOrders = GameManager.GetCurrentRecipesList();
     }
 
     private void Update()
@@ -25,11 +25,6 @@ public class OrderQueue : MonoBehaviour
 
             orderInterval = Random.Range(1f, 5f);
         }
-    }
-
-    private void SetCurrentOrderList()
-    {
-        currentLevelOrders = GameManager.GetCurrentRecipesList();
     }
 
     public void ReceiveOrder()
