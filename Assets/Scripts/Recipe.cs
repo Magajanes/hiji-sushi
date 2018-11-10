@@ -6,11 +6,11 @@ public class Recipe : MonoBehaviour
 {
     public string DishName;
 
-    public Dictionary<Ingredient, int> PrepareSteps;
-
     public Instructions PrepareInstructions;
 
-    private void Start()
+    public Dictionary<Ingredient, int> PrepareSteps = new Dictionary<Ingredient, int>();
+
+    public void Initialize()
     {
         SetSteps(PrepareInstructions.IngredientsList, PrepareInstructions.MeasuresList);
     }

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 834c5434a0beae847a7bc579213133cc, type: 3}
+  m_Name: Level 1
+  m_EditorClassIdentifier: 
+  LevelRecipesList:
+  - {fileID: 1090037576428066, guid: 5c4ef708d523a334392aa33e775732ce, type: 2}
+  - {fileID: 1090037576428066, guid: 60eec477eceecf5438dafb276864751d, type: 2}
+  - {fileID: 1090037576428066, guid: 77921b6a5e37df049b0050b32e59f655, type: 2}
+  - {fileID: 1090037576428066, guid: d1595a39a3c58b947ac52164bd20a9cc, type: 2}
+  - {fileID: 1090037576428066, guid: 20d061cd46afc3440bace8c23831117a, type: 2}
+  - {fileID: 1090037576428066, guid: aba081b49c9a76e47b4e20ce5a5ae222, type: 2}
