@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472d4910ebf461d49a840933ad3c5264, type: 3}
+  m_Name: "Spice Salm\xE3o"
+  m_EditorClassIdentifier: 
+  IngredientsList:
+  - {fileID: 114244115129627082, guid: cbfb38ab2f6108346af89ba89118d892, type: 2}
+  - {fileID: 114912150088100574, guid: b3357827d0ae7824d96af37ef17a3024, type: 2}
+  - {fileID: 114315849067865162, guid: eed60f38fb095f64690fc0cee9a06438, type: 2}
+  - {fileID: 114857742835861600, guid: 9b64dd16b1911a44a9980d4544e26254, type: 2}
+  - {fileID: 114814887598314216, guid: 0c6d7265804a08e419866434045874cd, type: 2}
+  MeasuresList: 0100000001000000010000000100000001000000
