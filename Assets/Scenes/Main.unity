@@ -163,7 +163,8 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9b64dd16b1911a44a9980d4544e26254, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &182006737
@@ -176,7 +177,6 @@ GameObject:
   m_Component:
   - component: {fileID: 182006739}
   - component: {fileID: 182006738}
-  - component: {fileID: 182006740}
   m_Layer: 0
   m_Name: CreamCheese
   m_TagString: Untagged
@@ -245,19 +245,6 @@ Transform:
   m_Father: {fileID: 1887573732}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &182006740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114533603655331874, guid: 0c6d7265804a08e419866434045874cd,
-    type: 2}
-  m_PrefabInternal: {fileID: 535318562}
-  m_GameObject: {fileID: 182006737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d795562720e813e4fa0cf4ba28ef23fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Cream Cheese
 --- !u!1 &297507336
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +255,6 @@ GameObject:
   m_Component:
   - component: {fileID: 297507338}
   - component: {fileID: 297507337}
-  - component: {fileID: 297507339}
   m_Layer: 0
   m_Name: Rice
   m_TagString: Untagged
@@ -337,19 +323,6 @@ Transform:
   m_Father: {fileID: 1887573732}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &297507339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114520574235123190, guid: b3357827d0ae7824d96af37ef17a3024,
-    type: 2}
-  m_PrefabInternal: {fileID: 624601428}
-  m_GameObject: {fileID: 297507336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d795562720e813e4fa0cf4ba28ef23fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Arroz
 --- !u!1 &310946731
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +333,6 @@ GameObject:
   m_Component:
   - component: {fileID: 310946733}
   - component: {fileID: 310946732}
-  - component: {fileID: 310946734}
   m_Layer: 0
   m_Name: Kani
   m_TagString: Untagged
@@ -429,19 +401,6 @@ Transform:
   m_Father: {fileID: 1887573732}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &310946734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114546086592998850, guid: 5bbad5c932ed3f94fa13630fd8f78e51,
-    type: 2}
-  m_PrefabInternal: {fileID: 1239286333}
-  m_GameObject: {fileID: 310946731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d795562720e813e4fa0cf4ba28ef23fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Kani
 --- !u!1 &317890757
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +753,8 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0c6d7265804a08e419866434045874cd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &624601428
@@ -847,7 +807,8 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b3357827d0ae7824d96af37ef17a3024, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &662508537
@@ -935,7 +896,6 @@ GameObject:
   m_Component:
   - component: {fileID: 935130727}
   - component: {fileID: 935130726}
-  - component: {fileID: 935130728}
   m_Layer: 0
   m_Name: Salmon
   m_TagString: Untagged
@@ -1004,19 +964,6 @@ Transform:
   m_Father: {fileID: 1887573732}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &935130728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114748661770127606, guid: 9b64dd16b1911a44a9980d4544e26254,
-    type: 2}
-  m_PrefabInternal: {fileID: 164011668}
-  m_GameObject: {fileID: 935130725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d795562720e813e4fa0cf4ba28ef23fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: "Salm\xE3o"
 --- !u!1001 &942493466
 Prefab:
   m_ObjectHideFlags: 0
@@ -1067,7 +1014,8 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0970500dc8907df41a04c08457c1775d, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &947615897
@@ -1230,7 +1178,6 @@ GameObject:
   m_Component:
   - component: {fileID: 998187917}
   - component: {fileID: 998187916}
-  - component: {fileID: 998187918}
   m_Layer: 0
   m_Name: Cucumber
   m_TagString: Untagged
@@ -1299,19 +1246,6 @@ Transform:
   m_Father: {fileID: 1887573732}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &998187918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114664986257101294, guid: 693d6edaf3dfa1e48ae78de1530cb32a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1168464646}
-  m_GameObject: {fileID: 998187915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d795562720e813e4fa0cf4ba28ef23fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Pepino
 --- !u!1 &1113023066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,7 +1256,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1113023068}
   - component: {fileID: 1113023067}
-  - component: {fileID: 1113023069}
   m_Layer: 0
   m_Name: Nori
   m_TagString: Untagged
@@ -1391,19 +1324,6 @@ Transform:
   m_Father: {fileID: 1887573732}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1113023069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114182981849505818, guid: cbfb38ab2f6108346af89ba89118d892,
-    type: 2}
-  m_PrefabInternal: {fileID: 1959858189}
-  m_GameObject: {fileID: 1113023066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d795562720e813e4fa0cf4ba28ef23fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Alga
 --- !u!1 &1146469223
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,7 +1409,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1158858146}
   - component: {fileID: 1158858145}
-  - component: {fileID: 1158858147}
   m_Layer: 0
   m_Name: Tuna
   m_TagString: Untagged
@@ -1558,19 +1477,6 @@ Transform:
   m_Father: {fileID: 1887573732}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1158858147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114393079123036462, guid: 5c3a90f8ff6df4b4e89d8413866ea05d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1531006841}
-  m_GameObject: {fileID: 1158858144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d795562720e813e4fa0cf4ba28ef23fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Atum
 --- !u!1 &1165230685
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,7 +1487,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1165230687}
   - component: {fileID: 1165230686}
-  - component: {fileID: 1165230688}
   m_Layer: 0
   m_Name: Wasabi
   m_TagString: Untagged
@@ -1650,19 +1555,6 @@ Transform:
   m_Father: {fileID: 1887573732}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1165230688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114499999370478584, guid: eed60f38fb095f64690fc0cee9a06438,
-    type: 2}
-  m_PrefabInternal: {fileID: 1886402866}
-  m_GameObject: {fileID: 1165230685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d795562720e813e4fa0cf4ba28ef23fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Wasabi
 --- !u!1001 &1168464646
 Prefab:
   m_ObjectHideFlags: 0
@@ -1713,7 +1605,8 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 693d6edaf3dfa1e48ae78de1530cb32a, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1239286333
@@ -1766,7 +1659,8 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5bbad5c932ed3f94fa13630fd8f78e51, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1261230978
@@ -1967,7 +1861,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1379892263}
   - component: {fileID: 1379892262}
-  - component: {fileID: 1379892264}
   m_Layer: 0
   m_Name: SalmonSkin
   m_TagString: Untagged
@@ -2036,19 +1929,6 @@ Transform:
   m_Father: {fileID: 1887573732}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1379892264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114839830200920100, guid: b8602e722baa4ae46abd31606660dfa3,
-    type: 2}
-  m_PrefabInternal: {fileID: 2014220087}
-  m_GameObject: {fileID: 1379892261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d795562720e813e4fa0cf4ba28ef23fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Skin
 --- !u!1 &1499283246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,7 +2129,8 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5c3a90f8ff6df4b4e89d8413866ea05d, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1537765703
@@ -2335,7 +2216,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1704168033}
-  - component: {fileID: 1704168032}
   m_Layer: 0
   m_Name: TunaSashimi
   m_TagString: Untagged
@@ -2343,18 +2223,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1704168032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1704168031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3af2325369b500640bb5b74940279ef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DishName: Sashimi Atum
 --- !u!4 &1704168033
 Transform:
   m_ObjectHideFlags: 0
@@ -2568,7 +2436,8 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: eed60f38fb095f64690fc0cee9a06438, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1887573731
@@ -2734,7 +2603,8 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: cbfb38ab2f6108346af89ba89118d892, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1977673600
@@ -2747,7 +2617,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1977673602}
   - component: {fileID: 1977673601}
-  - component: {fileID: 1977673603}
   m_Layer: 0
   m_Name: Sesame
   m_TagString: Untagged
@@ -2816,19 +2685,6 @@ Transform:
   m_Father: {fileID: 1887573732}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1977673603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114945604465738072, guid: 0970500dc8907df41a04c08457c1775d,
-    type: 2}
-  m_PrefabInternal: {fileID: 942493466}
-  m_GameObject: {fileID: 1977673600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d795562720e813e4fa0cf4ba28ef23fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Gergelim
 --- !u!1001 &2014220087
 Prefab:
   m_ObjectHideFlags: 0
@@ -2879,7 +2735,8 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b8602e722baa4ae46abd31606660dfa3, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &2030261887
