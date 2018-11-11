@@ -44,8 +44,6 @@ public class OrderQueue : MonoBehaviour
 
             Slots[i].SlotPosition = nextPosition;
 
-            Debug.Log("Slot " + i + " created at position " + nextPosition + " and it's state is " + Slots[i].CurrentState + "!");
-
             nextPosition += 2f * Vector3.right;
         }
     }
@@ -58,11 +56,11 @@ public class OrderQueue : MonoBehaviour
 
         var recipe = order.GetComponent<Recipe>();
 
+        recipe.Initialize();
+
         OrderList.Add(recipe);
 
         ScrollOrders(OrderList);
-
-        recipe.Initialize();
     }
 
     private void ScrollOrders(List<Recipe> orders)
