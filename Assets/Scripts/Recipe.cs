@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Recipe : MonoBehaviour
 {
+    [HideInInspector]
+    public int CurrentSlot = 0;
+
     public string DishName;
 
     public Instructions PrepareInstructions;
