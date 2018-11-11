@@ -257,13 +257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e061d65e94e27d4583b465d6f79240d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Slots:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   OrderList: []
 --- !u!1 &322218441
 GameObject:

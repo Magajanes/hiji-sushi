@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class OrderQueue : MonoBehaviour
 {
-    private readonly Vector3 StartPosition = new Vector3(-5.5f, 3.4f, 0f);
+    private readonly Vector3 StartPosition = new Vector3(-2f, 3.4f, 0f);
 
     private float orderInterval = 3f;
     private List<GameObject> currentLevelOrders;
 
-    public Slot[] Slots = new Slot[6];
+    public Slot[] Slots = new Slot[7];
     public List<Recipe> OrderList = new List<Recipe>();
 
     private void Start()
@@ -34,7 +34,7 @@ public class OrderQueue : MonoBehaviour
 
     public void PrepareSlots()
     {
-        var nextPosition = StartPosition + 2f * Vector3.right;
+        var nextPosition = StartPosition;
 
         for (int i = 0; i < Slots.Length; i++)
         {
@@ -72,7 +72,7 @@ public class OrderQueue : MonoBehaviour
             var currentPos = recipe.transform.position;
             var newPos = currentPos + 2f * Vector3.right;
 
-            if (recipe.CurrentSlot < 5 && Slots[recipe.CurrentSlot + 1].CurrentState == Slot.State.Empty)
+            if (recipe.CurrentSlot < 6 && Slots[recipe.CurrentSlot + 1].CurrentState == Slot.State.Empty)
             {
                 Slots[recipe.CurrentSlot].CurrentState = Slot.State.Empty;
 
