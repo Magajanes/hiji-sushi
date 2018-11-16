@@ -71,7 +71,6 @@
     <Compile Include="Assets\Scripts\RecipeCheck.cs" />
     <Compile Include="Assets\Scripts\RecipePanel.cs" />
     <Compile Include="Assets\Scripts\Slot.cs" />
-    <Compile Include="Assets\Scripts\Used.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Games/HijiSushi 2.0/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
