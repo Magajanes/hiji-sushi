@@ -66,6 +66,13 @@ public class IngredientMixer : MonoBehaviour
     public void EmptyMixer()
     {
         for (int i = 0; i < Slots.Length; i++)
+        {
+            if(UsedIngredients[i] != null)
+                Destroy(UsedIngredients[i].gameObject);
+
+            Measures[i] = 0;
+
             Slots[i].CurrentState = Slot.State.Empty;
+        }
     }
 }

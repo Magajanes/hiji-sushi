@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Recipe : MonoBehaviour
 {
     [HideInInspector]
     public bool IsSelected = false;
-
-    public GameObject Highlight;
-
     [HideInInspector]
     public int CurrentSlot = 0;
 
     public string DishName;
+
+    public float TimeToDeliver;
+    public float TimeToPrepare;
+
+    public GameObject Highlight;
+    public Slider Timer;
 
     public Instructions PrepareInstructions;
 
