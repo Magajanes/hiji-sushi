@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f43fb27198449546b06d0bea3cf74ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Kani
   AmountText: {fileID: 114151891567255550}
 --- !u!212 &212308765529963896
 SpriteRenderer:

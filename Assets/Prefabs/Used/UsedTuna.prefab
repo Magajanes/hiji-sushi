@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f43fb27198449546b06d0bea3cf74ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Atum
   AmountText: {fileID: 114460374847941388}
 --- !u!212 &212088748770864796
 SpriteRenderer:

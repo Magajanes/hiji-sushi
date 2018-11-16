@@ -88,6 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f43fb27198449546b06d0bea3cf74ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Skin
   AmountText: {fileID: 114666357242116012}
 --- !u!114 &114222486834227130
 MonoBehaviour:

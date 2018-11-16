@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f43fb27198449546b06d0bea3cf74ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: "Salm\xE3o"
   AmountText: {fileID: 114943062552326448}
 --- !u!114 &114943062552326448
 MonoBehaviour:
