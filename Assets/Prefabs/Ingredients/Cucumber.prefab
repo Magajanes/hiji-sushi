@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Pepino
+  Used: 0
+  UsedPrefab: {fileID: 1547873538777470, guid: 792a8dd1c507dad4e8d46ebe6bf820c8, type: 2}
 --- !u!212 &212424714936173648
 SpriteRenderer:
   m_ObjectHideFlags: 1

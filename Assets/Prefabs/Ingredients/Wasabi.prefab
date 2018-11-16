@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Wasabi
+  Used: 0
+  UsedPrefab: {fileID: 1116601092316636, guid: 89051fb28d249864380248398cfa5fe8, type: 2}
 --- !u!212 &212544259332168016
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Gergelim
+  Used: 0
+  UsedPrefab: {fileID: 1586741939683888, guid: 0d9eae47c96e43f44b502ee153312c9f, type: 2}
 --- !u!212 &212562304720632004
 SpriteRenderer:
   m_ObjectHideFlags: 1

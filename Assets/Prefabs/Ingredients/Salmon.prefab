@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: "Salm\xE3o"
+  Used: 0
+  UsedPrefab: {fileID: 1302040061473548, guid: d878807612fd3a34082c21d9bb1d76ef, type: 2}
 --- !u!212 &212472463293716300
 SpriteRenderer:
   m_ObjectHideFlags: 1

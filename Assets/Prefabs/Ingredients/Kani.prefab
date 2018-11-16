@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Kani
+  Used: 0
+  UsedPrefab: {fileID: 1257881518557078, guid: 3c8ec2d5b2672d344ae435bced9d44ff, type: 2}
 --- !u!212 &212249746793433682
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Alga
+  Used: 0
+  UsedPrefab: {fileID: 1664937412379832, guid: 728136e87b44c0148bb5ddfa22195d5d, type: 2}
 --- !u!212 &212469949007619576
 SpriteRenderer:
   m_ObjectHideFlags: 1

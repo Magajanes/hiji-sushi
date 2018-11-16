@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Cream Cheese
+  Used: 0
+  UsedPrefab: {fileID: 1035406782729994, guid: 3ac796ac40826e14b8dfee3a944848ca, type: 2}
 --- !u!212 &212698245611354656
 SpriteRenderer:
   m_ObjectHideFlags: 1

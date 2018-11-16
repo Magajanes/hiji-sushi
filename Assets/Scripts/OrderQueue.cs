@@ -36,7 +36,7 @@ public class OrderQueue : MonoBehaviour
         }
     }
 
-    public void PrepareSlots()
+    private void PrepareSlots()
     {
         var nextPosition = StartPosition;
 

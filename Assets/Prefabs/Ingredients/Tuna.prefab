@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Atum
+  Used: 0
+  UsedPrefab: {fileID: 1688136294263082, guid: 93ab652644119a3498f29a4d82000c53, type: 2}
 --- !u!212 &212011156489584536
 SpriteRenderer:
   m_ObjectHideFlags: 1

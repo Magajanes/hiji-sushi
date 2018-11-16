@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Arroz
+  Used: 0
+  UsedPrefab: {fileID: 1901252787508722, guid: ced90b5fad568324a91431aab1146ec7, type: 2}
 --- !u!212 &212298337593821776
 SpriteRenderer:
   m_ObjectHideFlags: 1

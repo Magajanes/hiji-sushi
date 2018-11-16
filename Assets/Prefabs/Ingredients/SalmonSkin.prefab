@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Skin
+  Used: 0
+  UsedPrefab: {fileID: 1761347824842750, guid: 0ef84b5935c79e24d8268bcb3116ccf6, type: 2}
 --- !u!212 &212780381260504682
 SpriteRenderer:
   m_ObjectHideFlags: 1
