@@ -8,6 +8,8 @@ public class OrderQueue : MonoBehaviour
 
     private float orderInterval = 3f;
 
+    public RecipePanel Panel;
+
     private List<GameObject> currentLevelOrders;
 
     public Slot[] Slots = new Slot[7];
@@ -86,5 +88,16 @@ public class OrderQueue : MonoBehaviour
                                                              "time", 1f));
             }
         }
+    }
+
+    public void EmptySlot(Recipe recipe)
+    {
+        Slots[recipe.CurrentSlot].CurrentState = Slot.State.Empty;
+
+        OrderList.Remove(recipe);
+
+        Panel.ResetInfo();
+
+        Destroy(recipe.gameObject);
     }
 }

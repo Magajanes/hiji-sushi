@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Recipe : MonoBehaviour
 {
+    [HideInInspector]
     public bool IsSelected = false;
 
     public GameObject Highlight;
@@ -17,9 +18,11 @@ public class Recipe : MonoBehaviour
 
     public Dictionary<Ingredient, int> PrepareSteps = new Dictionary<Ingredient, int>();
 
+    public static EventHandler OnSelect;
+
     public void Initialize()
     {
-        Highlight.SetActive(false);
+        SetHighlight();
 
         SetSteps(PrepareInstructions.IngredientsList, PrepareInstructions.MeasuresList);
     }
@@ -46,6 +49,8 @@ public class Recipe : MonoBehaviour
         IsSelected = true;
 
         SetHighlight();
+
+        OnSelect(this, new EventArgs());
     }
 
     public void SetHighlight()
