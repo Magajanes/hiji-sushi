@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212149568942884864}
   - component: {fileID: 61038794780164030}
   - component: {fileID: 114962187942239140}
+  - component: {fileID: 114180836650850132}
   m_Layer: 0
   m_Name: SpiceTuna
   m_TagString: Untagged
@@ -97,6 +98,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.24, y: 0.84}
   m_EdgeRadius: 0
+--- !u!114 &114180836650850132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1090037576428066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!114 &114962187942239140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSelected: 0
+  Highlight: {fileID: 0}
   CurrentSlot: 0
   DishName: Spice Tuna
   PrepareInstructions: {fileID: 11400000, guid: 24f05d85667f1604c8145a6fd380852c,
@@ -147,7 +162,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d5a5ff0a7032e70458e5536a4afdbbb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212894231080728150}
   - component: {fileID: 61361949683580966}
   - component: {fileID: 114553209074570816}
+  - component: {fileID: 114882639539629718}
   m_Layer: 0
   m_Name: TunaCeviche
   m_TagString: Untagged
@@ -109,10 +110,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSelected: 0
+  Highlight: {fileID: 0}
   CurrentSlot: 0
   DishName: Ceviche Atum
   PrepareInstructions: {fileID: 11400000, guid: fb747a1f4bc0f2f4a82b07e395977139,
     type: 2}
+--- !u!114 &114882639539629718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1090037576428066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!212 &212795756968856778
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -193,7 +208,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 3f9849b5c0a4f9449a1cd9811ed239a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

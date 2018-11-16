@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212273463677685646}
   - component: {fileID: 61186580401416104}
   - component: {fileID: 114288617677878942}
+  - component: {fileID: 114785759244120832}
   m_Layer: 0
   m_Name: TunaTemaki
   m_TagString: Untagged
@@ -109,10 +110,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSelected: 0
+  Highlight: {fileID: 0}
   CurrentSlot: 0
   DishName: Temaki Atum
   PrepareInstructions: {fileID: 11400000, guid: 34f4be1b94fc9114592b442c9bf6b550,
     type: 2}
+--- !u!114 &114785759244120832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1090037576428066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!212 &212273463677685646
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -147,7 +162,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 08fbea5d543ae3249a18573c7da93103, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

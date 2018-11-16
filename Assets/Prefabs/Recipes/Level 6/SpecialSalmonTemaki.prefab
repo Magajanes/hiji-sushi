@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212147808981359800}
   - component: {fileID: 61855548967047254}
   - component: {fileID: 114626670870702872}
+  - component: {fileID: 114043089423384896}
   m_Layer: 0
   m_Name: SpecialSalmonTemaki
   m_TagString: Untagged
@@ -97,6 +98,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.24, y: 0.84}
   m_EdgeRadius: 0
+--- !u!114 &114043089423384896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1090037576428066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!114 &114626670870702872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSelected: 0
+  Highlight: {fileID: 0}
   CurrentSlot: 0
   DishName: "Temaki Salm\xE3o Especial"
   PrepareInstructions: {fileID: 11400000, guid: 146d7f26be38c154a8bee0f2c233da36,
@@ -147,7 +162,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 08097109867672f42ac55d532df4911f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

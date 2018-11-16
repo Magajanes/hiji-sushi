@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212557591492334852}
   - component: {fileID: 61751668199418480}
   - component: {fileID: 114786024757375030}
+  - component: {fileID: 114483443191540182}
   m_Layer: 0
   m_Name: Philadelphia
   m_TagString: Untagged
@@ -97,6 +98,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.24, y: 0.84}
   m_EdgeRadius: 0
+--- !u!114 &114483443191540182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1090037576428066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!114 &114786024757375030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSelected: 0
+  Highlight: {fileID: 0}
   CurrentSlot: 0
   DishName: Philadelphia
   PrepareInstructions: {fileID: 11400000, guid: 709749b8e4f7dba41929508c8d38c3cc,
@@ -193,7 +208,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 997621a099db5be4f9f9e40a8ac282cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

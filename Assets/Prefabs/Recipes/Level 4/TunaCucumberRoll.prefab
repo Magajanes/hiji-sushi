@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212150690304429498}
   - component: {fileID: 61816531779831630}
   - component: {fileID: 114126348257434622}
+  - component: {fileID: 114477392692781720}
   m_Layer: 0
   m_Name: TunaCucumberRoll
   m_TagString: Untagged
@@ -109,10 +110,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSelected: 0
+  Highlight: {fileID: 0}
   CurrentSlot: 0
   DishName: Cucumber Roll Atum
   PrepareInstructions: {fileID: 11400000, guid: 7099095a66a4737459881e002db668e2,
     type: 2}
+--- !u!114 &114477392692781720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1090037576428066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!212 &212150690304429498
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -147,7 +162,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 069b82bce6b3a384ea810a2e05490203, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

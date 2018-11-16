@@ -6,6 +6,8 @@ public class Recipe : MonoBehaviour
 {
     public bool IsSelected = false;
 
+    public GameObject Highlight;
+
     [HideInInspector]
     public int CurrentSlot = 0;
 
@@ -17,6 +19,8 @@ public class Recipe : MonoBehaviour
 
     public void Initialize()
     {
+        Highlight.SetActive(false);
+
         SetSteps(PrepareInstructions.IngredientsList, PrepareInstructions.MeasuresList);
     }
 
@@ -26,14 +30,26 @@ public class Recipe : MonoBehaviour
             PrepareSteps.Add(ingredients[i], measures[i]);
     }
 
-    public void Select(RecipeCheck check)
+    public void Select()
     {
-        var current = check.CurrentRecipe;
+        var current = GameManager.Checker.CurrentRecipe;
 
-        current.IsSelected = false;
+        if (current != null)
+        {
+            current.IsSelected = false;
 
-        check.CurrentRecipe = this;
+            current.SetHighlight();
+        }
+
+        GameManager.Checker.CurrentRecipe = this;
 
         IsSelected = true;
+
+        SetHighlight();
+    }
+
+    public void SetHighlight()
+    {
+        Highlight.SetActive(IsSelected);
     }
 }
