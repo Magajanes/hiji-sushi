@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Recipe : MonoBehaviour
 {
+    public bool IsSelected = false;
+
     [HideInInspector]
     public int CurrentSlot = 0;
 
@@ -22,5 +24,16 @@ public class Recipe : MonoBehaviour
     {
         for (int i = 0; i < ingredients.Count; i++)
             PrepareSteps.Add(ingredients[i], measures[i]);
+    }
+
+    public void Select(RecipeCheck check)
+    {
+        var current = check.CurrentRecipe;
+
+        current.IsSelected = false;
+
+        check.CurrentRecipe = this;
+
+        IsSelected = true;
     }
 }

@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4915416628700136}
   - component: {fileID: 212164062025084176}
+  - component: {fileID: 61440360413444740}
   - component: {fileID: 114966132828553512}
   m_Layer: 0
   m_Name: KaniSushi
@@ -71,6 +72,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61440360413444740
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1090037576428066}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.1}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 10, y: 10}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.24, y: 0.84}
+  m_EdgeRadius: 0
 --- !u!114 &114966132828553512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -82,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af2325369b500640bb5b74940279ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsSelected: 0
   CurrentSlot: 0
   DishName: Sushi Kani
   PrepareInstructions: {fileID: 11400000, guid: 7323d53afaac44440b6073951425bd45,

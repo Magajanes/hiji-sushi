@@ -7,9 +7,11 @@ public class OrderQueue : MonoBehaviour
     private readonly Vector3 StartPosition = new Vector3(-2f, 3.4f, 0f);
 
     private float orderInterval = 3f;
+
     private List<GameObject> currentLevelOrders;
 
     public Slot[] Slots = new Slot[7];
+
     public List<Recipe> OrderList = new List<Recipe>();
 
     private void Start()
@@ -68,6 +70,7 @@ public class OrderQueue : MonoBehaviour
         foreach (Recipe recipe in orders)
         {
             var currentPos = recipe.transform.position;
+
             var newPos = currentPos + 2f * Vector3.right;
 
             if (recipe.CurrentSlot < 6 && Slots[recipe.CurrentSlot + 1].CurrentState == Slot.State.Empty)

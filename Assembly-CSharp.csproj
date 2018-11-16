@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Level.cs" />
     <Compile Include="Assets\Scripts\OrderQueue.cs" />
     <Compile Include="Assets\Scripts\Recipe.cs" />
+    <Compile Include="Assets\Scripts\RecipeCheck.cs" />
     <Compile Include="Assets\Scripts\Slot.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Games/HijiSushi 2.0/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
