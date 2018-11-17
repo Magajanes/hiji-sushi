@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Philadelphia
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  IngredientsTypeList: []
+  DishPrefab: {fileID: 1569108435257006, guid: c7b63090991d875419afb4fea5c1f049, type: 2}
   IngredientsList:
   - Alga
   - Arroz

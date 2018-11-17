@@ -96,7 +96,8 @@ public class OrderQueue : MonoBehaviour
 
         OrderList.Remove(recipe);
 
-        Panel.ResetInfo();
+        if(recipe.IsSelected)
+            Panel.ResetInfo();
 
         Destroy(recipe.gameObject);
     }

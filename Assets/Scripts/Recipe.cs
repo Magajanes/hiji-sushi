@@ -53,22 +53,25 @@ public class Recipe : MonoBehaviour
 
     public void Select()
     {
-        var current = GameManager.Checker.CurrentRecipe;
-
-        if (current != null)
+        if (GameManager.Checker.PrepareCoroutine == null)
         {
-            current.IsSelected = false;
+            var current = GameManager.Checker.CurrentRecipe;
 
-            current.SetHighlight();
+            if (current != null)
+            {
+                current.IsSelected = false;
+
+                current.SetHighlight();
+            }
+
+            GameManager.Checker.CurrentRecipe = this;
+
+            IsSelected = true;
+
+            SetHighlight();
+
+            OnSelect(this, new EventArgs());
         }
-
-        GameManager.Checker.CurrentRecipe = this;
-
-        IsSelected = true;
-
-        SetHighlight();
-
-        OnSelect(this, new EventArgs());
     }
 
     public void SetHighlight()

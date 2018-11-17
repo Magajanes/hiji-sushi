@@ -12,14 +12,14 @@ public class RecipeCheck : MonoBehaviour
 
     public Coroutine PrepareCoroutine;
 
-    public delegate void PrepareAction(IngredientMixer mixer);
-    public PrepareAction Prepare;
+    public delegate bool PrepareAction(IngredientMixer mixer);
+    public PrepareAction Check;
 
     public void StartProcess()
     {
-        Prepare = PrepareRecipe;
+        Check = NormalCheckRecipe;
 
-        Prepare(Mixer);
+        PrepareRecipe(Mixer);
     }
 
     public void PrepareRecipe(IngredientMixer mixer)
@@ -31,7 +31,7 @@ public class RecipeCheck : MonoBehaviour
             return;
         }
 
-        if (CheckRecipe(mixer))
+        if (Check(mixer))
         {
             PrepareCoroutine = StartCoroutine(PrepareDish(mixer));
 
@@ -44,14 +44,18 @@ public class RecipeCheck : MonoBehaviour
     public void OrderFailed(Recipe order)
     {
         if (PrepareCoroutine != null)
+        {
             StopCoroutine(PrepareCoroutine);
+
+            PrepareCoroutine = null;
+        }
 
         Orders.EmptySlot(order);
 
         Debug.Log(order.DishName + " demorou demais a ser entregue!");
     }
 
-    public bool CheckRecipe(IngredientMixer mixer)
+    public bool NormalCheckRecipe(IngredientMixer mixer)
     {
         var steps = CurrentRecipe.PrepareSteps;
 
@@ -85,8 +89,18 @@ public class RecipeCheck : MonoBehaviour
 
     private IEnumerator PrepareDish(IngredientMixer mixer)
     {
-        Debug.Log("Dish is correct!");
+        mixer.ShrinkIngredients(CurrentRecipe.PrepareInstructions.TimeToPrepare);
 
-        yield return null;
+        yield return new WaitForSeconds(CurrentRecipe.PrepareInstructions.TimeToPrepare);
+
+        mixer.EmptyMixer();
+
+        Orders.EmptySlot(CurrentRecipe);
+
+        Debug.Log(CurrentRecipe.DishName + " perfeito!");
+
+        mixer.DeliverDish(CurrentRecipe);
+
+        PrepareCoroutine = null;
     }
 }

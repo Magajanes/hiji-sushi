@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: "Sushi Salm\xE3o"
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  IngredientsTypeList: []
+  DishPrefab: {fileID: 1602576860874546, guid: 79d8e4a2768530b4393413db1ae98a62, type: 2}
   IngredientsList:
   - Arroz
   - "Salm\xE3o"

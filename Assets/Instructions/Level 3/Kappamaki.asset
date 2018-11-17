@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Kappamaki
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  IngredientsTypeList: []
+  DishPrefab: {fileID: 1825105103199138, guid: c684a094ca9df5f458572c5763ad61be, type: 2}
   IngredientsList:
   - Alga
   - Arroz

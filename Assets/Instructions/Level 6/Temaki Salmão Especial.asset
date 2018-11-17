@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: "Temaki Salm\xE3o Especial"
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  IngredientsTypeList: []
+  DishPrefab: {fileID: 1280789947544412, guid: 17de3be5162dd1749a9e1cdc9cedeb33, type: 2}
   IngredientsList:
   - Alga
   - Arroz

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Temaki Skin
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  IngredientsTypeList: []
+  DishPrefab: {fileID: 1864903637323046, guid: 6d9027fda017c4b4a9d17b07f17f2359, type: 2}
   IngredientsList:
   - Alga
   - Arroz

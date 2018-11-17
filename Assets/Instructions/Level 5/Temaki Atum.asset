@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Temaki Atum
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  IngredientsTypeList: []
+  DishPrefab: {fileID: 1265421952048804, guid: f6e8cf82aef1ede42b6cc923a6617047, type: 2}
   IngredientsList:
   - Alga
   - Arroz

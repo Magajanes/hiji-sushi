@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class IngredientMixer : MonoBehaviour
 {
@@ -87,5 +88,36 @@ public class IngredientMixer : MonoBehaviour
         }
 
         return count;
+    }
+
+    public void ShrinkIngredients(float time)
+    {
+        foreach (Used used in UsedIngredients)
+        {
+            if(used != null)
+                iTween.ScaleTo(used.gameObject, Vector3.zero, time);
+        }
+    }
+
+    public void DeliverDish(Recipe recipe)
+    {
+        StartCoroutine(Deliver(recipe));
+    }
+
+    private IEnumerator Deliver(Recipe recipe)
+    {
+        var dish = Instantiate(recipe.PrepareInstructions.DishPrefab, new Vector3(5.7f, -3f, 0f), Quaternion.identity);
+
+        dish.transform.localScale = Vector3.zero;
+
+        iTween.ScaleTo(dish, Vector3.one, 1f);
+
+        iTween.MoveTo(dish, iTween.Hash("position", new Vector3(8.9f, 0.9f, 0f),
+                                        "easetype", iTween.EaseType.easeOutBounce,
+                                        "time", 1f));
+
+        yield return new WaitForSeconds(2.5f);
+
+        Destroy(dish);
     }
 }

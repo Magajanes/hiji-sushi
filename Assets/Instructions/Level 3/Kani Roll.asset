@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Kani Roll
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  IngredientsTypeList: []
+  DishPrefab: {fileID: 1587558723263152, guid: 0a12be6da1ea5fb47b01553663e6ea3b, type: 2}
   IngredientsList:
   - Alga
   - Arroz

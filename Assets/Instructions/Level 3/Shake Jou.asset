@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Shake Jou
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  IngredientsTypeList: []
+  DishPrefab: {fileID: 1361869449005202, guid: fd672f26c1b38b04ab06b9f22694cc3a, type: 2}
   IngredientsList:
   - "Salm\xE3o"
   - Arroz

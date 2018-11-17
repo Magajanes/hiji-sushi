@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Sushi Kani
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  IngredientsTypeList: []
+  DishPrefab: {fileID: 1914234186296628, guid: 270d26717d0d3a2428559595c8216a4c, type: 2}
   IngredientsList:
   - Arroz
   - Kani

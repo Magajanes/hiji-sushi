@@ -7,6 +7,8 @@ public class Instructions : ScriptableObject
 {
     public float TimeToPrepare;
 
+    public GameObject DishPrefab;
+
     public List<string> IngredientsList;
 
     public List<int> MeasuresList;

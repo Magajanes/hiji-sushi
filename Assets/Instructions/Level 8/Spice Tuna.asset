@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Spice Tuna
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  IngredientsTypeList: []
+  DishPrefab: {fileID: 1117755584998476, guid: 56c9c183163a99740ab0c6c5474f16b2, type: 2}
   IngredientsList:
   - Alga
   - Arroz
