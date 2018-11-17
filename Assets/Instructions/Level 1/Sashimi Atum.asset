@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Name: Sashimi Atum
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
+  IngredientsTypeList: []
   IngredientsList:
-  - {fileID: 114422906023925500, guid: 5c3a90f8ff6df4b4e89d8413866ea05d, type: 2}
-  IngredientTypesList:
   - Atum
   MeasuresList: 03000000

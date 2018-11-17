@@ -7,9 +7,7 @@ public class Instructions : ScriptableObject
 {
     public float TimeToPrepare;
 
-    public List<Ingredient> IngredientsList;
-
-    public List<string> IngredientTypesList;
+    public List<string> IngredientsList;
 
     public List<int> MeasuresList;
 }

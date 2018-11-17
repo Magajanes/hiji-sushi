@@ -12,11 +12,8 @@ MonoBehaviour:
   m_Name: "Salm\xE3o Roll"
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
+  IngredientsTypeList: []
   IngredientsList:
-  - {fileID: 114244115129627082, guid: cbfb38ab2f6108346af89ba89118d892, type: 2}
-  - {fileID: 114912150088100574, guid: b3357827d0ae7824d96af37ef17a3024, type: 2}
-  - {fileID: 114857742835861600, guid: 9b64dd16b1911a44a9980d4544e26254, type: 2}
-  IngredientTypesList:
   - Alga
   - Arroz
   - "Salm\xE3o"

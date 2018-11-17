@@ -28,7 +28,7 @@ public class Recipe : MonoBehaviour
     {
         SetHighlight();
 
-        SetSteps(PrepareInstructions.IngredientTypesList, PrepareInstructions.MeasuresList);
+        SetSteps(PrepareInstructions.IngredientsList, PrepareInstructions.MeasuresList);
 
         deliveryTime = TimeToDeliver;
 

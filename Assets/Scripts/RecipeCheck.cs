@@ -53,22 +53,18 @@ public class RecipeCheck : MonoBehaviour
 
     public bool CheckRecipe(IngredientMixer mixer)
     {
-        /*var steps = CurrentRecipe.PrepareSteps;
+        var steps = CurrentRecipe.PrepareSteps;
 
         int correctSteps = 0;
 
         for (int i = 0; i < mixer.NumberOfTypes(); i++)
         {
-            if (steps.ContainsKey(mixer.SelectedIngredients[i]))
+            if (steps.ContainsKey(mixer.UsedIngredients[i].Name))
             {
                 var measure = mixer.Measures[i];
 
-                if (measure == steps[mixer.SelectedIngredients[i]])
-                {
+                if (measure == steps[mixer.UsedIngredients[i].Name])
                     correctSteps++;
-
-                    Debug.Log("Passo correto!");
-                }
                 else
                 {
                     correctSteps = correctSteps <= 0 ? 0 : correctSteps - 1;
@@ -84,9 +80,7 @@ public class RecipeCheck : MonoBehaviour
             }
         }
 
-        return correctSteps == steps.Count;*/
-
-        return false;
+        return correctSteps == steps.Count;
     }
 
     private IEnumerator PrepareDish(IngredientMixer mixer)
