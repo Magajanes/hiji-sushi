@@ -40,6 +40,9 @@ public class Recipe : MonoBehaviour
         deliveryTime -= Time.deltaTime;
 
         Timer.value = deliveryTime;
+
+        if (deliveryTime <= 0f)
+            GameManager.Checker.OrderFailed(this);
     }
 
     private void SetSteps(List<string> ingredientTypes, List<int> measures)

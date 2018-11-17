@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e061d65e94e27d4583b465d6f79240d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Panel: {fileID: 0}
+  Panel: {fileID: 1063434860}
   OrderList: []
 --- !u!1 &322218441
 GameObject:
@@ -730,12 +730,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b44d4e2b53f1c47b975aea7758b206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectedIngredients:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   UsedIngredients:
   - {fileID: 0}
   - {fileID: 0}
@@ -1129,6 +1123,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4102294413491734, guid: 693d6edaf3dfa1e48ae78de1530cb32a,
     type: 2}
   m_PrefabInternal: {fileID: 2144992313}
+--- !u!114 &1063434860 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114893582171291740, guid: d234fe77df02ce64a940f1841bc2d059,
+    type: 2}
+  m_PrefabInternal: {fileID: 223678055}
+  m_Script: {fileID: 11500000, guid: 30a68100df2f8ed4da6b5cb314eba569, type: 3}
 --- !u!1 &1087554865
 GameObject:
   m_ObjectHideFlags: 0
