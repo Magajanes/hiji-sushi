@@ -368,8 +368,7 @@ MonoBehaviour:
   IsSelected: 0
   CurrentSlot: 0
   DishName: Tekamaki
-  TimeToDeliver: 0
-  TimeToPrepare: 0
+  TimeToDeliver: 30
   Highlight: {fileID: 1922033275641414}
   Timer: {fileID: 114893286402962608}
   PrepareInstructions: {fileID: 11400000, guid: 1f97fa901f23f9a4e823febfc80c95ab,

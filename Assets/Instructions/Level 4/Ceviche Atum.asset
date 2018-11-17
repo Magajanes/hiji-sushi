@@ -11,7 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472d4910ebf461d49a840933ad3c5264, type: 3}
   m_Name: Ceviche Atum
   m_EditorClassIdentifier: 
+  TimeToPrepare: 1
   IngredientsList:
   - {fileID: 114422906023925500, guid: 5c3a90f8ff6df4b4e89d8413866ea05d, type: 2}
   - {fileID: 114799955161611838, guid: 0970500dc8907df41a04c08457c1775d, type: 2}
+  IngredientTypesList:
+  - Atum
+  - Gergelim
   MeasuresList: 0200000001000000

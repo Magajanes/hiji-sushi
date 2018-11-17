@@ -331,8 +331,7 @@ MonoBehaviour:
   IsSelected: 0
   CurrentSlot: 0
   DishName: "Ceviche Salm\xE3o"
-  TimeToDeliver: 0
-  TimeToPrepare: 0
+  TimeToDeliver: 30
   Highlight: {fileID: 1848108161243080}
   Timer: {fileID: 114385994165772550}
   PrepareInstructions: {fileID: 11400000, guid: 755dcd7e731a09746b9d70ea71d437eb,

@@ -226,8 +226,7 @@ MonoBehaviour:
   IsSelected: 0
   CurrentSlot: 0
   DishName: Cucumber Roll Atum
-  TimeToDeliver: 0
-  TimeToPrepare: 0
+  TimeToDeliver: 30
   Highlight: {fileID: 1226110555295284}
   Timer: {fileID: 114152318623907714}
   PrepareInstructions: {fileID: 11400000, guid: 7099095a66a4737459881e002db668e2,

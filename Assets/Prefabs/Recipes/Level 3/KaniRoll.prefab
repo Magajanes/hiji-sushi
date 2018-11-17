@@ -295,8 +295,7 @@ MonoBehaviour:
   IsSelected: 0
   CurrentSlot: 0
   DishName: Kani Roll
-  TimeToDeliver: 0
-  TimeToPrepare: 0
+  TimeToDeliver: 30
   Highlight: {fileID: 1318903610242450}
   Timer: {fileID: 114032359818979040}
   PrepareInstructions: {fileID: 11400000, guid: acfbb29ae199dd446a2b056f4ee7bcc3,

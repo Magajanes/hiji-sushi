@@ -226,8 +226,7 @@ MonoBehaviour:
   IsSelected: 0
   CurrentSlot: 0
   DishName: "Cucumber Roll Salm\xE3o"
-  TimeToDeliver: 0
-  TimeToPrepare: 0
+  TimeToDeliver: 30
   Highlight: {fileID: 1988818113205504}
   Timer: {fileID: 114408543756733266}
   PrepareInstructions: {fileID: 11400000, guid: c1fb5d861d819fb4db1a7d85930cef34,

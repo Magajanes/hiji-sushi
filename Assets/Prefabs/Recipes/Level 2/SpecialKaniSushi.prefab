@@ -395,8 +395,7 @@ MonoBehaviour:
   IsSelected: 0
   CurrentSlot: 0
   DishName: Sushi Kani Especial
-  TimeToDeliver: 0
-  TimeToPrepare: 0
+  TimeToDeliver: 30
   Highlight: {fileID: 1463176390890628}
   Timer: {fileID: 114386225507046792}
   PrepareInstructions: {fileID: 11400000, guid: cbc862e5861d06e48953fc503ffbd5b0,

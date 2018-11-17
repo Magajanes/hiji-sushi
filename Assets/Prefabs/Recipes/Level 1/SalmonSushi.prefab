@@ -395,8 +395,7 @@ MonoBehaviour:
   IsSelected: 0
   CurrentSlot: 0
   DishName: "Sushi Salm\xE3o"
-  TimeToDeliver: 0
-  TimeToPrepare: 0
+  TimeToDeliver: 30
   Highlight: {fileID: 1409054044856282}
   Timer: {fileID: 114319854507853136}
   PrepareInstructions: {fileID: 11400000, guid: f42dc871121331c41a52bc892b96f2a2,

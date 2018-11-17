@@ -274,8 +274,7 @@ MonoBehaviour:
   IsSelected: 0
   CurrentSlot: 0
   DishName: Ceviche Atum
-  TimeToDeliver: 0
-  TimeToPrepare: 0
+  TimeToDeliver: 30
   Highlight: {fileID: 1550174159466940}
   Timer: {fileID: 114269941406570046}
   PrepareInstructions: {fileID: 11400000, guid: fb747a1f4bc0f2f4a82b07e395977139,

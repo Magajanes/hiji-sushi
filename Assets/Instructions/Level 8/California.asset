@@ -11,10 +11,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472d4910ebf461d49a840933ad3c5264, type: 3}
   m_Name: California
   m_EditorClassIdentifier: 
+  TimeToPrepare: 1
   IngredientsList:
   - {fileID: 114546023275241860, guid: 5bbad5c932ed3f94fa13630fd8f78e51, type: 2}
   - {fileID: 114957803807844314, guid: 693d6edaf3dfa1e48ae78de1530cb32a, type: 2}
   - {fileID: 114244115129627082, guid: cbfb38ab2f6108346af89ba89118d892, type: 2}
   - {fileID: 114912150088100574, guid: b3357827d0ae7824d96af37ef17a3024, type: 2}
   - {fileID: 114799955161611838, guid: 0970500dc8907df41a04c08457c1775d, type: 2}
+  IngredientTypesList:
+  - Kani
+  - Pepino
+  - Alga
+  - Arroz
+  - Gergelim
   MeasuresList: 0100000001000000010000000100000001000000

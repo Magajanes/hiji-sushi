@@ -6,6 +6,9 @@ public class IngredientMixer : MonoBehaviour
 
     public Slot[] Slots = new Slot[5];
 
+    [HideInInspector]
+    public Ingredient[] SelectedIngredients = new Ingredient[5];
+
     public Used[] UsedIngredients = new Used[5];
 
     public int[] Measures = new int[5];
@@ -24,6 +27,8 @@ public class IngredientMixer : MonoBehaviour
                 var ing = Instantiate(ingredient.UsedPrefab, Slots[i].SlotPosition, Quaternion.identity);
 
                 var used = ing.GetComponent<Used>();
+
+                SelectedIngredients[i] = ingredient;
 
                 UsedIngredients[i] = used;
 
@@ -74,5 +79,18 @@ public class IngredientMixer : MonoBehaviour
 
             Slots[i].CurrentState = Slot.State.Empty;
         }
+    }
+
+    public int NumberOfTypes()
+    {
+        int count = 0;
+
+        for (int i = 0; i < UsedIngredients.Length; i++)
+        {
+            if (UsedIngredients[i] != null)
+                count++;
+        }
+
+        return count;
     }
 }

@@ -325,8 +325,7 @@ MonoBehaviour:
   IsSelected: 0
   CurrentSlot: 0
   DishName: Philadelphia
-  TimeToDeliver: 0
-  TimeToPrepare: 0
+  TimeToDeliver: 30
   Highlight: {fileID: 1425791151774336}
   Timer: {fileID: 114621546364990178}
   PrepareInstructions: {fileID: 11400000, guid: 709749b8e4f7dba41929508c8d38c3cc,

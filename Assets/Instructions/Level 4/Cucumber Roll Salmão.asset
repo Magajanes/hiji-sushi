@@ -11,7 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472d4910ebf461d49a840933ad3c5264, type: 3}
   m_Name: "Cucumber Roll Salm\xE3o"
   m_EditorClassIdentifier: 
+  TimeToPrepare: 1
   IngredientsList:
   - {fileID: 114957803807844314, guid: 693d6edaf3dfa1e48ae78de1530cb32a, type: 2}
   - {fileID: 114857742835861600, guid: 9b64dd16b1911a44a9980d4544e26254, type: 2}
+  IngredientTypesList:
+  - Pepino
+  - "Salm\xE3o"
   MeasuresList: 0200000001000000

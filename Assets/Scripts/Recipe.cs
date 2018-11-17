@@ -13,14 +13,14 @@ public class Recipe : MonoBehaviour
     public string DishName;
 
     public float TimeToDeliver;
-    public float TimeToPrepare;
+    private float deliveryTime;
 
     public GameObject Highlight;
     public Slider Timer;
 
     public Instructions PrepareInstructions;
 
-    public Dictionary<Ingredient, int> PrepareSteps = new Dictionary<Ingredient, int>();
+    public Dictionary<string, int> PrepareSteps = new Dictionary<string, int>();
 
     public static EventHandler OnSelect;
 
@@ -28,13 +28,24 @@ public class Recipe : MonoBehaviour
     {
         SetHighlight();
 
-        SetSteps(PrepareInstructions.IngredientsList, PrepareInstructions.MeasuresList);
+        SetSteps(PrepareInstructions.IngredientTypesList, PrepareInstructions.MeasuresList);
+
+        deliveryTime = TimeToDeliver;
+
+        Timer.maxValue = deliveryTime;
     }
 
-    private void SetSteps(List<Ingredient> ingredients, List<int> measures)
+    private void Update()
     {
-        for (int i = 0; i < ingredients.Count; i++)
-            PrepareSteps.Add(ingredients[i], measures[i]);
+        deliveryTime -= Time.deltaTime;
+
+        Timer.value = deliveryTime;
+    }
+
+    private void SetSteps(List<string> ingredientTypes, List<int> measures)
+    {
+        for (int i = 0; i < ingredientTypes.Count; i++)
+            PrepareSteps.Add(ingredientTypes[i], measures[i]);
     }
 
     public void Select()

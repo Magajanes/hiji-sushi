@@ -368,8 +368,7 @@ MonoBehaviour:
   IsSelected: 0
   CurrentSlot: 0
   DishName: Sushi Skin
-  TimeToDeliver: 0
-  TimeToPrepare: 0
+  TimeToDeliver: 30
   Highlight: {fileID: 1067532455347024}
   Timer: {fileID: 114126050437665826}
   PrepareInstructions: {fileID: 11400000, guid: 4b455465fa080ba42a209fae106f3076,
