@@ -28,7 +28,7 @@ public class Recipe : MonoBehaviour
     {
         SetHighlight();
 
-        SetSteps(PrepareInstructions.IngredientsList, PrepareInstructions.MeasuresList);
+        PrepareSteps = PrepareInstructions.SetSteps();
 
         deliveryTime = TimeToDeliver;
 
@@ -43,12 +43,6 @@ public class Recipe : MonoBehaviour
 
         if (deliveryTime <= 0f)
             GameManager.Checker.OrderFailed(this);
-    }
-
-    private void SetSteps(List<string> ingredientTypes, List<int> measures)
-    {
-        for (int i = 0; i < ingredientTypes.Count; i++)
-            PrepareSteps.Add(ingredientTypes[i], measures[i]);
     }
 
     public void Select()

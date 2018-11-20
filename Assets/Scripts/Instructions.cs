@@ -7,9 +7,21 @@ public class Instructions : ScriptableObject
 {
     public float TimeToPrepare;
 
+    public float Points;
+
     public GameObject DishPrefab;
 
     public List<string> IngredientsList;
 
     public List<int> MeasuresList;
+
+    public Dictionary<string,int> SetSteps()
+    {
+        var steps = new Dictionary<string, int>();
+
+        for (int i = 0; i < IngredientsList.Count; i++)
+            steps.Add(IngredientsList[i], MeasuresList[i]);
+
+        return steps;
+    }
 }

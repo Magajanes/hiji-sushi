@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\HygieneManager.cs" />
     <Compile Include="Assets\Scripts\Ingredient.cs" />
     <Compile Include="Assets\Scripts\IngredientMixer.cs" />
     <Compile Include="Assets\Scripts\Instructions.cs" />

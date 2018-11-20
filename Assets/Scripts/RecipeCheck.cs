@@ -8,6 +8,7 @@ public class RecipeCheck : MonoBehaviour
     public Recipe CurrentRecipe;
 
     public IngredientMixer Mixer;
+
     public OrderQueue Orders;
 
     public Coroutine PrepareCoroutine;

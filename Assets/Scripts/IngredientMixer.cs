@@ -16,6 +16,22 @@ public class IngredientMixer : MonoBehaviour
         PrepareSlots();
     }
 
+    private void PrepareSlots()
+    {
+        var nextPosition = StartPosition;
+
+        for (int i = 0; i < Slots.Length; i++)
+        {
+            Slots[i] = new Slot();
+
+            Slots[i].CurrentState = Slot.State.Empty;
+
+            Slots[i].SlotPosition = nextPosition;
+
+            nextPosition += 1.5f * Vector3.right;
+        }
+    }
+
     public void AddIngredient(Ingredient ingredient)
     {
         for (int i = 0; i < Slots.Length; i++)
@@ -45,22 +61,6 @@ public class IngredientMixer : MonoBehaviour
 
                 break;
             }
-        }
-    }
-
-    private void PrepareSlots()
-    {
-        var nextPosition = StartPosition;
-
-        for (int i = 0; i < Slots.Length; i++)
-        {
-            Slots[i] = new Slot();
-
-            Slots[i].CurrentState = Slot.State.Empty;
-
-            Slots[i].SlotPosition = nextPosition;
-
-            nextPosition += 1.5f * Vector3.right;
         }
     }
 

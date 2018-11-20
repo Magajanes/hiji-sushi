@@ -6,19 +6,19 @@ public class OrderQueue : MonoBehaviour
 {
     private readonly Vector3 StartPosition = new Vector3(-2f, 3.4f, 0f);
 
-    private float orderInterval = 3f;
-
     public RecipePanel Panel;
 
-    private List<GameObject> currentLevelOrders;
-
-    public Slot[] Slots = new Slot[7];
+    public Slot[] SlotsArray = new Slot[7];
 
     public List<Recipe> OrderList = new List<Recipe>();
 
+    private float orderInterval = 3f;
+
+    private List<GameObject> currentLevelOrders;
+
     private void Start()
     {
-        currentLevelOrders = GameManager.GetCurrentRecipesList();
+        currentLevelOrders = GameManager.GetCurrentOrdersList();
 
         PrepareSlots();
     }
@@ -40,13 +40,13 @@ public class OrderQueue : MonoBehaviour
     {
         var nextPosition = StartPosition;
 
-        for (int i = 0; i < Slots.Length; i++)
+        for (int i = 0; i < SlotsArray.Length; i++)
         {
-            Slots[i] = new Slot();
+            SlotsArray[i] = new Slot();
 
-            Slots[i].CurrentState = Slot.State.Empty;
+            SlotsArray[i].CurrentState = Slot.State.Empty;
 
-            Slots[i].SlotPosition = nextPosition;
+            SlotsArray[i].SlotPosition = nextPosition;
 
             nextPosition += 2f * Vector3.right;
         }
@@ -64,24 +64,24 @@ public class OrderQueue : MonoBehaviour
 
         OrderList.Add(recipe);
 
-        ScrollOrders(OrderList);
+        ScrollOrders();
     }
 
-    private void ScrollOrders(List<Recipe> orders)
+    private void ScrollOrders()
     {
-        foreach (Recipe recipe in orders)
+        foreach (Recipe recipe in OrderList)
         {
             var currentPos = recipe.transform.position;
 
             var newPos = currentPos + 2f * Vector3.right;
 
-            if (recipe.CurrentSlot < 6 && Slots[recipe.CurrentSlot + 1].CurrentState == Slot.State.Empty)
+            if (recipe.CurrentSlot < 6 && SlotsArray[recipe.CurrentSlot + 1].CurrentState == Slot.State.Empty)
             {
-                Slots[recipe.CurrentSlot].CurrentState = Slot.State.Empty;
+                SlotsArray[recipe.CurrentSlot].CurrentState = Slot.State.Empty;
 
                 recipe.CurrentSlot++;
 
-                Slots[recipe.CurrentSlot].CurrentState = Slot.State.Occupied;
+                SlotsArray[recipe.CurrentSlot].CurrentState = Slot.State.Occupied;
 
                 iTween.MoveTo(recipe.gameObject, iTween.Hash("position", newPos,
                                                              "easetype", iTween.EaseType.easeOutExpo,
@@ -92,7 +92,7 @@ public class OrderQueue : MonoBehaviour
 
     public void EmptySlot(Recipe recipe)
     {
-        Slots[recipe.CurrentSlot].CurrentState = Slot.State.Empty;
+        SlotsArray[recipe.CurrentSlot].CurrentState = Slot.State.Empty;
 
         OrderList.Remove(recipe);
 

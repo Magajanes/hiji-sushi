@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
         Checker = RecipeChecker;
     }
 
-    public static List<GameObject> GetCurrentRecipesList()
+    public static List<GameObject> GetCurrentOrdersList()
     {
-        return CurrentLevel.LevelRecipesList;
+        return CurrentLevel.LevelOrdersList;
     }
 }
