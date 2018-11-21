@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Sushi Atum
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
+  Points: 30
   DishPrefab: {fileID: 1489019708334068, guid: 7ada12ba812866644a469c293fdb321a, type: 2}
   IngredientsList:
   - Arroz

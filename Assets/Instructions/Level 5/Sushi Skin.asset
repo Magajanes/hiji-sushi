@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Sushi Skin
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
+  Points: 30
   DishPrefab: {fileID: 1716519497919268, guid: c855dde5a908b644892a29e62dcaeda8, type: 2}
   IngredientsList:
   - Arroz

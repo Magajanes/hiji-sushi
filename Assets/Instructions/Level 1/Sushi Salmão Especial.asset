@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: "Sushi Salm\xE3o Especial"
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
+  Points: 30
   DishPrefab: {fileID: 1727917367748230, guid: e0444dd207b68f9418b9b792a3dcc711, type: 2}
   IngredientsList:
   - Arroz

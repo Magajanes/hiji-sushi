@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: "Salm\xE3o Roll"
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
+  Points: 30
   DishPrefab: {fileID: 1287769402749066, guid: 50522bf90aa1e49448a00ead704fc48d, type: 2}
   IngredientsList:
   - Alga

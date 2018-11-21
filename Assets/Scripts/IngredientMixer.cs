@@ -116,6 +116,8 @@ public class IngredientMixer : MonoBehaviour
                                         "easetype", iTween.EaseType.easeOutBounce,
                                         "time", 1f));
 
+        recipe.GivePoints();
+
         yield return new WaitForSeconds(2.5f);
 
         Destroy(dish);

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Tekamaki
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
+  Points: 30
   DishPrefab: {fileID: 1185249866769458, guid: 6208f383c09c366459c543a2157316dc, type: 2}
   IngredientsList:
   - Alga

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Sunomono
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
+  Points: 30
   DishPrefab: {fileID: 1047341431471578, guid: f3273b25ba7240646bf10a0ee1183dd0, type: 2}
   IngredientsList:
   - Pepino

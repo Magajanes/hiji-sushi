@@ -39,7 +39,7 @@ public class RecipeCheck : MonoBehaviour
             return;
         }
 
-        Debug.Log(CurrentRecipe.DishName + " não foi entregue!");
+        Debug.Log(CurrentRecipe.DishName + " está incorreto e não foi entregue!");
     }
 
     public void OrderFailed(Recipe order)
@@ -50,6 +50,10 @@ public class RecipeCheck : MonoBehaviour
 
             PrepareCoroutine = null;
         }
+
+        var penalty = order.PrepareInstructions.Points;
+
+        GameManager.Instance.RemovePoints(penalty);
 
         Orders.EmptySlot(order);
 

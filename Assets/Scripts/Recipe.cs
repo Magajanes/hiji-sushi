@@ -72,4 +72,11 @@ public class Recipe : MonoBehaviour
     {
         Highlight.SetActive(IsSelected);
     }
+
+    public void GivePoints()
+    {
+        var points = PrepareInstructions.Points * (deliveryTime / TimeToDeliver);
+
+        GameManager.Instance.AddPoints(points);
+    }
 }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: "Spice Salm\xE3o"
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
+  Points: 30
   DishPrefab: {fileID: 1405018933054552, guid: 2ca9182e8197bb647a05a99d6c520c51, type: 2}
   IngredientsList:
   - Alga
