@@ -10,11 +10,9 @@ public class GameManager : MonoBehaviour
 
     public static Level CurrentLevel;
 
-    public static RecipeCheck Checker;
-
     public List<Level> GameLevels;
 
-    public RecipeCheck RecipeChecker;
+    public RecipeCheck Checker;
 
     public float Score;
 
@@ -25,8 +23,6 @@ public class GameManager : MonoBehaviour
         Instance = this;
 
         CurrentLevel = GameLevels[0];
-
-        Checker = RecipeChecker;
     }
 
     public static List<GameObject> GetCurrentOrdersList()

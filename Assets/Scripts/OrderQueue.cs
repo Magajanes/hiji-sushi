@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OrderQueue : MonoBehaviour
+public class OrderQueue : SlotBehaviour
 {
     private readonly Vector3 StartPosition = new Vector3(-2f, 3.4f, 0f);
 
@@ -20,7 +20,7 @@ public class OrderQueue : MonoBehaviour
     {
         currentLevelOrders = GameManager.GetCurrentOrdersList();
 
-        PrepareSlots();
+        PrepareSlots(StartPosition, SlotsArray, 2f);
     }
 
     private void Update()
@@ -33,22 +33,6 @@ public class OrderQueue : MonoBehaviour
                 ReceiveOrder();
 
             orderInterval = Random.Range(1f, 5f);
-        }
-    }
-
-    private void PrepareSlots()
-    {
-        var nextPosition = StartPosition;
-
-        for (int i = 0; i < SlotsArray.Length; i++)
-        {
-            SlotsArray[i] = new Slot();
-
-            SlotsArray[i].CurrentState = Slot.State.Empty;
-
-            SlotsArray[i].SlotPosition = nextPosition;
-
-            nextPosition += 2f * Vector3.right;
         }
     }
 

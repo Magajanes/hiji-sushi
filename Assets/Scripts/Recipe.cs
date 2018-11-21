@@ -42,14 +42,14 @@ public class Recipe : MonoBehaviour
         Timer.value = deliveryTime;
 
         if (deliveryTime <= 0f)
-            GameManager.Checker.OrderFailed(this);
+            GameManager.Instance.Checker.OrderFailed(this);
     }
 
     public void Select()
     {
-        if (GameManager.Checker.PrepareCoroutine == null)
+        if (GameManager.Instance.Checker.PrepareCoroutine == null)
         {
-            var current = GameManager.Checker.CurrentRecipe;
+            var current = GameManager.Instance.Checker.CurrentRecipe;
 
             if (current != null)
             {
@@ -58,7 +58,7 @@ public class Recipe : MonoBehaviour
                 current.SetHighlight();
             }
 
-            GameManager.Checker.CurrentRecipe = this;
+            GameManager.Instance.Checker.CurrentRecipe = this;
 
             IsSelected = true;
 

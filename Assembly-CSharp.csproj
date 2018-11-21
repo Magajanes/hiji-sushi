@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CameraMove.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HygieneManager.cs" />
     <Compile Include="Assets\Scripts\Ingredient.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Scripts\RecipeCheck.cs" />
     <Compile Include="Assets\Scripts\RecipePanel.cs" />
     <Compile Include="Assets\Scripts\Slot.cs" />
+    <Compile Include="Assets\Scripts\SlotBehaviour.cs" />
     <Compile Include="Assets\Scripts\Used.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

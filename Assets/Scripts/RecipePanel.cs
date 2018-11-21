@@ -8,9 +8,9 @@ public class RecipePanel : MonoBehaviour
     private const float HIDDEN_POSITION = 6.4f;
 
     public Transform buttonIcon;
+    public RecipeCheck Checker;
 
     public Text RecipeTitle;
-
     public Text[] Instructions;
 
     private bool isShowing = false;
@@ -32,7 +32,7 @@ public class RecipePanel : MonoBehaviour
 
     public void SetPanel(object sender, EventArgs args)
     {
-        ShowRecipe(GameManager.Checker.CurrentRecipe);
+        ShowRecipe(Checker.CurrentRecipe);
     }
 
     public void ShowRecipe(Recipe recipe)

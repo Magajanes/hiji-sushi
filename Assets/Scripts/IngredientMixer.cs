@@ -1,44 +1,27 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class IngredientMixer : MonoBehaviour
+public class IngredientMixer : SlotBehaviour
 {
     public readonly Vector3 StartPosition = new Vector3(2.75f, -3.2f, 0f);
 
-    public Slot[] Slots = new Slot[5];
+    public Slot[] SlotsArray = new Slot[5];
 
     public Used[] UsedIngredients = new Used[5];
-
     public int[] Measures = new int[5];
 
     private void Start()
     {
-        PrepareSlots();
-    }
-
-    private void PrepareSlots()
-    {
-        var nextPosition = StartPosition;
-
-        for (int i = 0; i < Slots.Length; i++)
-        {
-            Slots[i] = new Slot();
-
-            Slots[i].CurrentState = Slot.State.Empty;
-
-            Slots[i].SlotPosition = nextPosition;
-
-            nextPosition += 1.5f * Vector3.right;
-        }
+        PrepareSlots(StartPosition, SlotsArray, 1.5f);
     }
 
     public void AddIngredient(Ingredient ingredient)
     {
-        for (int i = 0; i < Slots.Length; i++)
+        for (int i = 0; i < SlotsArray.Length; i++)
         {
-            if (Slots[i].CurrentState == Slot.State.Empty)
+            if (SlotsArray[i].CurrentState == Slot.State.Empty)
             {
-                var ing = Instantiate(ingredient.UsedPrefab, Slots[i].SlotPosition, Quaternion.identity);
+                var ing = Instantiate(ingredient.UsedPrefab, SlotsArray[i].SlotPosition, Quaternion.identity);
 
                 var used = ing.GetComponent<Used>();
 
@@ -48,7 +31,7 @@ public class IngredientMixer : MonoBehaviour
 
                 used.AmountText.text = "x" + Measures[i];
 
-                Slots[i].CurrentState = Slot.State.Occupied;
+                SlotsArray[i].CurrentState = Slot.State.Occupied;
 
                 break;
             }
@@ -66,14 +49,14 @@ public class IngredientMixer : MonoBehaviour
 
     public void EmptyMixer()
     {
-        for (int i = 0; i < Slots.Length; i++)
+        for (int i = 0; i < SlotsArray.Length; i++)
         {
             if(UsedIngredients[i] != null)
                 Destroy(UsedIngredients[i].gameObject);
 
             Measures[i] = 0;
 
-            Slots[i].CurrentState = Slot.State.Empty;
+            SlotsArray[i].CurrentState = Slot.State.Empty;
         }
     }
 
