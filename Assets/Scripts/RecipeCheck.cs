@@ -44,16 +44,14 @@ public class RecipeCheck : MonoBehaviour
 
     public void OrderFailed(Recipe order)
     {
-        if (PrepareCoroutine != null)
+        if (CurrentRecipe == order && PrepareCoroutine != null)
         {
             StopCoroutine(PrepareCoroutine);
 
             PrepareCoroutine = null;
         }
 
-        var penalty = order.PrepareInstructions.Points;
-
-        GameManager.Instance.RemovePoints(penalty);
+        order.Penalize();
 
         Orders.EmptySlot(order);
 
