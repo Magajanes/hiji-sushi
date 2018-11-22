@@ -10,6 +10,8 @@ public class IngredientMixer : SlotBehaviour
     public Used[] UsedIngredients = new Used[5];
     public int[] Measures = new int[5];
 
+    public HygieneManager Manager;
+
     private void Start()
     {
         PrepareSlots(StartPosition, SlotsArray, 1.5f);
@@ -99,7 +101,18 @@ public class IngredientMixer : SlotBehaviour
                                         "easetype", iTween.EaseType.easeOutBounce,
                                         "time", 1f));
 
-        recipe.GivePoints();
+        if (Manager.HygieneCheck())
+        {
+            Debug.Log(recipe.DishName + " perfeito!");
+
+            recipe.GivePoints();
+        }
+        else
+        {
+            Debug.Log(recipe.DishName + " estragado!");
+
+            recipe.Penalize();
+        }
 
         yield return new WaitForSeconds(2.5f);
 

@@ -82,6 +82,6 @@ public class Recipe : MonoBehaviour
 
     public void Penalize()
     {
-        GameManager.Instance.RemovePoints(PrepareInstructions.Points);
+        GameManager.Instance.RemovePoints(PrepareInstructions.Points / 2f);
     }
 }

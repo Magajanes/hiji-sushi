@@ -830,6 +830,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   Measures: 0000000000000000000000000000000000000000
+  Manager: {fileID: 309086002}
 --- !u!1 &658384125
 GameObject:
   m_ObjectHideFlags: 0

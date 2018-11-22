@@ -8,7 +8,6 @@ public class RecipeCheck : MonoBehaviour
     public Recipe CurrentRecipe;
 
     public IngredientMixer Mixer;
-
     public OrderQueue Orders;
 
     public Coroutine PrepareCoroutine;
@@ -99,8 +98,6 @@ public class RecipeCheck : MonoBehaviour
         mixer.EmptyMixer();
 
         Orders.EmptySlot(CurrentRecipe);
-
-        Debug.Log(CurrentRecipe.DishName + " perfeito!");
 
         mixer.DeliverDish(CurrentRecipe);
 
