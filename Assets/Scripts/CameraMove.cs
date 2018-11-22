@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMove : MonoBehaviour {
+public class CameraMove : MonoBehaviour
+{
+    public void MoveCamera()
+    {
+        var newPosition = transform.position;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        newPosition.x = -newPosition.x;
+
+        iTween.MoveTo(gameObject, iTween.Hash("position", newPosition,
+                                              "easetype", iTween.EaseType.easeInOutExpo,
+                                              "time", 1f));
+    }
 }
