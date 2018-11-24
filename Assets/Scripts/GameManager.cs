@@ -45,4 +45,14 @@ public class GameManager : MonoBehaviour
 
         ScorePanel.text = Mathf.Ceil(Score).ToString();
     }
+
+    public void LevelUp()
+    {
+        
+    }
+
+    public void LevelDown()
+    {
+
+    }
 }

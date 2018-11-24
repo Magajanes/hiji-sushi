@@ -23,7 +23,11 @@ public class IngredientMixer : SlotBehaviour
         {
             if (SlotsArray[i].CurrentState == Slot.State.Empty)
             {
-                var ing = Instantiate(ingredient.UsedPrefab, SlotsArray[i].SlotPosition, Quaternion.identity);
+                var ing = Instantiate(ingredient.UsedPrefab, ingredient.transform.position, Quaternion.identity);
+
+                iTween.MoveTo(ing, iTween.Hash("position", SlotsArray[i].SlotPosition,
+                                               "easetype", iTween.EaseType.easeInOutExpo,
+                                               "time", 0.25f));
 
                 var used = ing.GetComponent<Used>();
 
@@ -40,6 +44,13 @@ public class IngredientMixer : SlotBehaviour
 
             if (ingredient.Name == UsedIngredients[i].Name)
             {
+                var ing = Instantiate(ingredient.UsedPrefab, ingredient.transform.position, Quaternion.identity);
+
+                iTween.MoveTo(ing, iTween.Hash("position", SlotsArray[i].SlotPosition,
+                                               "easetype", iTween.EaseType.easeInOutExpo,
+                                               "time", 0.25f));
+                Destroy(ing, 0.25f);
+
                 Measures[i]++;
 
                 UsedIngredients[i].AmountText.text = "x" + Measures[i];
