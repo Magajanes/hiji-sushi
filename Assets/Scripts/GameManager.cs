@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public static Level CurrentLevel;
+    public Level CurrentLevel;
+
+    public int OrdersLevel = 1;
 
     public List<Level> GameLevels;
 
@@ -18,14 +20,17 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI ScorePanel;
 
+    public delegate void LevelUpAction();
+    public static event LevelUpAction OnLevelChange;
+
     private void Awake()
     {
         Instance = this;
 
-        CurrentLevel = GameLevels[0];
+        CurrentLevel = GameLevels[OrdersLevel - 1];
     }
 
-    public static List<GameObject> GetCurrentOrdersList()
+    public List<GameObject> GetCurrentOrdersList()
     {
         return CurrentLevel.LevelOrdersList;
     }
@@ -35,6 +40,14 @@ public class GameManager : MonoBehaviour
         Score += points;
 
         ScorePanel.text = Mathf.Ceil(Score).ToString();
+
+        if (OrdersLevel <= 8 && Score >= OrdersLevel * 100)
+        {
+            LevelUp();
+
+            if (OnLevelChange != null)
+                OnLevelChange();
+        }
     }
 
     public void RemovePoints(float points)
@@ -44,15 +57,25 @@ public class GameManager : MonoBehaviour
         Score = Score <= 0f ? 0f : Score;
 
         ScorePanel.text = Mathf.Ceil(Score).ToString();
+
+        if (OrdersLevel > 1 && Score < (OrdersLevel - 1) * 100)
+        {
+            LevelDown();
+
+            if (OnLevelChange != null)
+                OnLevelChange();
+        }
     }
 
     public void LevelUp()
     {
-        
+        OrdersLevel++;
+        CurrentLevel = GameLevels[OrdersLevel - 1];
     }
 
     public void LevelDown()
     {
-
+        OrdersLevel--;
+        CurrentLevel = GameLevels[OrdersLevel - 1];
     }
 }

@@ -5,7 +5,7 @@ public class HygieneManager : MonoBehaviour
 {
     public Slider HygieneBar;
 
-    private float hygieneCounter;
+    public float HygieneCounter;
 
     [SerializeField]
     private float DirtRate = 1f;
@@ -14,16 +14,16 @@ public class HygieneManager : MonoBehaviour
     {
         HygieneBar.maxValue = 100f;
 
-        hygieneCounter = HygieneBar.maxValue;
+        HygieneCounter = HygieneBar.maxValue;
     }
 
     private void Update()
     {
-        hygieneCounter -= Time.deltaTime * DirtRate;
+        HygieneCounter -= Time.deltaTime * DirtRate;
 
-        HygieneBar.value = hygieneCounter;
+        HygieneBar.value = HygieneCounter;
 
-        hygieneCounter = Mathf.Clamp(hygieneCounter, 0f, 100f);
+        HygieneCounter = Mathf.Clamp(HygieneCounter, 0f, 100f);
     }
 
     public bool HygieneCheck()

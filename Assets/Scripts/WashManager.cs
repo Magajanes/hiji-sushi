@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WashManager : MonoBehaviour {
+public class WashManager : MonoBehaviour
+{
+    public HygieneManager Manager;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void WashHands()
+    {
+        Manager.HygieneCounter = 100f;
+    }
 }

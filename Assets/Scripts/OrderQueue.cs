@@ -17,7 +17,9 @@ public class OrderQueue : SlotBehaviour
 
     private void Start()
     {
-        currentLevelOrders = GameManager.GetCurrentOrdersList();
+        GameManager.OnLevelChange += UpdateLevels;
+
+        UpdateLevels();
 
         PrepareSlots(StartPosition, SlotsArray, 2f);
     }
@@ -33,6 +35,11 @@ public class OrderQueue : SlotBehaviour
 
             orderInterval = Random.Range(1f, 5f);
         }
+    }
+
+    private void UpdateLevels()
+    {
+        currentLevelOrders = GameManager.Instance.GetCurrentOrdersList();
     }
 
     public void ReceiveOrder()
@@ -83,5 +90,10 @@ public class OrderQueue : SlotBehaviour
             Panel.ResetInfo();
 
         Destroy(recipe.gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.OnLevelChange -= UpdateLevels;
     }
 }
