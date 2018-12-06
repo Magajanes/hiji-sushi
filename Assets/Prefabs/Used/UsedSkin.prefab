@@ -45,7 +45,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1761347824842750
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Skin
   AmountText: {fileID: 114666357242116012}
+  MeasuresPanel: {fileID: 1738845443073620}
 --- !u!114 &114222486834227130
 MonoBehaviour:
   m_ObjectHideFlags: 1

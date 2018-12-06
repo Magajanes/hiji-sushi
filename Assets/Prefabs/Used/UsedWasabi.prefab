@@ -62,7 +62,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4720870905135568
 Transform:
   m_ObjectHideFlags: 1
@@ -226,6 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Wasabi
   AmountText: {fileID: 114578012825169710}
+  MeasuresPanel: {fileID: 1779427394902930}
 --- !u!114 &114962726696943414
 MonoBehaviour:
   m_ObjectHideFlags: 1

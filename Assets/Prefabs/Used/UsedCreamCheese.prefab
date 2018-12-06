@@ -45,7 +45,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1210861803585074
 GameObject:
   m_ObjectHideFlags: 1
@@ -111,6 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Cream Cheese
   AmountText: {fileID: 114987810214638456}
+  MeasuresPanel: {fileID: 1094013968465174}
 --- !u!114 &114674356582925724
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1257881518557078
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Kani
   AmountText: {fileID: 114151891567255550}
+  MeasuresPanel: {fileID: 1249032871322076}
 --- !u!212 &212308765529963896
 SpriteRenderer:
   m_ObjectHideFlags: 1

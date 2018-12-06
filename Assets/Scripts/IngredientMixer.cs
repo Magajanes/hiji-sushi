@@ -25,11 +25,13 @@ public class IngredientMixer : SlotBehaviour
             {
                 var ing = Instantiate(ingredient.UsedPrefab, ingredient.transform.position, Quaternion.identity);
 
+                var used = ing.GetComponent<Used>();
+
                 iTween.MoveTo(ing, iTween.Hash("position", SlotsArray[i].SlotPosition,
                                                "easetype", iTween.EaseType.easeInOutExpo,
-                                               "time", 0.25f));
-
-                var used = ing.GetComponent<Used>();
+                                               "time", 0.25f,
+                                               "oncompletetarget", used.gameObject,
+                                               "oncomplete", "ActivatePanel"));
 
                 UsedIngredients[i] = used;
 

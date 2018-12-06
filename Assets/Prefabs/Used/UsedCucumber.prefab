@@ -62,7 +62,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4741770869030556
 Transform:
   m_ObjectHideFlags: 1
@@ -90,6 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Pepino
   AmountText: {fileID: 114777739328047512}
+  MeasuresPanel: {fileID: 1974480736604070}
 --- !u!114 &114594450425125110
 MonoBehaviour:
   m_ObjectHideFlags: 1

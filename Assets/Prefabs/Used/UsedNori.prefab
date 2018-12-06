@@ -62,7 +62,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4911496768199404
 Transform:
   m_ObjectHideFlags: 1
@@ -205,6 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Alga
   AmountText: {fileID: 114294812027068940}
+  MeasuresPanel: {fileID: 1933084406407910}
 --- !u!114 &114661896551260620
 MonoBehaviour:
   m_ObjectHideFlags: 1
