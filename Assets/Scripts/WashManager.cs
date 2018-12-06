@@ -6,8 +6,13 @@ public class WashManager : MonoBehaviour
 {
     public HygieneManager Manager;
 
-    public void WashHands()
+    public Hands HandsObject;
+
+    public void WashHands(int step)
     {
-        Manager.HygieneCounter = 100f;
+        var willGivePoints = HandsObject.CanWashHands(step);
+
+        if (willGivePoints)
+            Manager.HygieneCounter += 10f;
     }
 }
