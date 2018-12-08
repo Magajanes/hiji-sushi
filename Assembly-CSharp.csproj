@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\SlotBehaviour.cs" />
     <Compile Include="Assets\Scripts\Used.cs" />
     <Compile Include="Assets\Scripts\WashManager.cs" />
+    <Compile Include="Assets\Scripts\WashStep.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

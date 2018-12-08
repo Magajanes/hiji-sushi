@@ -33,7 +33,9 @@ public class OrderQueue : SlotBehaviour
             if(OrderList.Count < 6)
                 ReceiveOrder();
 
-            orderInterval = Random.Range(1f, 5f);
+            float chance = Random.Range(0f, 100f);
+
+            orderInterval = chance > 20f ? Random.Range(3f, 6f) : Random.Range(1f, 3f);
         }
     }
 
