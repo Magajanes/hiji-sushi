@@ -54,14 +54,16 @@ public class WashManager : MonoBehaviour
 
     private void EvaluateBeforeSoap(WashStep step)
     {
-        if (!step.Done)
+        if (!step.Done && step.IsInitial)
         {
             WashHands(step);
 
             step.Done = true;
         }
-        else
+        else if (step.Done)
             Debug.Log("Step already done!");
+        else if (!step.IsInitial)
+            Debug.Log("This is not an initial step!");
 
         if (StepsComplete(FirstWashSteps))
             WashEvaluation = EvaluateAfterSoap;
@@ -69,11 +71,15 @@ public class WashManager : MonoBehaviour
 
     private void EvaluateAfterSoap(WashStep step)
     {
-        if (!step.Done)
+        if (!step.Done && !step.IsInitial)
         {
             WashHands(step);
 
             step.Done = true;
         }
+        else if (step.Done)
+            Debug.Log("Step already done!");
+        else if (step.IsInitial)
+            Debug.Log("This is not an initial step!");
     }
 }
