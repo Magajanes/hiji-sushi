@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public float DirtRate = 1f;
+    public float WaitRate = 1f;
+
     public Level CurrentLevel;
 
     public int OrdersLevel = 1;

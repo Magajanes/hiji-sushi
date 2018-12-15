@@ -7,9 +7,6 @@ public class HygieneManager : MonoBehaviour
 
     public float HygieneCounter;
 
-    [SerializeField]
-    private float DirtRate = 1f;
-
     private void Start()
     {
         HygieneBar.maxValue = 100f;
@@ -19,7 +16,7 @@ public class HygieneManager : MonoBehaviour
 
     private void Update()
     {
-        HygieneCounter -= Time.deltaTime * DirtRate;
+        HygieneCounter -= Time.deltaTime * GameManager.Instance.DirtRate;
 
         HygieneBar.value = HygieneCounter;
 

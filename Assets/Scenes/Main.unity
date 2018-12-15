@@ -430,7 +430,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HygieneBar: {fileID: 868154422}
   HygieneCounter: 0
-  DirtRate: 1
 --- !u!4 &309086003
 Transform:
   m_ObjectHideFlags: 0
@@ -2633,6 +2632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0a97ae4dab10148a7ba717a6ce5c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DirtRate: 1
+  WaitRate: 1
   CurrentLevel: {fileID: 0}
   OrdersLevel: 1
   GameLevels:

@@ -37,7 +37,7 @@ public class Recipe : MonoBehaviour
 
     private void Update()
     {
-        deliveryTime -= Time.deltaTime;
+        deliveryTime -= Time.deltaTime * GameManager.Instance.WaitRate;
 
         Timer.value = deliveryTime;
 
