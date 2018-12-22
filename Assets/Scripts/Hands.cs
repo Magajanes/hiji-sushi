@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Hands : MonoBehaviour
 {
+    public float WashAnimationTime;
+
     public Animator HandsAnimator;
 
     private Coroutine washCoroutine = null;
@@ -25,7 +27,7 @@ public class Hands : MonoBehaviour
         HandsAnimator.SetInteger("StepNumber", step);
         HandsAnimator.SetBool("WashingHands", true);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(WashAnimationTime);
 
         washCoroutine = null;
 

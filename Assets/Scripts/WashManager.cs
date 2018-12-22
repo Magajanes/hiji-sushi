@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class WashManager : MonoBehaviour
 {
+    public readonly Vector3 WashHandsPosition = new Vector3(-5.7f, 0f, 0f);
+    public readonly Vector3 HideHandsPosition = new Vector3(-5.7f, -4f - 0f);
+
     private float hygieneGauge = 0f;
 
     public WashStep[] FirstWashSteps = new WashStep[2];
@@ -16,14 +19,24 @@ public class WashManager : MonoBehaviour
     private delegate void WashEvaluationAction(WashStep step);
     private WashEvaluationAction WashEvaluation;
 
+    private delegate void WashButtonAction();
+    private WashButtonAction HandsSetup;
+
     private void Start()
     {
         WashEvaluation = EvaluateBeforeSoap;
+
+        HandsSetup = PrepareHandsToWash;
     }
 
     public void EvaluateStep(WashStep step)
     {
         WashEvaluation(step);
+    }
+
+    public void WashSetup()
+    {
+        HandsSetup();
     }
 
     public void WashHands(WashStep step)
@@ -50,6 +63,34 @@ public class WashManager : MonoBehaviour
         }
 
         return count == steps.Length;
+    }
+
+    private void ResetSteps()
+    {
+        foreach (WashStep step in FirstWashSteps)
+            step.Done = false;
+
+        foreach (WashStep step in ComplexWashSteps)
+            step.Done = false;
+    }
+
+    private void PrepareHandsToWash()
+    {
+        iTween.MoveTo(HandsObject.gameObject, iTween.Hash("position", WashHandsPosition,
+                                                          "easetype", iTween.EaseType.easeInOutExpo,
+                                                          "time", 1f,
+                                                          "oncomplete", "ResetSteps"));
+
+        HandsSetup = PrepareHandsToCook;
+    }
+
+    private void PrepareHandsToCook()
+    {
+        iTween.MoveTo(HandsObject.gameObject, iTween.Hash("position", HideHandsPosition,
+                                                  "easetype", iTween.EaseType.easeOutExpo,
+                                                  "time", 1f));
+
+        HandsSetup = PrepareHandsToWash;
     }
 
     private void EvaluateBeforeSoap(WashStep step)

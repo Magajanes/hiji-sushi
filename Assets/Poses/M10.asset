@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: M10
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: ESQ M10/ESQ M10 dir dedao 1
+    localPosition: {x: 8.13614, y: -2.9235244, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.98214173, w: 0.18814252}
+    localScale: {x: 2.1326, y: 2.1326, z: 2.1326}
+  - path: ESQ M10/ESQ M10 dir dedao 1/ESQ M10 dir dedao 2
+    localPosition: {x: 1.2975006, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.37834537, w: 0.92566454}
+    localScale: {x: 1.8566, y: 1.8566, z: 1.8566}
+  - path: ESQ M10/ESQ M10 dir dedao 1/ESQ M10 dir dedo I 1
+    localPosition: {x: 1.9694841, y: -1.7303534, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.33696082, w: 0.94151866}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M10/ESQ M10 dir dedao 1/ESQ M10 dir dedo I 1/New bone
+    localPosition: {x: 0.8596333, y: 0.0000004917383, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.2830946, w: 0.959092}
+    localScale: {x: 0.6880748, y: 0.6880748, z: 0.6880748}
+  - path: ESQ M10/ESQ M10 dir dedao 1/ESQ M10 dir dedo II III IV
+    localPosition: {x: 1.8242247, y: -2.1968734, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.29202417, w: 0.956411}
+    localScale: {x: 1.35671, y: 1.1718, z: 1.1718}
+  - path: ESQ M10/ESQ M10 esq 1
+    localPosition: {x: 4.728199, y: -2.4268885, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.40726605, w: 0.91330963}
+    localScale: {x: 3.874, y: 3.874, z: 3.874}
+  - path: ESQ M10/ESQ M10 esq 1/ESQ M10 esq 2
+    localPosition: {x: 1.2750704, y: 0.00000009231488, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.33965307, w: 0.9405508}
+    localScale: {x: 0.5980879, y: 0.5980879, z: 0.5980879}
+  - path: ESQ M10/ESQ M10 esq 1/ESQ M10 esq 2/ESQ M10 esq 3
+    localPosition: {x: 0.29400432, y: 0.000000021800332, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.25866395, w: 0.96596736}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M10/ESQ M10 papel
+    localPosition: {x: 5.9580164, y: 5.1081524, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.4438227, w: 0.8961147}
+    localScale: {x: 1.7884, y: 1.7884, z: 1.7884}

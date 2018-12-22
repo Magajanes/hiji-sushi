@@ -48,6 +48,8 @@ public class RecipeCheck : MonoBehaviour
             StopCoroutine(PrepareCoroutine);
 
             PrepareCoroutine = null;
+
+            Mixer.EmptyMixer();
         }
 
         order.Penalize();
