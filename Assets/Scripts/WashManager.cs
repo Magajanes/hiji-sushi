@@ -39,7 +39,7 @@ public class WashManager : MonoBehaviour
         HandsSetup();
     }
 
-    public void WashHands(WashStep step)
+    /*public void WashHands(WashStep step)
     {
         var willGivePoints = HandsObject.CanWashHands(step.WashStepID);
 
@@ -50,6 +50,14 @@ public class WashManager : MonoBehaviour
             if (hygieneGauge >= Manager.HygieneCounter)
                 Manager.HygieneCounter = hygieneGauge;
         }
+    }*/
+
+    private void EvaluateHygienePoints(WashStep step)
+    {
+        hygieneGauge += step.PointsToGive;
+
+        if (hygieneGauge >= Manager.HygieneCounter)
+            Manager.HygieneCounter = hygieneGauge;
     }
 
     private bool StepsComplete(WashStep[] steps)
@@ -67,6 +75,10 @@ public class WashManager : MonoBehaviour
 
     private void ResetSteps()
     {
+        hygieneGauge = 0f;
+
+        WashEvaluation = EvaluateBeforeSoap;
+
         foreach (WashStep step in FirstWashSteps)
             step.Done = false;
 
@@ -78,8 +90,9 @@ public class WashManager : MonoBehaviour
     {
         iTween.MoveTo(HandsObject.gameObject, iTween.Hash("position", WashHandsPosition,
                                                           "easetype", iTween.EaseType.easeInOutExpo,
-                                                          "time", 1f,
-                                                          "oncomplete", "ResetSteps"));
+                                                          "time", 1f));
+
+        ResetSteps();
 
         HandsSetup = PrepareHandsToCook;
     }
@@ -94,6 +107,43 @@ public class WashManager : MonoBehaviour
     }
 
     private void EvaluateBeforeSoap(WashStep step)
+    {
+        if (HandsObject.CanWashHands(step.WashStepID))
+        {
+            if (!step.Done && step.IsInitial)
+            {
+                EvaluateHygienePoints(step);
+
+                step.Done = true;
+            }
+            else if (step.Done)
+                Debug.Log("Step already done!");
+            else if (!step.IsInitial)
+                Debug.Log("This is not an initial step!");
+
+            if (StepsComplete(FirstWashSteps))
+                WashEvaluation = EvaluateAfterSoap;
+        }
+    }
+
+    private void EvaluateAfterSoap(WashStep step)
+    {
+        if (HandsObject.CanWashHands(step.WashStepID))
+        {
+            if (!step.Done && !step.IsInitial)
+            {
+                EvaluateHygienePoints(step);
+
+                step.Done = true;
+            }
+            else if (step.Done)
+                Debug.Log("Step already done!");
+            else if (step.IsInitial)
+                Debug.Log("This is not an initial step!");
+        }
+    }
+
+    /*private void EvaluateBeforeSoap(WashStep step)
     {
         if (!step.Done && step.IsInitial)
         {
@@ -122,5 +172,5 @@ public class WashManager : MonoBehaviour
             Debug.Log("Step already done!");
         else if (step.IsInitial)
             Debug.Log("This is not an initial step!");
-    }
+    }*/
 }

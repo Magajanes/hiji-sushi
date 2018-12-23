@@ -317,8 +317,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1446949096524532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -3.15, y: -4.15, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 4570948025046076}
   - {fileID: 4778757578994658}
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 2.3955972
+  m_Length: 2.3955975
   m_ChildTransform: {fileID: 4807228965695662}
   m_AttachedIK: {fileID: 0}
 --- !u!114 &114219673451116262
@@ -579,7 +579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.5650218
+  m_Length: 1.5650219
   m_ChildTransform: {fileID: 4362153813894794}
   m_AttachedIK: {fileID: 0}
 --- !u!114 &114259903398092106
@@ -594,7 +594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 4.8135014
+  m_Length: 4.813502
   m_ChildTransform: {fileID: 4367980058662310}
   m_AttachedIK: {fileID: 0}
 --- !u!114 &114376485573411136
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_BoneTransforms:
   - {fileID: 4295556078973498}
   - {fileID: 4367980058662310}
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 5.291698
+  m_Length: 5.291699
   m_ChildTransform: {fileID: 4457357467809832}
   m_AttachedIK: {fileID: 0}
 --- !u!114 &114663548884545676
@@ -752,7 +752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.9999991
+  m_Length: 0.99999994
   m_ChildTransform: {fileID: 4377472481656870}
   m_AttachedIK: {fileID: 0}
 --- !u!114 &114996407681995262
@@ -771,7 +771,7 @@ MonoBehaviour:
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_BoneTransforms:
   - {fileID: 4520376939069316}
   - {fileID: 4457357467809832}
@@ -814,7 +814,7 @@ SkinnedMeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -866,7 +866,7 @@ SkinnedMeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
