@@ -2751,7 +2751,8 @@ MonoBehaviour:
   DirtRate: 1
   WaitRate: 1
   CurrentLevel: {fileID: 0}
-  OrdersLevel: 1
+  OrdersLevel: 0
+  LevelGoalPoints: 320000006400000096000000c8000000fa0000002c0100005e010000
   GameLevels:
   - {fileID: 11400000, guid: ea001684329d2ad44bf967d9cc46ea13, type: 2}
   - {fileID: 11400000, guid: 6c1da7fe4c5fb744f9463078765e171d, type: 2}

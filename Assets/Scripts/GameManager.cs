@@ -12,9 +12,9 @@ public class GameManager : MonoBehaviour
     public float WaitRate = 1f;
 
     public Level CurrentLevel;
+    public int OrdersLevel = 0;
 
-    public int OrdersLevel = 1;
-
+    public List<int> LevelGoalPoints;
     public List<Level> GameLevels;
 
     public RecipeCheck Checker;
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
 
-        CurrentLevel = GameLevels[OrdersLevel - 1];
+        CurrentLevel = GameLevels[OrdersLevel];
     }
 
     public List<GameObject> GetCurrentOrdersList()
@@ -44,7 +44,15 @@ public class GameManager : MonoBehaviour
 
         ScorePanel.text = Mathf.Ceil(Score).ToString();
 
-        if (OrdersLevel <= 8 && Score >= OrdersLevel * 100)
+        /*if (OrdersLevel <= 7 && Score >= OrdersLevel * 100)
+        {
+            LevelUp();
+
+            if (OnLevelChange != null)
+                OnLevelChange();
+        }*/
+
+        if (OrdersLevel <= 7 && Score >= LevelGoalPoints[OrdersLevel])
         {
             LevelUp();
 
@@ -61,24 +69,32 @@ public class GameManager : MonoBehaviour
 
         ScorePanel.text = Mathf.Ceil(Score).ToString();
 
-        if (OrdersLevel > 1 && Score < (OrdersLevel - 1) * 100)
+        if(OrdersLevel > 0 && Score < LevelGoalPoints[OrdersLevel - 1])
         {
             LevelDown();
 
             if (OnLevelChange != null)
                 OnLevelChange();
         }
+
+        /*if (OrdersLevel > 1 && Score < (OrdersLevel - 1) * 100)
+        {
+            LevelDown();
+
+            if (OnLevelChange != null)
+                OnLevelChange();
+        }*/
     }
 
     public void LevelUp()
     {
         OrdersLevel++;
-        CurrentLevel = GameLevels[OrdersLevel - 1];
+        CurrentLevel = GameLevels[OrdersLevel];
     }
 
     public void LevelDown()
     {
         OrdersLevel--;
-        CurrentLevel = GameLevels[OrdersLevel - 1];
+        CurrentLevel = GameLevels[OrdersLevel];
     }
 }
