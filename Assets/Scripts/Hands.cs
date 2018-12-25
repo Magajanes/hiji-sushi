@@ -22,6 +22,11 @@ public class Hands : MonoBehaviour
         return false;
     }
 
+    public void FinishWash()
+    {
+        HandsAnimator.SetTrigger("Finish");
+    }
+
     private IEnumerator SetWashStep(int step)
     {
         HandsAnimator.SetInteger("StepNumber", step);

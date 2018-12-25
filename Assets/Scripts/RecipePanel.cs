@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +14,7 @@ public class RecipePanel : MonoBehaviour
     public Text RecipeTitle;
     public Text[] Instructions;
 
-    private bool isShowing = false;
+    private Coroutine hintCoroutine = null;
 
     private void Start()
     {
@@ -51,31 +52,29 @@ public class RecipePanel : MonoBehaviour
         }
     }
 
-    public void MovePanel()
+    public void RecipeHint()
     {
-        if (isShowing)
-        {
-            iTween.MoveTo(gameObject, iTween.Hash("y", HIDDEN_POSITION,
-                                                  "easetype", iTween.EaseType.easeOutExpo,
-                                                  "time", 1f,
-                                                  "onstart", "FlipButtonSprite"));
+        if (hintCoroutine == null)
+            hintCoroutine = StartCoroutine(ShowHint());
+    }
 
-            isShowing = !isShowing;
-
-            return;
-        }
-
-        if (!isShowing)
-        {
-            iTween.MoveTo(gameObject, iTween.Hash("y", SHOWING_POSITION,
+    public void MovePanel(float nextPosition)
+    {
+        iTween.MoveTo(gameObject, iTween.Hash("y", nextPosition,
                                       "easetype", iTween.EaseType.easeOutExpo,
                                       "time", 1f,
                                       "onstart", "FlipButtonSprite"));
+    }
 
-            isShowing = !isShowing;
+    private IEnumerator ShowHint()
+    {
+        MovePanel(SHOWING_POSITION);
 
-            return;
-        }
+        yield return new WaitForSeconds(5f);
+
+        MovePanel(HIDDEN_POSITION);
+
+        hintCoroutine = null;
     }
 
     public void FlipButtonSprite()

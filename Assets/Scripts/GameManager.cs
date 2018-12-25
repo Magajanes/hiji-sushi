@@ -44,15 +44,7 @@ public class GameManager : MonoBehaviour
 
         ScorePanel.text = Mathf.Ceil(Score).ToString();
 
-        /*if (OrdersLevel <= 7 && Score >= OrdersLevel * 100)
-        {
-            LevelUp();
-
-            if (OnLevelChange != null)
-                OnLevelChange();
-        }*/
-
-        if (OrdersLevel <= 7 && Score >= LevelGoalPoints[OrdersLevel])
+        if (OrdersLevel < 7 && Score >= LevelGoalPoints[OrdersLevel])
         {
             LevelUp();
 
@@ -76,14 +68,6 @@ public class GameManager : MonoBehaviour
             if (OnLevelChange != null)
                 OnLevelChange();
         }
-
-        /*if (OrdersLevel > 1 && Score < (OrdersLevel - 1) * 100)
-        {
-            LevelDown();
-
-            if (OnLevelChange != null)
-                OnLevelChange();
-        }*/
     }
 
     public void LevelUp()

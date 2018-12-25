@@ -11,6 +11,7 @@ public class IngredientMixer : SlotBehaviour
     public int[] Measures = new int[5];
 
     public HygieneManager Manager;
+    public OrderQueue OrderQueue;
 
     private void Start()
     {
@@ -37,7 +38,7 @@ public class IngredientMixer : SlotBehaviour
 
                 Measures[i]++;
 
-                used.AmountText.text = "x" + Measures[i];
+                used.AmountText.text = Measures[i].ToString();
 
                 SlotsArray[i].CurrentState = Slot.State.Occupied;
 
@@ -55,7 +56,7 @@ public class IngredientMixer : SlotBehaviour
 
                 Measures[i]++;
 
-                UsedIngredients[i].AmountText.text = "x" + Measures[i];
+                UsedIngredients[i].AmountText.text = Measures[i].ToString();
 
                 break;
             }
@@ -111,8 +112,8 @@ public class IngredientMixer : SlotBehaviour
         iTween.ScaleTo(dish, Vector3.one, 1f);
 
         iTween.MoveTo(dish, iTween.Hash("position", new Vector3(8.9f, 0.9f, 0f),
-                                        "easetype", iTween.EaseType.easeOutBounce,
-                                        "time", 1f));
+                                        "easetype", iTween.EaseType.easeOutExpo,
+                                        "time", 0.5f));
 
         if (Manager.HygieneCheck())
         {
