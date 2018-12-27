@@ -8,7 +8,6 @@ public class RecipePanel : MonoBehaviour
     private const float SHOWING_POSITION = 2.1f;
     private const float HIDDEN_POSITION = 6.7f;
 
-    public Transform buttonIcon;
     public RecipeCheck Checker;
 
     public Text RecipeTitle;
@@ -62,8 +61,7 @@ public class RecipePanel : MonoBehaviour
     {
         iTween.MoveTo(gameObject, iTween.Hash("y", nextPosition,
                                               "easetype", iTween.EaseType.easeOutExpo,
-                                              "time", 1f,
-                                              "onstart", "FlipButtonSprite"));
+                                              "time", 1f));
     }
 
     private IEnumerator ShowHint()
@@ -75,15 +73,6 @@ public class RecipePanel : MonoBehaviour
         MovePanel(HIDDEN_POSITION);
 
         hintCoroutine = null;
-    }
-
-    public void FlipButtonSprite()
-    {
-        var scale = buttonIcon.localScale;
-
-        scale.x = -scale.x;
-
-        buttonIcon.localScale = scale;
     }
 
     private void OnDestroy()
