@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class RecipePanel : MonoBehaviour
 {
-    private const float SHOWING_POSITION = 2.15f;
-    private const float HIDDEN_POSITION = 6.4f;
+    private const float SHOWING_POSITION = 2.1f;
+    private const float HIDDEN_POSITION = 6.7f;
 
     public Transform buttonIcon;
     public RecipeCheck Checker;
@@ -61,9 +61,9 @@ public class RecipePanel : MonoBehaviour
     public void MovePanel(float nextPosition)
     {
         iTween.MoveTo(gameObject, iTween.Hash("y", nextPosition,
-                                      "easetype", iTween.EaseType.easeOutExpo,
-                                      "time", 1f,
-                                      "onstart", "FlipButtonSprite"));
+                                              "easetype", iTween.EaseType.easeOutExpo,
+                                              "time", 1f,
+                                              "onstart", "FlipButtonSprite"));
     }
 
     private IEnumerator ShowHint()

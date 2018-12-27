@@ -87,8 +87,8 @@ public class WashManager : MonoBehaviour
     private void PrepareHandsToCook()
     {
         iTween.MoveTo(HandsObject.gameObject, iTween.Hash("position", HideHandsPosition,
-                                                  "easetype", iTween.EaseType.easeOutExpo,
-                                                  "time", 1f));
+                                                          "easetype", iTween.EaseType.easeOutExpo,
+                                                          "time", 1f));
 
         HandsSetup = PrepareHandsToWash;
     }
