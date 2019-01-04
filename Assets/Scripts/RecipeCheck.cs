@@ -19,12 +19,15 @@ public class RecipeCheck : MonoBehaviour
     {
         Check = NormalCheckRecipe;
 
-        PrepareRecipe(Mixer);
+        PrepareRecipe(Mixer, CurrentRecipe);
     }
 
-    public void PrepareRecipe(IngredientMixer mixer)
+    public void PrepareRecipe(IngredientMixer mixer, Recipe recipe)
     {
-        if (CurrentRecipe == null)
+        if (PrepareCoroutine != null)
+            return;
+
+        if (recipe == null)
         {
             Debug.Log("Nenhum pedido selecionado!");
 
@@ -33,12 +36,12 @@ public class RecipeCheck : MonoBehaviour
 
         if (Check(mixer))
         {
-            PrepareCoroutine = StartCoroutine(PrepareDish(mixer));
+            PrepareCoroutine = StartCoroutine(PrepareDish(mixer, recipe));
 
             return;
         }
 
-        Debug.Log(CurrentRecipe.DishName + " está incorreto e não foi entregue!");
+        Debug.Log(recipe.DishName + " está incorreto e não foi entregue!");
     }
 
     public void OrderFailed(Recipe order)
@@ -91,17 +94,17 @@ public class RecipeCheck : MonoBehaviour
         return correctSteps == steps.Count;
     }
 
-    private IEnumerator PrepareDish(IngredientMixer mixer)
+    private IEnumerator PrepareDish(IngredientMixer mixer, Recipe recipe)
     {
-        mixer.ShrinkIngredients(CurrentRecipe.PrepareInstructions.TimeToPrepare);
+        mixer.ShrinkIngredients(recipe.PrepareInstructions.TimeToPrepare);
 
-        yield return new WaitForSeconds(CurrentRecipe.PrepareInstructions.TimeToPrepare);
+        yield return new WaitForSeconds(recipe.PrepareInstructions.TimeToPrepare);
 
         mixer.EmptyMixer();
 
-        Orders.EmptySlot(CurrentRecipe);
+        Orders.EmptySlot(recipe);
 
-        mixer.DeliverDish(CurrentRecipe);
+        mixer.DeliverDish(recipe);
 
         PrepareCoroutine = null;
     }

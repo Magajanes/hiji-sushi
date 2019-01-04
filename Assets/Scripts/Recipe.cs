@@ -45,7 +45,7 @@ public class Recipe : MonoBehaviour
             GameManager.Instance.Checker.OrderFailed(this);
     }
 
-    public void Select()
+    /*public void Select()
     {
         if (GameManager.Instance.Checker.PrepareCoroutine == null)
         {
@@ -66,6 +66,26 @@ public class Recipe : MonoBehaviour
 
             OnSelect(this, new EventArgs());
         }
+    }*/
+
+    public void Select()
+    {
+        var current = GameManager.Instance.Checker.CurrentRecipe;
+
+        if (current != null)
+        {
+            current.IsSelected = false;
+
+            current.SetHighlight();
+        }
+
+        GameManager.Instance.Checker.CurrentRecipe = this;
+
+        IsSelected = true;
+
+        SetHighlight();
+
+        OnSelect(this, new EventArgs());
     }
 
     public void SetHighlight()

@@ -5,11 +5,13 @@ public class Ingredient : MonoBehaviour
     public string Name;
 
     public IngredientMixer Mixer;
+    public RecipeCheck Check;
 
     public GameObject UsedPrefab;
 
     public void Select()
     {
-        Mixer.AddIngredient(this);
+        if (Check.PrepareCoroutine == null)
+            Mixer.AddIngredient(this);
     }
 }
