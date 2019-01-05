@@ -50,13 +50,10 @@ public class RecipePanel : MonoBehaviour
         for (int i = 0; i < instructions.IngredientsList.Count; i++)
         {
             Instructions[i].enabled = true;
-
             Instructions[i].text = instructions.MeasuresList[i] + "x";
 
             IngredientIcons[i].enabled = true;
-
             IngredientIcons[i].sprite = instructions.IngredientIconsList[i];
-
             IngredientIcons[i].preserveAspect = true;
         }
     }
