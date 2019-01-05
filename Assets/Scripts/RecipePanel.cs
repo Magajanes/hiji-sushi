@@ -12,6 +12,7 @@ public class RecipePanel : MonoBehaviour
 
     public Text RecipeTitle;
     public Text[] Instructions;
+    public Image[] IngredientIcons;
 
     private Coroutine hintCoroutine = null;
 
@@ -28,6 +29,9 @@ public class RecipePanel : MonoBehaviour
 
         foreach (Text text in Instructions)
             text.enabled = false;
+
+        foreach (Image image in IngredientIcons)
+            image.enabled = false;
     }
 
     public void SetPanel(object sender, EventArgs args)
@@ -47,7 +51,13 @@ public class RecipePanel : MonoBehaviour
         {
             Instructions[i].enabled = true;
 
-            Instructions[i].text = instructions.MeasuresList[i] + "x " + instructions.IngredientsList[i];
+            Instructions[i].text = instructions.MeasuresList[i] + "x";
+
+            IngredientIcons[i].enabled = true;
+
+            IngredientIcons[i].sprite = instructions.IngredientIconsList[i];
+
+            IngredientIcons[i].preserveAspect = true;
         }
     }
 
