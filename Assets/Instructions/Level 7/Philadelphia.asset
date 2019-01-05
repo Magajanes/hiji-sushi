@@ -19,4 +19,9 @@ MonoBehaviour:
   - Arroz
   - "Salm\xE3o"
   - Cream Cheese
+  IngredientIconsList:
+  - {fileID: 21300000, guid: cce5be802b6b675428076cb9a94d3f80, type: 3}
+  - {fileID: 21300000, guid: 07a809f9880fd2348ae98c387ec4a688, type: 3}
+  - {fileID: 21300000, guid: 75fd2eff14b6a4145b3d5ac8b390a99e, type: 3}
+  - {fileID: 21300000, guid: f0d81053134455a46af7f6ca3b9e2f06, type: 3}
   MeasuresList: 01000000010000000100000001000000

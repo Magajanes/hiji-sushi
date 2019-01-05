@@ -13,6 +13,8 @@ public class Instructions : ScriptableObject
 
     public List<string> IngredientsList;
 
+    public List<Sprite> IngredientIconsList;
+
     public List<int> MeasuresList;
 
     public Dictionary<string,int> SetSteps()

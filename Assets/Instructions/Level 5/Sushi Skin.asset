@@ -17,4 +17,7 @@ MonoBehaviour:
   IngredientsList:
   - Arroz
   - Skin
+  IngredientIconsList:
+  - {fileID: 21300000, guid: 07a809f9880fd2348ae98c387ec4a688, type: 3}
+  - {fileID: 21300000, guid: f2d34c56b2fd1984b876c4d955785c7a, type: 3}
   MeasuresList: 0100000001000000

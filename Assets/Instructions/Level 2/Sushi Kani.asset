@@ -17,4 +17,7 @@ MonoBehaviour:
   IngredientsList:
   - Arroz
   - Kani
+  IngredientIconsList:
+  - {fileID: 21300000, guid: 07a809f9880fd2348ae98c387ec4a688, type: 3}
+  - {fileID: 21300000, guid: 1502bbef353113a4c8e3643f5e8fa6dc, type: 3}
   MeasuresList: 0100000001000000

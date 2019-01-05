@@ -17,4 +17,7 @@ MonoBehaviour:
   IngredientsList:
   - "Salm\xE3o"
   - Gergelim
+  IngredientIconsList:
+  - {fileID: 21300000, guid: 75fd2eff14b6a4145b3d5ac8b390a99e, type: 3}
+  - {fileID: 21300000, guid: 21594967c1259eb4cad47cff6acee9df, type: 3}
   MeasuresList: 0200000001000000

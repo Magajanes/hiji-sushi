@@ -20,4 +20,10 @@ MonoBehaviour:
   - Wasabi
   - Skin
   - Cream Cheese
+  IngredientIconsList:
+  - {fileID: 21300000, guid: cce5be802b6b675428076cb9a94d3f80, type: 3}
+  - {fileID: 21300000, guid: 07a809f9880fd2348ae98c387ec4a688, type: 3}
+  - {fileID: 21300000, guid: 2f1af5768a4eaca45a8c8a857d27ca65, type: 3}
+  - {fileID: 21300000, guid: f2d34c56b2fd1984b876c4d955785c7a, type: 3}
+  - {fileID: 21300000, guid: f0d81053134455a46af7f6ca3b9e2f06, type: 3}
   MeasuresList: 0100000001000000010000000100000001000000

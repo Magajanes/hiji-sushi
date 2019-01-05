@@ -16,4 +16,6 @@ MonoBehaviour:
   DishPrefab: {fileID: 1476273354172994, guid: 54ce26a9dd44bdf4fb8dd13274a4af7b, type: 2}
   IngredientsList:
   - "Salm\xE3o"
+  IngredientIconsList:
+  - {fileID: 21300000, guid: 75fd2eff14b6a4145b3d5ac8b390a99e, type: 3}
   MeasuresList: 03000000

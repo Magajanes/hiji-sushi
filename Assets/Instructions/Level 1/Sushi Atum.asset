@@ -17,4 +17,7 @@ MonoBehaviour:
   IngredientsList:
   - Arroz
   - Atum
+  IngredientIconsList:
+  - {fileID: 21300000, guid: 07a809f9880fd2348ae98c387ec4a688, type: 3}
+  - {fileID: 21300000, guid: bbf1bf6ae31fc7e49aac2f5e8edecb5a, type: 3}
   MeasuresList: 0100000001000000

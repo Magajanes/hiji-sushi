@@ -17,4 +17,7 @@ MonoBehaviour:
   IngredientsList:
   - Atum
   - Gergelim
+  IngredientIconsList:
+  - {fileID: 21300000, guid: bbf1bf6ae31fc7e49aac2f5e8edecb5a, type: 3}
+  - {fileID: 21300000, guid: 21594967c1259eb4cad47cff6acee9df, type: 3}
   MeasuresList: 0200000001000000
