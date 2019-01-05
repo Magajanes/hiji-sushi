@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6776ffc5decb643ac0032635483e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WashAnimationTime: 3
+  WashAnimationTime: 2
   HandsAnimator: {fileID: 109103338}
 --- !u!1 &122270815
 GameObject:
