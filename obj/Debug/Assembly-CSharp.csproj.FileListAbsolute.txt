@@ -168,3 +168,5 @@ C:\Games\HijiSushi 2.0\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
 C:\Games\HijiSushi 2.0\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Games\HijiSushi 2.0\obj\Debug\Assembly-CSharp.dll
 C:\Games\HijiSushi 2.0\obj\Debug\Assembly-CSharp.pdb
+C:\Games\HijiSushi 2.0\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
+C:\Games\HijiSushi 2.0\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml

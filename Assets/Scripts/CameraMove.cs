@@ -10,6 +10,9 @@ public class CameraMove : MonoBehaviour
     [SerializeField]
     private WashManager washManager;
 
+    public delegate void ModeChangeAction(bool mode);
+    public static event ModeChangeAction OnModeChange;
+
     public void ChangeMode()
     {
         if (cameraMoveCoroutine == null)
@@ -39,6 +42,9 @@ public class CameraMove : MonoBehaviour
                                               "oncomplete", "SetTimeRates"));
 
         yield return new WaitForSeconds(1f);
+
+        if (OnModeChange != null)
+            OnModeChange(cookMode);
 
         cameraMoveCoroutine = null;
     }
