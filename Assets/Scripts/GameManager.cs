@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public int PerfectDishes;
+    public int DelayedDishes;
+    public int RottenDishes;
+
     public float DirtRate = 1f;
     public float WaitRate = 1f;
 
@@ -36,6 +40,11 @@ public class GameManager : MonoBehaviour
     public List<GameObject> GetCurrentOrdersList()
     {
         return CurrentLevel.LevelOrdersList;
+    }
+
+    private int TotalPrepared()
+    {
+        return PerfectDishes + DelayedDishes + RottenDishes;
     }
 
     public void AddPoints(float points)

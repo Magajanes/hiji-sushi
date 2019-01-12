@@ -120,12 +120,16 @@ public class IngredientMixer : SlotBehaviour
             Debug.Log(recipe.DishName + " perfeito!");
 
             recipe.GivePoints();
+
+            GameManager.Instance.PerfectDishes++;
         }
         else
         {
             Debug.Log(recipe.DishName + " estragado!");
 
             recipe.Penalize();
+
+            GameManager.Instance.RottenDishes++;
         }
 
         yield return new WaitForSeconds(2.5f);

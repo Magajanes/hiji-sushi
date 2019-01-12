@@ -57,6 +57,8 @@ public class OrderQueue : SlotBehaviour
         OrderList.Add(recipe);
 
         ScrollOrders();
+
+        ClientsManager.Instance.ReceiveClient();
     }
 
     private void ScrollOrders()

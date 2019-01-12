@@ -59,6 +59,8 @@ public class RecipeCheck : MonoBehaviour
 
         Orders.EmptySlot(order);
 
+        GameManager.Instance.DelayedDishes++;
+
         Debug.Log(order.DishName + " demorou demais a ser entregue!");
     }
 
