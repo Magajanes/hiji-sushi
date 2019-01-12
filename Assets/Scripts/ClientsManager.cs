@@ -58,8 +58,9 @@ public class ClientsManager : SlotBehaviour
             return;
 
         var client = RandomClient();
-
         var clientObject = client.gameObject;
+
+        client.Complain();
 
         iTween.MoveTo(clientObject, iTween.Hash("position", ExitPosition,
                                                 "easetype", iTween.EaseType.easeInExpo,

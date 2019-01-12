@@ -11,7 +11,9 @@ public class IngredientMixer : SlotBehaviour
     public int[] Measures = new int[5];
 
     public HygieneManager Manager;
-    public OrderQueue OrderQueue;
+
+    [SerializeField]
+    AudioSource source;
 
     private void Start()
     {
@@ -76,6 +78,11 @@ public class IngredientMixer : SlotBehaviour
         }
     }
 
+    public void Meow()
+    {
+        source.Play();
+    }
+
     public int NumberOfTypes()
     {
         int count = 0;
@@ -121,7 +128,7 @@ public class IngredientMixer : SlotBehaviour
 
         if (Manager.HygieneCheck())
         {
-            Debug.Log(recipe.DishName + " perfeito!");
+            client.Eat();
 
             recipe.GivePoints();
 
@@ -129,7 +136,7 @@ public class IngredientMixer : SlotBehaviour
         }
         else
         {
-            Debug.Log(recipe.DishName + " estragado!");
+            client.Vomit();
 
             recipe.Penalize();
 
