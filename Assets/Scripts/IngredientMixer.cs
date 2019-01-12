@@ -111,7 +111,11 @@ public class IngredientMixer : SlotBehaviour
 
         iTween.ScaleTo(dish, Vector3.one, 1f);
 
-        iTween.MoveTo(dish, iTween.Hash("position", new Vector3(8.9f, 0.9f, 0f),
+        var client = ClientsManager.Instance.RandomClient();
+
+        var clientPosition = ClientsManager.Instance.SlotsArray[client.CurrentSlotIndex].SlotPosition;
+
+        iTween.MoveTo(dish, iTween.Hash("position", new Vector3(clientPosition.x, 0.9f, 0f),
                                         "easetype", iTween.EaseType.easeOutExpo,
                                         "time", 0.5f));
 
@@ -122,8 +126,6 @@ public class IngredientMixer : SlotBehaviour
             recipe.GivePoints();
 
             GameManager.Instance.PerfectDishes++;
-
-            ClientsManager.Instance.RemoveClient();
         }
         else
         {
@@ -132,11 +134,11 @@ public class IngredientMixer : SlotBehaviour
             recipe.Penalize();
 
             GameManager.Instance.RottenDishes++;
-
-            ClientsManager.Instance.RemoveClient();
         }
 
-        yield return new WaitForSeconds(2.5f);
+        ClientsManager.Instance.RemoveClient(client);
+
+        yield return new WaitForSeconds(0.75f);
 
         Destroy(dish);
     }

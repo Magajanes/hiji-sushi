@@ -61,7 +61,7 @@ public class RecipeCheck : MonoBehaviour
 
         GameManager.Instance.DelayedDishes++;
 
-        Debug.Log(order.DishName + " demorou demais a ser entregue!");
+        ClientsManager.Instance.RemoveRandomClient();
     }
 
     public bool NormalCheckRecipe(IngredientMixer mixer)
