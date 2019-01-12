@@ -5,6 +5,7 @@ using UnityEngine;
 public class ClientsManager : SlotBehaviour
 {
     private readonly Vector3 SpawnPosition = new Vector3(-3f, 2f, 0f);
+    private readonly Vector3 ExitPosition = new Vector3(20f, 2f, 0f);
 
     public static ClientsManager Instance;
 
@@ -38,8 +39,9 @@ public class ClientsManager : SlotBehaviour
         while (SlotsArray[index].CurrentState == Slot.State.Occupied);
 
         var clientObject = Instantiate(clientPrefab, SpawnPosition, Quaternion.identity);
-
         var client = clientObject.GetComponent<Client>();
+
+        client.CurrentSlotIndex = index;
 
         ClientsInRestaurant.Add(client);
 
@@ -48,5 +50,26 @@ public class ClientsManager : SlotBehaviour
                                                 "time", 2f));
 
         SlotsArray[index].CurrentState = Slot.State.Occupied;
+    }
+
+    public void RemoveClient()
+    {
+        if (ClientsInRestaurant.Count == 0)
+            return;
+
+        int index = Random.Range(0, ClientsInRestaurant.Count);
+
+        var client = ClientsInRestaurant[index];
+        var clientObject = client.gameObject;
+
+        iTween.MoveTo(clientObject, iTween.Hash("position", ExitPosition,
+                                                "easetype", iTween.EaseType.easeInExpo,
+                                                "time", 2f));
+
+        ClientsInRestaurant.Remove(client);
+
+        SlotsArray[client.CurrentSlotIndex].CurrentState = Slot.State.Empty;
+
+        Destroy(clientObject, 2f);
     }
 }

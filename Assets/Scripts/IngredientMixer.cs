@@ -122,6 +122,8 @@ public class IngredientMixer : SlotBehaviour
             recipe.GivePoints();
 
             GameManager.Instance.PerfectDishes++;
+
+            ClientsManager.Instance.RemoveClient();
         }
         else
         {
@@ -130,6 +132,8 @@ public class IngredientMixer : SlotBehaviour
             recipe.Penalize();
 
             GameManager.Instance.RottenDishes++;
+
+            ClientsManager.Instance.RemoveClient();
         }
 
         yield return new WaitForSeconds(2.5f);
