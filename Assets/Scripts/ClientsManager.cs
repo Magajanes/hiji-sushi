@@ -47,7 +47,7 @@ public class ClientsManager : SlotBehaviour
 
         iTween.MoveTo(clientObject, iTween.Hash("position", SlotsArray[index].SlotPosition,
                                                 "easetype", iTween.EaseType.easeOutExpo,
-                                                "time", 2f));
+                                                "time", 1f));
 
         SlotsArray[index].CurrentState = Slot.State.Occupied;
     }
