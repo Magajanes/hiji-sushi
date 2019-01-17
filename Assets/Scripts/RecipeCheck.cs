@@ -12,6 +12,9 @@ public class RecipeCheck : MonoBehaviour
 
     public Coroutine PrepareCoroutine;
 
+    [SerializeField]
+    private AudioSource source;
+
     public delegate bool PrepareAction(IngredientMixer mixer);
     public PrepareAction Check;
 
@@ -29,7 +32,7 @@ public class RecipeCheck : MonoBehaviour
 
         if (recipe == null)
         {
-            Debug.Log("Nenhum pedido selecionado!");
+            source.Play();
 
             return;
         }
@@ -40,8 +43,6 @@ public class RecipeCheck : MonoBehaviour
 
             return;
         }
-
-        Debug.Log(recipe.DishName + " está incorreto e não foi entregue!");
     }
 
     public void OrderFailed(Recipe order)
@@ -82,14 +83,14 @@ public class RecipeCheck : MonoBehaviour
                 {
                     correctSteps = correctSteps <= 0 ? 0 : correctSteps - 1;
 
-                    Debug.Log("Medida incorreta!");
+                    source.Play();
                 }
             }
             else
             {
                 correctSteps = correctSteps <= 0 ? 0 : correctSteps - 1;
 
-                Debug.Log("Ingrediente incorreto!");
+                source.Play();
             }
         }
 

@@ -130,17 +130,17 @@ public class IngredientMixer : SlotBehaviour
         {
             client.Eat();
 
-            recipe.GivePoints();
-
             GameManager.Instance.PerfectDishes++;
+
+            recipe.GivePoints();
         }
         else
         {
             client.Vomit();
 
-            recipe.Penalize();
-
             GameManager.Instance.RottenDishes++;
+
+            recipe.Penalize();
         }
 
         ClientsManager.Instance.RemoveClient(client);

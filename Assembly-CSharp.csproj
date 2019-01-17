@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\Instructions.cs" />
     <Compile Include="Assets\Scripts\Level.cs" />
     <Compile Include="Assets\Scripts\ModeChanger.cs" />
+    <Compile Include="Assets\Scripts\NewsPanel.cs" />
     <Compile Include="Assets\Scripts\OrderQueue.cs" />
     <Compile Include="Assets\Scripts\Recipe.cs" />
     <Compile Include="Assets\Scripts\RecipeCheck.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="Assets\Scripts\ScenesController.cs" />
     <Compile Include="Assets\Scripts\Slot.cs" />
     <Compile Include="Assets\Scripts\SlotBehaviour.cs" />
+    <Compile Include="Assets\Scripts\StatsPanel.cs" />
     <Compile Include="Assets\Scripts\Used.cs" />
     <Compile Include="Assets\Scripts\WashManager.cs" />
     <Compile Include="Assets\Scripts\WashStep.cs" />

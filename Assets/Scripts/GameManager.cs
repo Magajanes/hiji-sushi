@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,22 +17,34 @@ public class GameManager : MonoBehaviour
     public int OrdersLevel = 0;
 
     public List<int> LevelGoalPoints;
+    public List<bool> LevelsReached;
     public List<Level> GameLevels;
 
     public RecipeCheck Checker;
 
     public float Score;
+    public float MaxScore;
 
     public TextMeshProUGUI ScorePanel;
 
     public delegate void LevelUpAction();
     public static event LevelUpAction OnLevelChange;
 
+    public delegate void LevelReachAction(int level);
+    public static event LevelReachAction OnNewLevelReached;
+
     private void Awake()
     {
         Instance = this;
 
         CurrentLevel = GameLevels[OrdersLevel];
+
+        MaxScore = 0f;
+
+        for (int i = 0; i < LevelsReached.Count; i++)
+            LevelsReached[i] = false;
+
+        LevelsReached[0] = true;
     }
 
     public List<GameObject> GetCurrentOrdersList()
@@ -50,6 +60,9 @@ public class GameManager : MonoBehaviour
     public void AddPoints(float points)
     {
         Score += points;
+
+        if (Score > MaxScore)
+            MaxScore = Score;
 
         ScorePanel.text = Mathf.Ceil(Score).ToString();
 
@@ -82,12 +95,29 @@ public class GameManager : MonoBehaviour
     public void LevelUp()
     {
         OrdersLevel++;
+
         CurrentLevel = GameLevels[OrdersLevel];
+
+        if (!LevelsReached[OrdersLevel])
+        {
+            LevelsReached[OrdersLevel] = true;
+
+            if (OnNewLevelReached != null)
+                OnNewLevelReached(OrdersLevel);
+        }
     }
 
     public void LevelDown()
     {
         OrdersLevel--;
+
         CurrentLevel = GameLevels[OrdersLevel];
+    }
+
+    public void ResetStats()
+    {
+        PerfectDishes = 0;
+        DelayedDishes = 0;
+        RottenDishes = 0;
     }
 }
