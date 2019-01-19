@@ -9,6 +9,8 @@ public class CameraMove : MonoBehaviour
 
     [SerializeField]
     private WashManager washManager;
+    [SerializeField]
+    private Sink sink;
 
     public delegate void ModeChangeAction(bool mode);
     public static event ModeChangeAction OnModeChange;
@@ -25,7 +27,11 @@ public class CameraMove : MonoBehaviour
         {
             washManager.HandsObject.FinishWash();
 
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2.5f);
+
+            sink.CloseWater();
+
+            yield return new WaitForSeconds(0.5f);
         }
 
         cookMode = !cookMode;

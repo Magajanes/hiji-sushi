@@ -14,6 +14,7 @@ public class WashManager : MonoBehaviour
 
     public HygieneManager Manager;
     public Hands HandsObject;
+    public SpriteRenderer WaterRenderer;
 
     private delegate void WashEvaluationAction(WashStep step);
     private WashEvaluationAction WashEvaluation;
@@ -99,6 +100,8 @@ public class WashManager : MonoBehaviour
 
     private void EvaluateBeforeSoap(WashStep step)
     {
+        WaterRenderer.sortingOrder = 7;
+
         if (HandsObject.CanWashHands(step.WashStepID))
         {
             if (!step.Done && step.IsInitial)
@@ -119,6 +122,8 @@ public class WashManager : MonoBehaviour
 
     private void EvaluateAfterSoap(WashStep step)
     {
+        WaterRenderer.sortingOrder = 2;
+
         if (HandsObject.CanWashHands(step.WashStepID))
         {
             if (!step.Done && !step.IsInitial)

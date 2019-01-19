@@ -103,6 +103,7 @@
     <Compile Include="Assets\Scripts\RecipeCheck.cs" />
     <Compile Include="Assets\Scripts\RecipePanel.cs" />
     <Compile Include="Assets\Scripts\ScenesController.cs" />
+    <Compile Include="Assets\Scripts\Sink.cs" />
     <Compile Include="Assets\Scripts\Slot.cs" />
     <Compile Include="Assets\Scripts\SlotBehaviour.cs" />
     <Compile Include="Assets\Scripts\StatsPanel.cs" />

@@ -9,8 +9,19 @@ public class Dirt : MonoBehaviour
     [SerializeField]
     private Sprite[] dirtSprites;
 
-    private void OnEnable()
+    private void Awake()
     {
-        dirtRenderer.sprite = dirtSprites[Random.Range(0, dirtSprites.Length)];
+        CameraMove.OnModeChange += SetRandomSprites;
+    }
+
+    public void SetRandomSprites(bool cookMode)
+    {
+        if (!cookMode)
+            dirtRenderer.sprite = dirtSprites[Random.Range(0, dirtSprites.Length)];
+    }
+
+    private void OnDestroy()
+    {
+        CameraMove.OnModeChange -= SetRandomSprites;
     }
 }
