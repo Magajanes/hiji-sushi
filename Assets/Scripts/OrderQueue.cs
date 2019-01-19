@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class OrderQueue : SlotBehaviour
 {
-    private readonly Vector3 StartPosition = new Vector3(-2f, 3.4f, 0f);
+    private readonly Vector3 StartPosition = new Vector3(-2f, 4.2f, 0f);
 
     public RecipePanel Panel;
 

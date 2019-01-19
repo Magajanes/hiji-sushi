@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ClientsManager : SlotBehaviour
 {
-    private readonly Vector3 SpawnPosition = new Vector3(-2f, 2f, 0f);
+    private readonly Vector3 SpawnPosition = new Vector3(-1.5f, 1.8f, 0f);
     private readonly Vector3 ExitPosition = new Vector3(20f, 2f, 0f);
 
     public static ClientsManager Instance;
@@ -22,7 +22,7 @@ public class ClientsManager : SlotBehaviour
 
     private void Start()
     {
-        PrepareSlots(SpawnPosition, SlotsArray, 3f);
+        PrepareSlots(SpawnPosition, SlotsArray, 1.8f);
     }
     
     public void ReceiveClient()

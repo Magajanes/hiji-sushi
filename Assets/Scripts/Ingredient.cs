@@ -9,8 +9,13 @@ public class Ingredient : MonoBehaviour
 
     public GameObject UsedPrefab;
 
+    [SerializeField]
+    private AudioSource source;
+
     public void Select()
     {
+        source.Play();
+
         if (Check.PrepareCoroutine == null)
             Mixer.AddIngredient(this);
     }

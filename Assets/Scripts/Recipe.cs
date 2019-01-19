@@ -14,6 +14,7 @@ public class Recipe : MonoBehaviour
 
     public float TimeToDeliver;
     private float deliveryTime;
+    private float points;
 
     public GameObject Highlight;
     public Slider Timer;
@@ -45,29 +46,6 @@ public class Recipe : MonoBehaviour
             GameManager.Instance.Checker.OrderFailed(this);
     }
 
-    /*public void Select()
-    {
-        if (GameManager.Instance.Checker.PrepareCoroutine == null)
-        {
-            var current = GameManager.Instance.Checker.CurrentRecipe;
-
-            if (current != null)
-            {
-                current.IsSelected = false;
-
-                current.SetHighlight();
-            }
-
-            GameManager.Instance.Checker.CurrentRecipe = this;
-
-            IsSelected = true;
-
-            SetHighlight();
-
-            OnSelect(this, new EventArgs());
-        }
-    }*/
-
     public void Select()
     {
         var current = GameManager.Instance.Checker.CurrentRecipe;
@@ -95,7 +73,10 @@ public class Recipe : MonoBehaviour
 
     public void GivePoints()
     {
-        var points = PrepareInstructions.Points * (deliveryTime / TimeToDeliver);
+        if (deliveryTime >= TimeToDeliver / 2f)
+            points = PrepareInstructions.Points * (deliveryTime / TimeToDeliver);
+        else
+            points = PrepareInstructions.Points / 2f;
 
         GameManager.Instance.AddPoints(points);
     }
