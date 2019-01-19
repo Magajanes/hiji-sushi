@@ -7,6 +7,11 @@ public class HygieneManager : MonoBehaviour
 
     public float HygieneCounter;
 
+    [SerializeField]
+    private float[] dirtLevels;
+    [SerializeField]
+    private GameObject[] dirts;
+
     private void Start()
     {
         HygieneBar.maxValue = 100f;
@@ -21,6 +26,9 @@ public class HygieneManager : MonoBehaviour
         HygieneBar.value = HygieneCounter;
 
         HygieneCounter = Mathf.Clamp(HygieneCounter, 0f, 100f);
+
+        for (int i = 0; i < dirts.Length; i++)
+            dirts[i].SetActive(HygieneCounter < dirtLevels[i]);
     }
 
     public bool HygieneCheck()

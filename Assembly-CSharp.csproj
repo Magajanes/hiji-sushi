@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\CameraMove.cs" />
     <Compile Include="Assets\Scripts\Client.cs" />
     <Compile Include="Assets\Scripts\ClientsManager.cs" />
+    <Compile Include="Assets\Scripts\Dirt.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Hands.cs" />
     <Compile Include="Assets\Scripts\HygieneManager.cs" />

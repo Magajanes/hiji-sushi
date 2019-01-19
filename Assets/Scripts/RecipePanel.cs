@@ -75,7 +75,7 @@ public class RecipePanel : MonoBehaviour
     {
         MovePanel(SHOWING_POSITION);
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
 
         MovePanel(HIDDEN_POSITION);
 

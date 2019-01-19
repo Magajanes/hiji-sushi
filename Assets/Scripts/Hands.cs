@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Hands : MonoBehaviour
@@ -7,6 +6,9 @@ public class Hands : MonoBehaviour
     public float WashAnimationTime;
 
     public Animator HandsAnimator;
+    public AudioSource Source;
+
+    public AudioClip[] WashClips;
 
     private Coroutine washCoroutine = null;
 
@@ -24,15 +26,23 @@ public class Hands : MonoBehaviour
 
     public void FinishWash()
     {
+        Source.clip = WashClips[1];
+        Source.Play();
+
         HandsAnimator.SetTrigger("Finish");
     }
 
     private IEnumerator SetWashStep(int step)
     {
+        Source.clip = WashClips[0];
+        Source.Play();
+
         HandsAnimator.SetInteger("StepNumber", step);
         HandsAnimator.SetBool("WashingHands", true);
 
         yield return new WaitForSeconds(WashAnimationTime);
+
+        Source.Stop();
 
         washCoroutine = null;
 

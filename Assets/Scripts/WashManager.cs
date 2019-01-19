@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WashManager : MonoBehaviour
 {
-    public readonly Vector3 WashHandsPosition = new Vector3(-5.7f, 0f, 0f);
-    public readonly Vector3 HideHandsPosition = new Vector3(-5.7f, -4f - 0f);
+    public readonly Vector3 WashHandsPosition = new Vector3(-6f, 0f, 0f);
+    public readonly Vector3 HideHandsPosition = new Vector3(-6f, -4f - 0f);
 
     private float hygieneGauge = 0f;
 
@@ -13,7 +13,6 @@ public class WashManager : MonoBehaviour
     public WashStep[] ComplexWashSteps = new WashStep[6];
 
     public HygieneManager Manager;
-
     public Hands HandsObject;
 
     private delegate void WashEvaluationAction(WashStep step);
