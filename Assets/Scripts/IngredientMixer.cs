@@ -80,7 +80,8 @@ public class IngredientMixer : SlotBehaviour
 
     public void Meow()
     {
-        source.Play();
+        if (GameManager.Instance.SoundFXOn)
+            source.Play();
     }
 
     public int NumberOfTypes()

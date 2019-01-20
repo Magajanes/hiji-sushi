@@ -32,7 +32,8 @@ public class RecipeCheck : MonoBehaviour
 
         if (recipe == null)
         {
-            source.Play();
+            if (GameManager.Instance.SoundFXOn)
+                source.Play();
 
             return;
         }
@@ -83,14 +84,16 @@ public class RecipeCheck : MonoBehaviour
                 {
                     correctSteps = correctSteps <= 0 ? 0 : correctSteps - 1;
 
-                    source.Play();
+                    if (GameManager.Instance.SoundFXOn)
+                        source.Play();
                 }
             }
             else
             {
                 correctSteps = correctSteps <= 0 ? 0 : correctSteps - 1;
 
-                source.Play();
+                if (GameManager.Instance.SoundFXOn)
+                    source.Play();
             }
         }
 

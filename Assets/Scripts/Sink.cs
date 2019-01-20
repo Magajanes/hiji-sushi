@@ -11,7 +11,8 @@ public class Sink : MonoBehaviour
 
     public void OpenWater()
     {
-        source.Play();
+        if (GameManager.Instance.SoundFXOn)
+            source.Play();
 
         waterAnimator.SetBool("Open", true);
     }
@@ -20,6 +21,7 @@ public class Sink : MonoBehaviour
     {
         waterAnimator.SetBool("Open", false);
 
-        source.Stop();
+        if (GameManager.Instance.SoundFXOn)
+            source.Stop();
     }
 }

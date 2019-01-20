@@ -17,22 +17,31 @@ public class Client : MonoBehaviour
 
     public void Complain()
     {
-        audioSource.clip = audioClips[0];
-        audioSource.Play();
+        if (GameManager.Instance.SoundFXOn)
+        {
+            audioSource.clip = audioClips[0];
+            audioSource.Play();
+        }
     }
 
     public void Eat()
     {
-        audioSource.clip = audioClips[1];
-        audioSource.Play();
+        if (GameManager.Instance.SoundFXOn)
+        {
+            audioSource.clip = audioClips[1];
+            audioSource.Play();
+        }
 
         clientAnimator.SetTrigger("Eat");
     }
 
     public void Vomit()
     {
-        audioSource.clip = audioClips[2];
-        audioSource.Play();
+        if (GameManager.Instance.SoundFXOn)
+        {
+            audioSource.clip = audioClips[2];
+            audioSource.Play();
+        }
 
         clientAnimator.SetTrigger("Vomit");
     }

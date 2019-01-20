@@ -21,11 +21,19 @@ public class GameManager : MonoBehaviour
     public List<Level> GameLevels;
 
     public RecipeCheck Checker;
+    public AudioSource MusicSource;
+
+    [SerializeField]
+    private AudioClip[] musics;
+    private ScenesController controller;
 
     public float Score;
     public float MaxScore;
 
     public TextMeshProUGUI ScorePanel;
+
+    public bool SoundFXOn;
+    public bool MusicOn;
 
     public delegate void LevelUpAction();
     public static event LevelUpAction OnLevelChange;
@@ -36,6 +44,17 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        controller = GameObject.Find("SceneManager").GetComponent<ScenesController>();
+
+        SoundFXOn = controller.SoundFXOn;
+        MusicOn = controller.MusicOn;
+
+        if (MusicOn)
+        {
+            MusicSource.clip = musics[0];
+            MusicSource.Play();
+        }
 
         CurrentLevel = GameLevels[OrdersLevel];
 

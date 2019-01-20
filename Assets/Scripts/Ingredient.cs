@@ -14,7 +14,8 @@ public class Ingredient : MonoBehaviour
 
     public void Select()
     {
-        source.Play();
+        if (GameManager.Instance.SoundFXOn)
+            source.Play();
 
         if (Check.PrepareCoroutine == null)
             Mixer.AddIngredient(this);

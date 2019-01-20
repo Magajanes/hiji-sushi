@@ -4528,8 +4528,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 869f86c56cffad14fb956f0d10104597, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -4873,6 +4873,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3c6aa41f5ac52ab4aac93977055b2d0b, type: 2}
   - {fileID: 11400000, guid: af833b796aa133c409ab6b5522490315, type: 2}
   Checker: {fileID: 1708922688}
+  MusicSource: {fileID: 1066506084}
+  musics:
+  - {fileID: 8300000, guid: 869f86c56cffad14fb956f0d10104597, type: 3}
   Score: 0
   MaxScore: 0
   ScorePanel: {fileID: 2013868703}
