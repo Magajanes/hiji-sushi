@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: California
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  Points: 30
+  Points: 55
   DishPrefab: {fileID: 1065622824392478, guid: fe86c49febc556343bc93d91986bfbc1, type: 2}
   IngredientsList:
   - Arroz

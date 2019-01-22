@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Ceviche Atum
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  Points: 30
+  Points: 40
   DishPrefab: {fileID: 1985522524586058, guid: 05abf3fe4c1c12942a0581745fb67f74, type: 2}
   IngredientsList:
   - Atum

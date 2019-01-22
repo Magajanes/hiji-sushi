@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Uramaki Skin
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  Points: 30
+  Points: 50
   DishPrefab: {fileID: 1609188538263836, guid: 8a84b68f74d83a04a88ce37492b60ae2, type: 2}
   IngredientsList:
   - Arroz

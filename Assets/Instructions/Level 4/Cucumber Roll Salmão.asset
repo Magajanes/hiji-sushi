@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: "Cucumber Roll Salm\xE3o"
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  Points: 30
+  Points: 40
   DishPrefab: {fileID: 1269096691348322, guid: 6c371dc1179e303478af8717dfc59331, type: 2}
   IngredientsList:
   - Pepino

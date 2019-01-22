@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: "Sashimi Salm\xE3o"
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  Points: 30
+  Points: 15
   DishPrefab: {fileID: 1476273354172994, guid: 54ce26a9dd44bdf4fb8dd13274a4af7b, type: 2}
   IngredientsList:
   - "Salm\xE3o"

@@ -395,7 +395,7 @@ MonoBehaviour:
   IsSelected: 0
   CurrentSlot: 0
   DishName: Sunomono
-  TimeToDeliver: 30
+  TimeToDeliver: 40
   Highlight: {fileID: 1577196388859156}
   Timer: {fileID: 114801020885953726}
   PrepareInstructions: {fileID: 11400000, guid: acfe809e86ee1184191f219c88db4962,

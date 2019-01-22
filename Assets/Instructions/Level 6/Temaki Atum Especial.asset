@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Temaki Atum Especial
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  Points: 30
+  Points: 70
   DishPrefab: {fileID: 1734085590953620, guid: 7eee5d2e1a404644194bc6de7e4ee5a6, type: 2}
   IngredientsList:
   - Alga

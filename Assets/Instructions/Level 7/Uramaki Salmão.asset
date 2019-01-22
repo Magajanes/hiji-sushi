@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: "Uramaki Salm\xE3o"
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  Points: 30
+  Points: 50
   DishPrefab: {fileID: 1589016534507624, guid: 4f8fdf083188b784ca1b15e0ec86e4c5, type: 2}
   IngredientsList:
   - Arroz

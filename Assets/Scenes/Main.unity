@@ -5073,7 +5073,7 @@ MonoBehaviour:
   WaitRate: 1
   CurrentLevel: {fileID: 0}
   OrdersLevel: 0
-  LevelGoalPoints: 64000000c80000002c01000090010000f401000058020000bc020000
+  LevelGoalPoints: c8000000900100005802000020030000e8030000b004000078050000
   LevelsReached: 0000000000000000
   GameLevels:
   - {fileID: 11400000, guid: ea001684329d2ad44bf967d9cc46ea13, type: 2}

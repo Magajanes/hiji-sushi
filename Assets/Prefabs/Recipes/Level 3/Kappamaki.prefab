@@ -226,7 +226,7 @@ MonoBehaviour:
   IsSelected: 0
   CurrentSlot: 0
   DishName: Kappamaki
-  TimeToDeliver: 30
+  TimeToDeliver: 40
   Highlight: {fileID: 1254130482867534}
   Timer: {fileID: 114402380818120532}
   PrepareInstructions: {fileID: 11400000, guid: ac86807392fbbf247a69552d3adaeec6,

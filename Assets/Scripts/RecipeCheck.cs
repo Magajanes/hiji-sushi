@@ -66,6 +66,8 @@ public class RecipeCheck : MonoBehaviour
         GameManager.Instance.DelayedDishes++;
 
         ClientsManager.Instance.RemoveRandomClient();
+
+        preparingHands.SetActive(false);
     }
 
     public bool NormalCheckRecipe(IngredientMixer mixer)

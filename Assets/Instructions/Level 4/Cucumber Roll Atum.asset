@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Cucumber Roll Atum
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  Points: 30
+  Points: 40
   DishPrefab: {fileID: 1660292233343316, guid: bfc13eba4889b284eba7810242a83b3e, type: 2}
   IngredientsList:
   - Pepino

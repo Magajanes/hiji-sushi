@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Spice Skin
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  Points: 30
+  Points: 60
   DishPrefab: {fileID: 1987670853383370, guid: 6cfdce9dc86430342aff8247aa838630, type: 2}
   IngredientsList:
   - Alga

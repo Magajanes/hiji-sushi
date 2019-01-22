@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Sashimi Atum
   m_EditorClassIdentifier: 
   TimeToPrepare: 1
-  Points: 30
+  Points: 15
   DishPrefab: {fileID: 1818749834903746, guid: 384aed5963e17c74f800f762d3c78eb9, type: 2}
   IngredientsList:
   - Atum

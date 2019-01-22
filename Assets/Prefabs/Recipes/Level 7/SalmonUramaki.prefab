@@ -226,7 +226,7 @@ MonoBehaviour:
   IsSelected: 0
   CurrentSlot: 0
   DishName: "Uramaki Salm\xE3o"
-  TimeToDeliver: 30
+  TimeToDeliver: 45
   Highlight: {fileID: 1946715749580222}
   Timer: {fileID: 114257648770735116}
   PrepareInstructions: {fileID: 11400000, guid: d5c485cbf1c35d344b390000d0883fbf,
