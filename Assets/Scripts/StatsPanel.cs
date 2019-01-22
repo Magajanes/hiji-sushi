@@ -32,6 +32,8 @@ public class StatsPanel : MonoBehaviour
             newsPanels[1].gameObject.SetActive(false);
 
             newsPanels[0].ShowStats();
+
+            GameManager.Instance.PlayMusic(1);
         }
         else
         {
@@ -39,6 +41,8 @@ public class StatsPanel : MonoBehaviour
             newsPanels[1].gameObject.SetActive(true);
 
             newsPanels[1].ShowStats();
+
+            GameManager.Instance.PlayMusic(1);
         }
     }
 
@@ -49,6 +53,8 @@ public class StatsPanel : MonoBehaviour
         Time.timeScale = 1;
 
         gameObject.SetActive(false);
+
+        GameManager.Instance.PlayMusic(0);
     }
 
     private void OnDestroy()

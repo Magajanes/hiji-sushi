@@ -9,6 +9,8 @@ public class ScenesController : MonoBehaviour
     public bool MenuOn = false;
     public bool CreditsOn = false;
 
+    public AudioSource Source;
+
     [SerializeField]
     private GameObject menu;
     [SerializeField]
@@ -22,11 +24,15 @@ public class ScenesController : MonoBehaviour
 
     private void Start()
     {
+        Source.Play();
+
         DontDestroyOnLoad(gameObject);
     }
 
     public void StartGame()
     {
+        Source.Stop();
+
         SceneManager.LoadScene("Main");
     }
 
@@ -49,6 +55,8 @@ public class ScenesController : MonoBehaviour
         MusicOn = !MusicOn;
 
         soundToggles[1].image.sprite = MusicOn ? musicToggleSprites[0] : musicToggleSprites[1];
+
+        Source.volume = MusicOn ? 1f : 0f;
     }
 
     public void ToggleCredits()

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -49,6 +50,8 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
 
+        Time.timeScale = 1f;
+
         gameOverPanel.SetActive(false);
 
         controller = GameObject.Find("SceneManager").GetComponent<ScenesController>();
@@ -57,10 +60,7 @@ public class GameManager : MonoBehaviour
         MusicOn = controller.MusicOn;
 
         if (MusicOn)
-        {
-            MusicSource.clip = musics[0];
-            MusicSource.Play();
-        }
+            PlayMusic(0);
 
         CurrentLevel = GameLevels[OrdersLevel];
 
@@ -70,6 +70,15 @@ public class GameManager : MonoBehaviour
             LevelsReached[i] = false;
 
         LevelsReached[0] = true;
+    }
+
+    public void PlayMusic(int musicIndex)
+    {
+        if (MusicSource.clip != null)
+            MusicSource.Stop();
+
+        MusicSource.clip = musics[musicIndex];
+        MusicSource.Play();
     }
 
     public List<GameObject> GetCurrentOrdersList()
@@ -157,5 +166,16 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
 
         gameOverPanel.SetActive(true);
+
+        MusicSource.loop = false;
+
+        PlayMusic(2);
+    }
+
+    public void ReturnToMenu()
+    {
+        Destroy(controller.gameObject);
+
+        SceneManager.LoadScene("Intro");
     }
 }
