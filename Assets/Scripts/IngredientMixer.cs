@@ -142,6 +142,8 @@ public class IngredientMixer : SlotBehaviour
             GameManager.Instance.RottenDishes++;
 
             recipe.Penalize();
+
+            GameManager.Instance.CheckGameEnd();
         }
 
         ClientsManager.Instance.RemoveClient(client);

@@ -11,17 +11,21 @@ public class Dirt : MonoBehaviour
 
     private void Awake()
     {
-        CameraMove.OnModeChange += SetRandomSprites;
+        Hands.OnWashComplete += SetRandomSprites;
     }
 
-    public void SetRandomSprites(bool cookMode)
+    private void Start()
     {
-        if (!cookMode)
-            dirtRenderer.sprite = dirtSprites[Random.Range(0, dirtSprites.Length)];
+        SetRandomSprites();
+    }
+
+    public void SetRandomSprites()
+    {
+        dirtRenderer.sprite = dirtSprites[Random.Range(0, dirtSprites.Length)];
     }
 
     private void OnDestroy()
     {
-        CameraMove.OnModeChange -= SetRandomSprites;
+        Hands.OnWashComplete -= SetRandomSprites;
     }
 }

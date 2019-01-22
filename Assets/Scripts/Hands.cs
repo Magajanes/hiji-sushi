@@ -5,12 +5,16 @@ public class Hands : MonoBehaviour
 {
     public float WashAnimationTime;
 
+    public HygieneManager Manager;
     public Animator HandsAnimator;
     public AudioSource Source;
 
     public AudioClip[] WashClips;
 
     private Coroutine washCoroutine = null;
+
+    public delegate void FinishWashAction();
+    public static event FinishWashAction OnWashComplete;
 
     public bool CanWashHands(int step)
     {
@@ -33,6 +37,12 @@ public class Hands : MonoBehaviour
         }
 
         HandsAnimator.SetTrigger("Finish");
+
+        if (Manager.HygieneCounter >= 100f)
+        {
+            if (OnWashComplete != null)
+                OnWashComplete();
+        }
     }
 
     private IEnumerator SetWashStep(int step)

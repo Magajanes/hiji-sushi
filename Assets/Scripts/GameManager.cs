@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public int PerfectDishes;
     public int DelayedDishes;
     public int RottenDishes;
+    public int RottenDishesLimit;
 
     public float DirtRate = 1f;
     public float WaitRate = 1f;
@@ -25,6 +26,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private AudioClip[] musics;
+    [SerializeField]
+    private GameObject gameOverPanel;
+
     private ScenesController controller;
 
     public float Score;
@@ -44,6 +48,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        gameOverPanel.SetActive(false);
 
         controller = GameObject.Find("SceneManager").GetComponent<ScenesController>();
 
@@ -138,5 +144,18 @@ public class GameManager : MonoBehaviour
         PerfectDishes = 0;
         DelayedDishes = 0;
         RottenDishes = 0;
+    }
+
+    public void CheckGameEnd()
+    {
+        if (RottenDishes > RottenDishesLimit)
+            GameOver();
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0f;
+
+        gameOverPanel.SetActive(true);
     }
 }

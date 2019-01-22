@@ -7,9 +7,12 @@ public class ScenesController : MonoBehaviour
     public bool SoundFXOn = true;
     public bool MusicOn = true;
     public bool MenuOn = false;
+    public bool CreditsOn = false;
 
     [SerializeField]
     private GameObject menu;
+    [SerializeField]
+    private GameObject credits;
     [SerializeField]
     private Button[] soundToggles;
     [SerializeField]
@@ -46,5 +49,15 @@ public class ScenesController : MonoBehaviour
         MusicOn = !MusicOn;
 
         soundToggles[1].image.sprite = MusicOn ? musicToggleSprites[0] : musicToggleSprites[1];
+    }
+
+    public void ToggleCredits()
+    {
+        if (!CreditsOn)
+            ToggleMenu();
+
+        CreditsOn = !CreditsOn;
+
+        credits.SetActive(CreditsOn);
     }
 }
