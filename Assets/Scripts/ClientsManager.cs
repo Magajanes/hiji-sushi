@@ -13,7 +13,7 @@ public class ClientsManager : SlotBehaviour
 
     public Slot[] SlotsArray = new Slot[6];
 
-    public GameObject clientPrefab;
+    public GameObject[] clientPrefabs;
 
     private void Awake()
     {
@@ -38,7 +38,7 @@ public class ClientsManager : SlotBehaviour
         }
         while (SlotsArray[index].CurrentState == Slot.State.Occupied);
 
-        var clientObject = Instantiate(clientPrefab, SpawnPosition, Quaternion.identity);
+        var clientObject = Instantiate(clientPrefabs[Random.Range(0, clientPrefabs.Length)], SpawnPosition, Quaternion.identity);
         var client = clientObject.GetComponent<Client>();
 
         client.CurrentSlotIndex = index;

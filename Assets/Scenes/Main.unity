@@ -3540,8 +3540,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClientsInRestaurant: []
-  clientPrefab: {fileID: 1803858772784820, guid: a961370e2f63ecf4e920d7828b9ea09b,
-    type: 2}
+  clientPrefabs:
+  - {fileID: 1803858772784820, guid: a961370e2f63ecf4e920d7828b9ea09b, type: 2}
+  - {fileID: 1150742536193148, guid: e6a64eaaa7b194547bf1ee695adbc4c2, type: 2}
 --- !u!4 &709009370
 Transform:
   m_ObjectHideFlags: 0
