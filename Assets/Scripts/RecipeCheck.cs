@@ -13,6 +13,8 @@ public class RecipeCheck : MonoBehaviour
     public Coroutine PrepareCoroutine;
 
     [SerializeField]
+    private GameObject preparingHands;
+    [SerializeField]
     private AudioSource source;
 
     public delegate bool PrepareAction(IngredientMixer mixer);
@@ -102,6 +104,8 @@ public class RecipeCheck : MonoBehaviour
 
     private IEnumerator PrepareDish(IngredientMixer mixer, Recipe recipe)
     {
+        preparingHands.SetActive(true);
+
         mixer.ShrinkIngredients(recipe.PrepareInstructions.TimeToPrepare);
 
         yield return new WaitForSeconds(recipe.PrepareInstructions.TimeToPrepare);
@@ -111,6 +115,8 @@ public class RecipeCheck : MonoBehaviour
         Orders.EmptySlot(recipe);
 
         mixer.DeliverDish(recipe);
+
+        preparingHands.SetActive(false);
 
         PrepareCoroutine = null;
     }
