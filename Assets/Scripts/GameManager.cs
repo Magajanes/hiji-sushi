@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public int PerfectDishes;
     public int DelayedDishes;
+    public int DelayedDishesLimit;
     public int RottenDishes;
     public int RottenDishesLimit;
 
@@ -189,4 +190,10 @@ public class GameManager : MonoBehaviour
         foreach (Recipe recipe in allRecipes)
             NewRecipesDictionary.Add(recipe.DishName, false);
     }
+
+    public bool GoodResults()
+    {
+        return RottenDishes < RottenDishesLimit && DelayedDishes < DelayedDishesLimit;
+    }
+
 }

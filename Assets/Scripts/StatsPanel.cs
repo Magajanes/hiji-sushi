@@ -5,14 +5,6 @@ public class StatsPanel : MonoBehaviour
     [SerializeField]
     private NewsPanel[] newsPanels;
 
-    private bool goodResults
-    {
-        get
-        {
-            return GameManager.Instance.RottenDishes < 1 && GameManager.Instance.DelayedDishes < 1;
-        }
-    }
-
     private void Awake()
     {
         GameManager.OnNewLevelReached += ShowStatsPanel;
@@ -26,7 +18,7 @@ public class StatsPanel : MonoBehaviour
 
         Time.timeScale = 0f;
 
-        if (!goodResults)
+        if (!GameManager.Instance.GoodResults())
         {
             newsPanels[0].gameObject.SetActive(true);
             newsPanels[1].gameObject.SetActive(false);

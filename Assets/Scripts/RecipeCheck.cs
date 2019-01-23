@@ -13,6 +13,8 @@ public class RecipeCheck : MonoBehaviour
     public Coroutine PrepareCoroutine;
 
     [SerializeField]
+    private RecipePanel recipePanel;
+    [SerializeField]
     private GameObject preparingHands;
     [SerializeField]
     private AudioSource source;
@@ -73,8 +75,17 @@ public class RecipeCheck : MonoBehaviour
     public bool NormalCheckRecipe(IngredientMixer mixer)
     {
         var steps = CurrentRecipe.PrepareSteps;
-
         int correctSteps = 0;
+
+        if(mixer.NumberOfTypes() != steps.Count)
+        {
+            if (GameManager.Instance.SoundFXOn)
+                source.Play();
+
+            CurrentRecipe.Shake();
+
+            return false;
+        }
 
         for (int i = 0; i < mixer.NumberOfTypes(); i++)
         {
@@ -88,6 +99,8 @@ public class RecipeCheck : MonoBehaviour
                 {
                     correctSteps = correctSteps <= 0 ? 0 : correctSteps - 1;
 
+                    CurrentRecipe.Shake();
+
                     if (GameManager.Instance.SoundFXOn)
                         source.Play();
                 }
@@ -95,6 +108,8 @@ public class RecipeCheck : MonoBehaviour
             else
             {
                 correctSteps = correctSteps <= 0 ? 0 : correctSteps - 1;
+
+                CurrentRecipe.Shake();
 
                 if (GameManager.Instance.SoundFXOn)
                     source.Play();
@@ -107,6 +122,8 @@ public class RecipeCheck : MonoBehaviour
     private IEnumerator PrepareDish(IngredientMixer mixer, Recipe recipe)
     {
         preparingHands.SetActive(true);
+
+        recipePanel.HidePanel();
 
         mixer.ShrinkIngredients(recipe.PrepareInstructions.TimeToPrepare);
 

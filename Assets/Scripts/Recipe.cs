@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,6 +21,8 @@ public class Recipe : MonoBehaviour
     public Slider Timer;
 
     public Instructions PrepareInstructions;
+
+    private Coroutine shakeCoroutine;
 
     public Dictionary<string, int> PrepareSteps = new Dictionary<string, int>();
 
@@ -84,5 +87,34 @@ public class Recipe : MonoBehaviour
     public void Penalize()
     {
         GameManager.Instance.RemovePoints(PrepareInstructions.Points / 2f);
+    }
+
+    public void Shake()
+    {
+        if (shakeCoroutine == null)
+            shakeCoroutine = StartCoroutine(ShakeRecipe());
+    }
+
+    private IEnumerator ShakeRecipe()
+    {
+        float counter = 0.5f;
+        Vector3 randomVector;
+
+        var lastPosition = transform.position;
+
+        while (counter > 0)
+        {
+            randomVector = UnityEngine.Random.insideUnitSphere * 0.2f;
+            randomVector.z = 0f;
+
+            transform.position = lastPosition + randomVector;
+            counter -= 0.01f;
+
+            yield return null;
+        }
+
+        transform.position = lastPosition;
+
+        shakeCoroutine = null;
     }
 }
