@@ -13,7 +13,9 @@ public class IngredientMixer : SlotBehaviour
     public HygieneManager Manager;
 
     [SerializeField]
-    AudioSource source;
+    private AudioSource source;
+    [SerializeField]
+    private RecipePanel recipePanel;
 
     private void Start()
     {
@@ -145,6 +147,8 @@ public class IngredientMixer : SlotBehaviour
 
             GameManager.Instance.CheckGameEnd();
         }
+
+        recipePanel.HidePanel();
 
         ClientsManager.Instance.RemoveClient(client);
 

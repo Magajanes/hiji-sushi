@@ -36,6 +36,12 @@ public class RecipePanel : MonoBehaviour
 
     public void SetPanel(object sender, EventArgs args)
     {
+        if (!GameManager.Instance.NewRecipesDictionary[Checker.CurrentRecipe.DishName] && hintCoroutine == null)
+        {
+            GameManager.Instance.NewRecipesDictionary[Checker.CurrentRecipe.DishName] = true;
+            hintCoroutine = StartCoroutine(ShowHint());
+        }
+
         ShowRecipe(Checker.CurrentRecipe);
     }
 
@@ -69,6 +75,17 @@ public class RecipePanel : MonoBehaviour
         iTween.MoveTo(gameObject, iTween.Hash("y", nextPosition,
                                               "easetype", iTween.EaseType.easeOutExpo,
                                               "time", 1f));
+    }
+
+    public void HidePanel()
+    {
+        if (hintCoroutine != null)
+        {
+            StopCoroutine(hintCoroutine);
+            MovePanel(HIDDEN_POSITION);
+        }
+
+        hintCoroutine = null;
     }
 
     private IEnumerator ShowHint()

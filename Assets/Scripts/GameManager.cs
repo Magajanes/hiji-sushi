@@ -40,6 +40,10 @@ public class GameManager : MonoBehaviour
     public bool SoundFXOn;
     public bool MusicOn;
 
+    [SerializeField]
+    private List<Recipe> allRecipes = new List<Recipe>();
+    public Dictionary<string, bool> NewRecipesDictionary = new Dictionary<string, bool>();
+
     public delegate void LevelUpAction();
     public static event LevelUpAction OnLevelChange;
 
@@ -63,6 +67,7 @@ public class GameManager : MonoBehaviour
             PlayMusic(0);
 
         CurrentLevel = GameLevels[OrdersLevel];
+        CreateNewRecipesDictionary();
 
         MaxScore = 0f;
 
@@ -177,5 +182,11 @@ public class GameManager : MonoBehaviour
         Destroy(controller.gameObject);
 
         SceneManager.LoadScene("Intro");
+    }
+
+    private void CreateNewRecipesDictionary()
+    {
+        foreach (Recipe recipe in allRecipes)
+            NewRecipesDictionary.Add(recipe.DishName, false);
     }
 }
