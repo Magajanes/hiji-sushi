@@ -84,6 +84,16 @@ public class OrderQueue : SlotBehaviour
         }
     }
 
+    public void ShakeOrders()
+    {
+        foreach (Recipe recipe in OrderList)
+        {
+            recipe.Shake();
+
+            recipe.transform.position = SlotsArray[recipe.CurrentSlot].SlotPosition;
+        }
+    }
+
     public void EmptySlot(Recipe recipe)
     {
         SlotsArray[recipe.CurrentSlot].CurrentState = Slot.State.Empty;

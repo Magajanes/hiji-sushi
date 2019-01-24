@@ -39,6 +39,8 @@ public class RecipeCheck : MonoBehaviour
             if (GameManager.Instance.SoundFXOn)
                 source.Play();
 
+            Orders.ShakeOrders();
+
             return;
         }
 
