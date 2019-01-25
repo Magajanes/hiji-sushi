@@ -3,6 +3,12 @@
 public class StatsPanel : MonoBehaviour
 {
     [SerializeField]
+    private MedalsPanel medalsPanel;
+
+    [SerializeField]
+    private Sprite[] medalSprites;
+
+    [SerializeField]
     private NewsPanel[] newsPanels;
 
     private void Awake()
@@ -18,23 +24,67 @@ public class StatsPanel : MonoBehaviour
 
         Time.timeScale = 0f;
 
-        if (!GameManager.Instance.GoodResults())
-        {
-            newsPanels[0].gameObject.SetActive(true);
-            newsPanels[1].gameObject.SetActive(false);
+        GameManager.Instance.PlayMusic(1);
 
+
+        if (GameManager.Instance.GoldResults())
+        {
+            foreach (NewsPanel news in newsPanels)
+                news.gameObject.SetActive(false);
+
+            newsPanels[0].gameObject.SetActive(true);
+            newsPanels[0].MedalImage.sprite = medalSprites[0];
+            newsPanels[0].MedalImage.preserveAspect = true;
             newsPanels[0].ShowStats();
 
-            GameManager.Instance.PlayMusic(1);
-        }
-        else
-        {
-            newsPanels[0].gameObject.SetActive(false);
-            newsPanels[1].gameObject.SetActive(true);
+            medalsPanel.SetMedal(level, medalSprites[0]);
 
+            return;
+        }
+
+        if (GameManager.Instance.DirtyResults())
+        {
+            foreach (NewsPanel news in newsPanels)
+                news.gameObject.SetActive(false);
+
+            newsPanels[1].gameObject.SetActive(true);
+            newsPanels[1].MedalImage.sprite = medalSprites[1];
+            newsPanels[1].MedalImage.preserveAspect = true;
             newsPanels[1].ShowStats();
 
-            GameManager.Instance.PlayMusic(1);
+            medalsPanel.SetMedal(level, medalSprites[1]);
+
+            return;
+        }
+
+        if (GameManager.Instance.SlowResults())
+        {
+            foreach (NewsPanel news in newsPanels)
+                news.gameObject.SetActive(false);
+
+            newsPanels[2].gameObject.SetActive(true);
+            newsPanels[2].MedalImage.sprite = medalSprites[1];
+            newsPanels[2].MedalImage.preserveAspect = true;
+            newsPanels[2].ShowStats();
+
+            medalsPanel.SetMedal(level, medalSprites[1]);
+
+            return;
+        }
+
+        if (GameManager.Instance.DirtyAndSlowResults())
+        {
+            foreach (NewsPanel news in newsPanels)
+                news.gameObject.SetActive(false);
+
+            newsPanels[3].gameObject.SetActive(true);
+            newsPanels[3].MedalImage.sprite = medalSprites[2];
+            newsPanels[3].MedalImage.preserveAspect = true;
+            newsPanels[3].ShowStats();
+
+            medalsPanel.SetMedal(level, medalSprites[2]);
+
+            return;
         }
     }
 

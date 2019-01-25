@@ -27,7 +27,6 @@ public class IngredientMixer : SlotBehaviour
             if (SlotsArray[i].CurrentState == Slot.State.Empty)
             {
                 var ing = Instantiate(ingredient.UsedPrefab, ingredient.transform.position, Quaternion.identity);
-
                 var used = ing.GetComponent<Used>();
 
                 iTween.MoveTo(ing, iTween.Hash("position", SlotsArray[i].SlotPosition,
@@ -37,11 +36,9 @@ public class IngredientMixer : SlotBehaviour
                                                "oncomplete", "ActivatePanel"));
 
                 UsedIngredients[i] = used;
-
                 Measures[i]++;
 
                 used.AmountText.text = Measures[i].ToString();
-
                 SlotsArray[i].CurrentState = Slot.State.Occupied;
 
                 break;
@@ -57,7 +54,6 @@ public class IngredientMixer : SlotBehaviour
                 Destroy(ing, 0.25f);
 
                 Measures[i]++;
-
                 UsedIngredients[i].AmountText.text = Measures[i].ToString();
 
                 break;
@@ -114,13 +110,10 @@ public class IngredientMixer : SlotBehaviour
     private IEnumerator Deliver(Recipe recipe)
     {
         var dish = Instantiate(recipe.PrepareInstructions.DishPrefab, new Vector3(5.7f, -3f, 0f), Quaternion.identity);
-
         dish.transform.localScale = Vector3.zero;
-
         iTween.ScaleTo(dish, Vector3.one, 1f);
 
         var client = ClientsManager.Instance.RandomClient();
-
         var clientPosition = ClientsManager.Instance.SlotsArray[client.CurrentSlotIndex].SlotPosition;
 
         iTween.MoveTo(dish, iTween.Hash("position", new Vector3(clientPosition.x, 0.9f, 0f),
@@ -130,22 +123,18 @@ public class IngredientMixer : SlotBehaviour
         if (Manager.HygieneCheck())
         {
             client.Eat();
-
             GameManager.Instance.PerfectDishes++;
-
             recipe.GivePoints();
         }
         else
         {
             client.Vomit();
-
             GameManager.Instance.RottenDishes++;
-
             recipe.Penalize();
-
-            GameManager.Instance.CheckGameEnd();
+            GameManager.Instance.CheckNotification();
         }
 
+        GameManager.Instance.CheckGameEnd();
         ClientsManager.Instance.RemoveClient(client);
 
         yield return new WaitForSeconds(0.75f);

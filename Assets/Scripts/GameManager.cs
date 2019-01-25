@@ -7,11 +7,19 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    [HideInInspector]
     public int PerfectDishes;
+    [HideInInspector]
     public int DelayedDishes;
-    public int DelayedDishesLimit;
+    [HideInInspector]
     public int RottenDishes;
-    public int RottenDishesLimit;
+
+    public int DelayedDishesLimit;
+    public int NotificationLimit;
+    public int DelayedGameOver;
+    public int RottenGameOver;
+
+    public float PointsToWin;
 
     public float DirtRate = 1f;
     public float WaitRate = 1f;
@@ -29,7 +37,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private AudioClip[] musics;
     [SerializeField]
-    private GameObject gameOverPanel;
+    private GameObject[] gamePanels;
 
     private ScenesController controller;
 
@@ -40,6 +48,7 @@ public class GameManager : MonoBehaviour
 
     public bool SoundFXOn;
     public bool MusicOn;
+    private bool notified = false;
 
     [SerializeField]
     private List<Recipe> allRecipes = new List<Recipe>();
@@ -57,7 +66,8 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 1f;
 
-        gameOverPanel.SetActive(false);
+        foreach (GameObject panel in gamePanels)
+            panel.SetActive(false);
 
         controller = GameObject.Find("SceneManager").GetComponent<ScenesController>();
 
@@ -159,23 +169,75 @@ public class GameManager : MonoBehaviour
         PerfectDishes = 0;
         DelayedDishes = 0;
         RottenDishes = 0;
+        notified = false;
     }
 
     public void CheckGameEnd()
     {
-        if (RottenDishes > RottenDishesLimit)
+        if (RottenDishes >= RottenGameOver)
+        {
             GameOver();
+            return;
+        }
+
+        if (DelayedDishes >= DelayedGameOver)
+        {
+            Bankrupcy();
+            return;
+        }
+
+        if (Score >= PointsToWin)
+            WinGame();
+    }
+
+    public void CheckNotification()
+    {
+        if (!notified && RottenDishes == NotificationLimit)
+            Notify();
     }
 
     public void GameOver()
     {
         Time.timeScale = 0f;
 
-        gameOverPanel.SetActive(true);
-
+        gamePanels[0].SetActive(true);
         MusicSource.loop = false;
-
         PlayMusic(2);
+    }
+
+    public void Bankrupcy()
+    {
+        Time.timeScale = 0f;
+
+        gamePanels[3].SetActive(true);
+        MusicSource.loop = false;
+        PlayMusic(2);
+    }
+
+    public void Notify()
+    {
+        Time.timeScale = 0f;
+
+        gamePanels[1].SetActive(true);
+        PlayMusic(1);
+
+        notified = true;
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+
+        gamePanels[1].SetActive(false);
+        PlayMusic(0);
+    }
+
+    public void WinGame()
+    {
+        Time.timeScale = 0f;
+
+        gamePanels[2].SetActive(true);
+        PlayMusic(1);
     }
 
     public void ReturnToMenu()
@@ -191,9 +253,23 @@ public class GameManager : MonoBehaviour
             NewRecipesDictionary.Add(recipe.DishName, false);
     }
 
-    public bool GoodResults()
+    public bool GoldResults()
     {
-        return RottenDishes < RottenDishesLimit && DelayedDishes < DelayedDishesLimit;
+        return DelayedDishes < DelayedDishesLimit && RottenDishes == 0;
     }
 
+    public bool DirtyResults()
+    {
+        return DelayedDishes < DelayedDishesLimit && RottenDishes > 0 && RottenDishes < NotificationLimit;
+    }
+
+    public bool SlowResults()
+    {
+        return DelayedDishes >= DelayedDishesLimit && RottenDishes == 0;
+    }
+
+    public bool DirtyAndSlowResults()
+    {
+        return (DelayedDishes >= DelayedDishesLimit && RottenDishes > 0 && RottenDishes < NotificationLimit) || (RottenDishes >= NotificationLimit && RottenDishes < RottenGameOver);
+    }
 }

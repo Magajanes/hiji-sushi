@@ -56,7 +56,7 @@ public class RecipePanel : MonoBehaviour
         for (int i = 0; i < instructions.IngredientsList.Count; i++)
         {
             Instructions[i].enabled = true;
-            Instructions[i].text = instructions.MeasuresList[i] + "x";
+            Instructions[i].text = instructions.MeasuresList[i].ToString();
 
             IngredientIcons[i].enabled = true;
             IngredientIcons[i].sprite = instructions.IngredientIconsList[i];
