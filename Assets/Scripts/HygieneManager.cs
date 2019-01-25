@@ -8,7 +8,7 @@ public class HygieneManager : MonoBehaviour
     public float HygieneCounter;
 
     [SerializeField]
-    private float[] dirtLevels;
+    private float dirtLevel;
     [SerializeField]
     private GameObject[] dirts;
 
@@ -27,8 +27,9 @@ public class HygieneManager : MonoBehaviour
 
         HygieneCounter = Mathf.Clamp(HygieneCounter, 0f, 100f);
 
+        //TODO
         for (int i = 0; i < dirts.Length; i++)
-            dirts[i].SetActive(HygieneCounter < dirtLevels[i]);
+            dirts[i].SetActive(HygieneCounter < dirtLevel);
     }
 
     public bool HygieneCheck()
