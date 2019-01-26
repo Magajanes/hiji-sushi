@@ -11,4 +11,15 @@ public class WashStep : MonoBehaviour
     public int WashStepID;
 
     public float PointsToGive;
+
+    public GameObject[] DirtObjects;
+
+    public void Clean()
+    {
+        foreach (GameObject dirt in DirtObjects)
+        {
+            if (dirt != null)
+                dirt.SetActive(false);
+        }
+    }
 }

@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     public RecipeCheck Checker;
     public AudioSource MusicSource;
+    public CameraMove CameraMove;
 
     [SerializeField]
     private AudioClip[] musics;

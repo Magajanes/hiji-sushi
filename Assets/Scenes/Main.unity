@@ -2584,6 +2584,9 @@ MonoBehaviour:
   Done: 0
   WashStepID: 4
   PointsToGive: 15
+  DirtObjects:
+  - {fileID: 655322819}
+  - {fileID: 2054623731}
 --- !u!70 &412543025
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2948,6 +2951,8 @@ MonoBehaviour:
   Done: 0
   WashStepID: 3
   PointsToGive: 15
+  DirtObjects:
+  - {fileID: 399274191}
 --- !u!70 &485741080
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3564,6 +3569,9 @@ MonoBehaviour:
   Done: 0
   WashStepID: 4
   PointsToGive: 15
+  DirtObjects:
+  - {fileID: 655322819}
+  - {fileID: 2054623731}
 --- !u!70 &592775352
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4693,6 +4701,9 @@ MonoBehaviour:
   Done: 0
   WashStepID: 5
   PointsToGive: 15
+  DirtObjects:
+  - {fileID: 303496936}
+  - {fileID: 1317581426}
 --- !u!58 &836684384
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4807,6 +4818,8 @@ MonoBehaviour:
   Done: 0
   WashStepID: 7
   PointsToGive: 15
+  DirtObjects:
+  - {fileID: 1634466169}
 --- !u!70 &853983460
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5052,6 +5065,9 @@ MonoBehaviour:
   Done: 0
   WashStepID: 5
   PointsToGive: 15
+  DirtObjects:
+  - {fileID: 303496936}
+  - {fileID: 1317581426}
 --- !u!58 &894982300
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6255,6 +6271,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: af833b796aa133c409ab6b5522490315, type: 2}
   Checker: {fileID: 1708922688}
   MusicSource: {fileID: 1066506084}
+  CameraMove: {fileID: 519420033}
   musics:
   - {fileID: 8300000, guid: 869f86c56cffad14fb956f0d10104597, type: 3}
   - {fileID: 8300000, guid: 5bee38d4fa97e334eb2fecbcbc60ce86, type: 3}
@@ -7223,6 +7240,8 @@ MonoBehaviour:
   Done: 0
   WashStepID: 6
   PointsToGive: 15
+  DirtObjects:
+  - {fileID: 1152367106}
 --- !u!70 &1261386917
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -8791,6 +8810,8 @@ MonoBehaviour:
   Done: 0
   WashStepID: 1
   PointsToGive: 15
+  DirtObjects:
+  - {fileID: 411741474}
 --- !u!58 &1636404572
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9481,6 +9502,7 @@ MonoBehaviour:
   Done: 0
   WashStepID: 2
   PointsToGive: 10
+  DirtObjects: []
 --- !u!1 &1763583456
 GameObject:
   m_ObjectHideFlags: 0

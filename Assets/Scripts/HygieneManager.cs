@@ -4,8 +4,9 @@ using UnityEngine.UI;
 public class HygieneManager : MonoBehaviour
 {
     public Slider HygieneBar;
-
     public float HygieneCounter;
+
+    private CameraMove camera;
 
     [SerializeField]
     private float dirtLevel;
@@ -17,6 +18,8 @@ public class HygieneManager : MonoBehaviour
         HygieneBar.maxValue = 100f;
 
         HygieneCounter = HygieneBar.maxValue;
+
+        camera = GameManager.Instance.CameraMove;
     }
 
     private void Update()
@@ -27,9 +30,11 @@ public class HygieneManager : MonoBehaviour
 
         HygieneCounter = Mathf.Clamp(HygieneCounter, 0f, 100f);
 
-        //TODO
-        for (int i = 0; i < dirts.Length; i++)
-            dirts[i].SetActive(HygieneCounter < dirtLevel);
+        if (camera.CookMode)
+        {
+            for (int i = 0; i < dirts.Length; i++)
+                dirts[i].SetActive(HygieneCounter < dirtLevel);
+        }
     }
 
     public bool HygieneCheck()

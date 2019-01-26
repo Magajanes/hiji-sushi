@@ -5,6 +5,14 @@ public class CameraMove : MonoBehaviour
 {
     private bool cookMode = true;
 
+    public bool CookMode
+    {
+        get
+        {
+            return cookMode;
+        }
+    }
+
     private Coroutine cameraMoveCoroutine = null;
 
     [SerializeField]

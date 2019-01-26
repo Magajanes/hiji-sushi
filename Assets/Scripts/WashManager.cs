@@ -107,7 +107,7 @@ public class WashManager : MonoBehaviour
             if (!step.Done && step.IsInitial)
             {
                 EvaluateHygienePoints(step);
-
+                step.Clean();
                 step.Done = true;
             }
             else if (step.Done)
@@ -129,7 +129,7 @@ public class WashManager : MonoBehaviour
             if (!step.Done && !step.IsInitial)
             {
                 EvaluateHygienePoints(step);
-
+                step.Clean();
                 step.Done = true;
             }
             else if (step.Done)
