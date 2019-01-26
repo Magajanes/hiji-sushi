@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
-    private bool cookMode = true;
+    public bool FirstWash = true;
+    private bool cookMode = false;
 
     public bool CookMode
     {
@@ -23,8 +24,22 @@ public class CameraMove : MonoBehaviour
     public delegate void ModeChangeAction(bool mode);
     public static event ModeChangeAction OnModeChange;
 
+    public delegate void FirstWashAction();
+    public static event FirstWashAction OnFirstWashFinished;
+
     public void ChangeMode()
     {
+        if (FirstWash)
+        {
+            if (washManager.HygieneGauge >= 100f)
+            {
+                FirstWash = false;
+
+                if (OnFirstWashFinished != null)
+                    OnFirstWashFinished();
+            }
+        }
+
         if (cameraMoveCoroutine == null)
             cameraMoveCoroutine = StartCoroutine(MoveCamera());
     }

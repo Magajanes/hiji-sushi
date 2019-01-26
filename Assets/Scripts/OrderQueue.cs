@@ -15,22 +15,41 @@ public class OrderQueue : SlotBehaviour
 
     private List<GameObject> currentLevelOrders;
 
+    private delegate void OrderAction();
+    private OrderAction Order;
+
     private void Start()
     {
         GameManager.OnLevelChange += UpdateLevels;
+        CameraMove.OnFirstWashFinished += StartOrders;
 
         UpdateLevels();
-
         PrepareSlots(StartPosition, SlotsArray, 2f);
+        Order = WaitFirstWashToOrder;
     }
 
     private void Update()
+    {
+        Order();
+    }
+
+    private void WaitFirstWashToOrder()
+    {
+        return;
+    }
+
+    private void StartOrders()
+    {
+        Order = OrderNormally;
+    }
+
+    private void OrderNormally()
     {
         orderInterval -= Time.deltaTime;
 
         if (orderInterval <= 0f)
         {
-            if(OrderList.Count < 6)
+            if (OrderList.Count < 6)
                 ReceiveOrder();
 
             float chance = Random.Range(0f, 100f);
@@ -109,5 +128,6 @@ public class OrderQueue : SlotBehaviour
     private void OnDestroy()
     {
         GameManager.OnLevelChange -= UpdateLevels;
+        CameraMove.OnFirstWashFinished -= StartOrders;
     }
 }

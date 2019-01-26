@@ -17,7 +17,8 @@ public class HygieneManager : MonoBehaviour
     {
         HygieneBar.maxValue = 100f;
 
-        HygieneCounter = HygieneBar.maxValue;
+        //HygieneCounter = HygieneBar.maxValue;
+        HygieneCounter = 0f;
 
         camera = GameManager.Instance.CameraMove;
     }

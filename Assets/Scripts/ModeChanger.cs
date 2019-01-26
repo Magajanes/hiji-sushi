@@ -12,6 +12,11 @@ public class ModeChanger : MonoBehaviour
         CameraMove.OnModeChange += SetButtonPosition;
     }
 
+    private void Start()
+    {
+        SetButtonPosition(false);
+    }
+
     public void SetButtonPosition(bool cookMode)
     {
         if (isDispenser)

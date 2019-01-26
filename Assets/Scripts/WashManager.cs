@@ -9,6 +9,14 @@ public class WashManager : MonoBehaviour
 
     private float hygieneGauge = 0f;
 
+    public float HygieneGauge
+    {
+        get
+        {
+            return hygieneGauge;
+        }
+    }
+
     public WashStep[] FirstWashSteps = new WashStep[2];
     public WashStep[] ComplexWashSteps = new WashStep[6];
 
@@ -27,6 +35,8 @@ public class WashManager : MonoBehaviour
         WashEvaluation = EvaluateBeforeSoap;
 
         HandsSetup = PrepareHandsToWash;
+
+        HandsSetup();
     }
 
     public void EvaluateStep(WashStep step)

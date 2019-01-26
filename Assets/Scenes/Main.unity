@@ -2341,7 +2341,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.7, y: 0, z: -10}
+  m_LocalPosition: {x: -5.7, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2358,6 +2358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4048a11e1503e5347802d7afb41d4784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FirstWash: 1
   washManager: {fileID: 122270816}
   sink: {fileID: 1822718638}
 --- !u!1001 &527305498
@@ -4740,8 +4741,8 @@ MonoBehaviour:
   DelayedGameOver: 10
   RottenGameOver: 5
   PointsToWin: 5000
-  DirtRate: 1
-  WaitRate: 1
+  DirtRate: 0
+  WaitRate: 0
   CurrentLevel: {fileID: 0}
   OrdersLevel: 0
   LevelGoalPoints: c8000000f40100008403000078050000d00700008c0a0000ac0d0000
