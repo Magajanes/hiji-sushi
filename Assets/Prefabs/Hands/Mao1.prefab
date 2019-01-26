@@ -319,7 +319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1617364775472108
 GameObject:
   m_ObjectHideFlags: 1
@@ -1021,7 +1021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.7803935
+  m_Length: 1.780394
   m_ChildTransform: {fileID: 4495634159722158}
   m_AttachedIK: {fileID: 0}
 --- !u!114 &114073004022757086
