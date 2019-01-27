@@ -8,6 +8,7 @@ public class ScenesController : MonoBehaviour
     public bool MusicOn = true;
     public bool MenuOn = false;
     public bool CreditsOn = false;
+    public bool NormalMode = true;
 
     public AudioSource Source;
 
@@ -15,6 +16,8 @@ public class ScenesController : MonoBehaviour
     private GameObject menu;
     [SerializeField]
     private GameObject credits;
+    [SerializeField]
+    private GameObject difficultySetup;
     [SerializeField]
     private Button[] soundToggles;
     [SerializeField]
@@ -67,5 +70,24 @@ public class ScenesController : MonoBehaviour
         CreditsOn = !CreditsOn;
 
         credits.SetActive(CreditsOn);
+    }
+
+    public void ShowDifficultySetup()
+    {
+        difficultySetup.SetActive(true);
+    }
+
+    public void SetDifficultyToNormal()
+    {
+        NormalMode = true;
+
+        difficultySetup.SetActive(false);
+    }
+
+    public void SetDifficultyToHard()
+    {
+        NormalMode = false;
+
+        difficultySetup.SetActive(false);
     }
 }

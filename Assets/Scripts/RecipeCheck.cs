@@ -19,12 +19,24 @@ public class RecipeCheck : MonoBehaviour
     [SerializeField]
     private AudioSource source;
 
+    private bool NormalMode
+    {
+        get
+        {
+            return GameManager.Instance.Controller.NormalMode;
+        }
+    }
+
     public delegate bool PrepareAction(IngredientMixer mixer);
     public PrepareAction Check;
 
     public void StartProcess()
     {
-        Check = NormalCheckRecipe;
+        if (NormalMode)
+            Check = NormalCheckRecipe;
+        else
+            Check = HardRecipeCheck;
+
         PrepareRecipe(Mixer, CurrentRecipe);
     }
 
@@ -114,6 +126,52 @@ public class RecipeCheck : MonoBehaviour
         }
 
         return correctSteps == steps.Count;
+    }
+
+    public bool HardRecipeCheck(IngredientMixer mixer)
+    {
+        var ingredients = CurrentRecipe.PrepareInstructions.IngredientsList;
+        var measures = CurrentRecipe.PrepareInstructions.MeasuresList;
+        int correctSteps = 0;
+
+        if (mixer.NumberOfTypes() != ingredients.Count)
+        {
+            if (GameManager.Instance.SoundFXOn)
+                source.Play();
+
+            CurrentRecipe.Shake();
+
+            return false;
+        }
+
+        for (int i = 0; i < mixer.NumberOfTypes(); i++)
+        {
+            if(mixer.UsedIngredients[i].Name == ingredients[i])
+            {
+                if (mixer.Measures[i] == measures[i])
+                    correctSteps++;
+                else
+                {
+                    if (GameManager.Instance.SoundFXOn)
+                        source.Play();
+
+                    CurrentRecipe.Shake();
+
+                    return false;
+                }
+            }
+            else
+            {
+                if (GameManager.Instance.SoundFXOn)
+                    source.Play();
+
+                CurrentRecipe.Shake();
+
+                return false;
+            }
+        }
+
+        return correctSteps == ingredients.Count;
     }
 
     private IEnumerator PrepareDish(IngredientMixer mixer, Recipe recipe)

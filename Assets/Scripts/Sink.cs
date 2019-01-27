@@ -5,12 +5,16 @@ using UnityEngine;
 public class Sink : MonoBehaviour
 {
     [SerializeField]
+    private WashManager washManager;
+    [SerializeField]
     private AudioSource source;
     [SerializeField]
     private Animator waterAnimator;
 
     public void OpenWater()
     {
+        washManager.WashStarted = true;
+
         if (GameManager.Instance.SoundFXOn)
             source.Play();
 
@@ -19,6 +23,8 @@ public class Sink : MonoBehaviour
 
     public void CloseWater()
     {
+        washManager.WashStarted = false;
+
         waterAnimator.SetBool("Open", false);
 
         if (GameManager.Instance.SoundFXOn)

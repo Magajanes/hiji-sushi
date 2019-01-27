@@ -11,16 +11,17 @@ public class Hands : MonoBehaviour
 
     public AudioClip[] WashClips;
 
-    private Coroutine washCoroutine = null;
+    [HideInInspector]
+    public Coroutine WashCoroutine;
 
     public delegate void FinishWashAction();
     public static event FinishWashAction OnWashComplete;
 
     public bool CanWashHands(int step)
     {
-        if (washCoroutine == null)
+        if (WashCoroutine == null)
         {
-            washCoroutine = StartCoroutine(SetWashStep(step));
+            WashCoroutine = StartCoroutine(SetWashStep(step));
 
             return true;
         }
@@ -59,9 +60,8 @@ public class Hands : MonoBehaviour
         yield return new WaitForSeconds(WashAnimationTime);
 
         Source.Stop();
-
-        washCoroutine = null;
-
         HandsAnimator.SetBool("WashingHands", false);
+
+        WashCoroutine = null;
     }
 }

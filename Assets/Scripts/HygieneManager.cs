@@ -6,7 +6,7 @@ public class HygieneManager : MonoBehaviour
     public Slider HygieneBar;
     public float HygieneCounter;
 
-    private CameraMove camera;
+    private CameraMove cameraMove;
 
     [SerializeField]
     private float dirtLevel;
@@ -17,10 +17,9 @@ public class HygieneManager : MonoBehaviour
     {
         HygieneBar.maxValue = 100f;
 
-        //HygieneCounter = HygieneBar.maxValue;
         HygieneCounter = 0f;
 
-        camera = GameManager.Instance.CameraMove;
+        cameraMove = GameManager.Instance.CameraMove;
     }
 
     private void Update()
@@ -31,7 +30,7 @@ public class HygieneManager : MonoBehaviour
 
         HygieneCounter = Mathf.Clamp(HygieneCounter, 0f, 100f);
 
-        if (camera.CookMode)
+        if (cameraMove.CookMode)
         {
             for (int i = 0; i < dirts.Length; i++)
                 dirts[i].SetActive(HygieneCounter < dirtLevel);

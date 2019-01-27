@@ -7,6 +7,8 @@ public class WashManager : MonoBehaviour
     public readonly Vector3 WashHandsPosition = new Vector3(-6f, 0f, 0f);
     public readonly Vector3 HideHandsPosition = new Vector3(-6f, -5f - 0f);
 
+    public bool WashStarted = false;
+
     private float hygieneGauge = 0f;
 
     public float HygieneGauge
@@ -23,6 +25,9 @@ public class WashManager : MonoBehaviour
     public HygieneManager Manager;
     public Hands HandsObject;
     public SpriteRenderer WaterRenderer;
+
+    [SerializeField]
+    private AudioSource source;
 
     private delegate void WashEvaluationAction(WashStep step);
     private WashEvaluationAction WashEvaluation;
@@ -103,27 +108,33 @@ public class WashManager : MonoBehaviour
         HandsSetup = PrepareHandsToWash;
     }
 
-    public bool WashStarted()
-    {
-        return hygieneGauge > 0f;
-    }
-
     private void EvaluateBeforeSoap(WashStep step)
     {
         WaterRenderer.sortingOrder = 7;
 
         if (HandsObject.CanWashHands(step.WashStepID))
         {
-            if (!step.Done && step.IsInitial)
+            if (!WashStarted)
+            {
+                if (GameManager.Instance.SoundFXOn)
+                    source.Play();
+            }
+            else if (!step.Done && step.IsInitial)
             {
                 EvaluateHygienePoints(step);
                 step.Clean();
                 step.Done = true;
             }
             else if (step.Done)
-                Debug.Log("Step already done!");
+            {
+                if (GameManager.Instance.SoundFXOn)
+                    source.Play();
+            }
             else if (!step.IsInitial)
-                Debug.Log("This is not an initial step!");
+            {
+                if (GameManager.Instance.SoundFXOn)
+                    source.Play();
+            }
 
             if (StepsComplete(FirstWashSteps))
                 WashEvaluation = EvaluateAfterSoap;
@@ -143,9 +154,15 @@ public class WashManager : MonoBehaviour
                 step.Done = true;
             }
             else if (step.Done)
-                Debug.Log("Step already done!");
+            {
+                if (GameManager.Instance.SoundFXOn)
+                    source.Play();
+            }
             else if (step.IsInitial)
-                Debug.Log("This is not an initial step!");
+            {
+                if (GameManager.Instance.SoundFXOn)
+                    source.Play();
+            }
         }
     }
 }

@@ -40,7 +40,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject[] gamePanels;
 
-    private ScenesController controller;
+    [HideInInspector]
+    public ScenesController Controller;
 
     public float Score;
     public float MaxScore;
@@ -70,10 +71,10 @@ public class GameManager : MonoBehaviour
         foreach (GameObject panel in gamePanels)
             panel.SetActive(false);
 
-        controller = GameObject.Find("SceneManager").GetComponent<ScenesController>();
+        Controller = GameObject.Find("SceneManager").GetComponent<ScenesController>();
 
-        SoundFXOn = controller.SoundFXOn;
-        MusicOn = controller.MusicOn;
+        SoundFXOn = Controller.SoundFXOn;
+        MusicOn = Controller.MusicOn;
 
         if (MusicOn)
             PlayMusic(0);
@@ -243,7 +244,7 @@ public class GameManager : MonoBehaviour
 
     public void ReturnToMenu()
     {
-        Destroy(controller.gameObject);
+        Destroy(Controller.gameObject);
 
         SceneManager.LoadScene("Intro");
     }

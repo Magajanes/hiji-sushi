@@ -29,6 +29,9 @@ public class CameraMove : MonoBehaviour
 
     public void ChangeMode()
     {
+        if (washManager.HandsObject.WashCoroutine != null)
+            return;
+
         if (FirstWash)
         {
             if (washManager.HygieneGauge >= 100f)
@@ -46,7 +49,7 @@ public class CameraMove : MonoBehaviour
 
     private IEnumerator MoveCamera()
     {
-        if (!cookMode && washManager.WashStarted())
+        if (!cookMode && washManager.WashStarted)
         {
             washManager.HandsObject.FinishWash();
 

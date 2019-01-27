@@ -389,6 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 361959d306895974f8622fe9c76c366d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WashStarted: 0
   FirstWashSteps:
   - {fileID: 1750253978}
   ComplexWashSteps:
@@ -401,6 +402,7 @@ MonoBehaviour:
   Manager: {fileID: 309086002}
   HandsObject: {fileID: 109103339}
   WaterRenderer: {fileID: 1323969897}
+  source: {fileID: 1708922689}
 --- !u!4 &122270817
 Transform:
   m_ObjectHideFlags: 0
@@ -7598,6 +7600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b17b8fd63ccf3c546a647d24c0f87df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  washManager: {fileID: 122270816}
   source: {fileID: 1323969899}
   waterAnimator: {fileID: 1323969898}
 --- !u!1 &1887573731
