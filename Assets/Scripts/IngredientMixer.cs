@@ -12,6 +12,9 @@ public class IngredientMixer : SlotBehaviour
 
     public HygieneManager Manager;
 
+    private Client _client;
+    private Vector3 _clientPosition;
+
     [SerializeField]
     private AudioSource source;
 
@@ -22,12 +25,15 @@ public class IngredientMixer : SlotBehaviour
 
     public void AddIngredient(Ingredient ingredient)
     {
+        GameObject ing;
+        Used used;
+
         for (int i = 0; i < SlotsArray.Length; i++)
         {
             if (SlotsArray[i].CurrentState == Slot.State.Empty)
             {
-                var ing = Instantiate(ingredient.UsedPrefab, ingredient.transform.position, Quaternion.identity);
-                var used = ing.GetComponent<Used>();
+                ing = Instantiate(ingredient.UsedPrefab, ingredient.transform.position, Quaternion.identity);
+                used = ing.GetComponent<Used>();
 
                 iTween.MoveTo(ing, iTween.Hash("position", SlotsArray[i].SlotPosition,
                                                "easetype", iTween.EaseType.easeInOutExpo,
@@ -46,7 +52,7 @@ public class IngredientMixer : SlotBehaviour
 
             if (ingredient.Name == UsedIngredients[i].Name)
             {
-                var ing = Instantiate(ingredient.UsedPrefab, ingredient.transform.position, Quaternion.identity);
+                ing = Instantiate(ingredient.UsedPrefab, ingredient.transform.position, Quaternion.identity);
 
                 iTween.MoveTo(ing, iTween.Hash("position", SlotsArray[i].SlotPosition,
                                                "easetype", iTween.EaseType.easeInOutExpo,
@@ -102,40 +108,36 @@ public class IngredientMixer : SlotBehaviour
         }
     }
 
-    public void DeliverDish(Recipe recipe)
+    public void DeliverDish(Recipe recipe, GameObject dish)
     {
-        StartCoroutine(Deliver(recipe));
+        StartCoroutine(Deliver(recipe, dish));
     }
 
-    private IEnumerator Deliver(Recipe recipe)
+    private IEnumerator Deliver(Recipe recipe, GameObject dish)
     {
-        var dish = Instantiate(recipe.PrepareInstructions.DishPrefab, new Vector3(5.7f, -3f, 0f), Quaternion.identity);
-        dish.transform.localScale = Vector3.zero;
-        iTween.ScaleTo(dish, Vector3.one, 1f);
+        _client = ClientsManager.Instance.RandomClient();
+        _clientPosition = ClientsManager.Instance.SlotsArray[_client.CurrentSlotIndex].SlotPosition;
 
-        var client = ClientsManager.Instance.RandomClient();
-        var clientPosition = ClientsManager.Instance.SlotsArray[client.CurrentSlotIndex].SlotPosition;
-
-        iTween.MoveTo(dish, iTween.Hash("position", new Vector3(clientPosition.x, 0.9f, 0f),
+        iTween.MoveTo(dish, iTween.Hash("position", new Vector3(_clientPosition.x, 0.9f, 0f),
                                         "easetype", iTween.EaseType.easeOutExpo,
                                         "time", 0.5f));
 
         if (Manager.HygieneCheck())
         {
-            client.Eat();
+            _client.Eat();
             GameManager.Instance.PerfectDishes++;
             recipe.GivePoints();
         }
         else
         {
-            client.Vomit();
+            _client.Vomit();
             GameManager.Instance.RottenDishes++;
             recipe.Penalize();
             GameManager.Instance.CheckNotification();
         }
 
         GameManager.Instance.CheckGameEnd();
-        ClientsManager.Instance.RemoveClient(client);
+        ClientsManager.Instance.RemoveClient(_client);
 
         yield return new WaitForSeconds(0.75f);
 

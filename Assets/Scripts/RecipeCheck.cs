@@ -19,6 +19,8 @@ public class RecipeCheck : MonoBehaviour
     [SerializeField]
     private AudioSource source;
 
+    private GameObject _dish;
+
     private bool NormalMode
     {
         get
@@ -30,13 +32,16 @@ public class RecipeCheck : MonoBehaviour
     public delegate bool PrepareAction(IngredientMixer mixer);
     public PrepareAction Check;
 
-    public void StartProcess()
+    private void Start()
     {
         if (NormalMode)
             Check = NormalCheckRecipe;
         else
             Check = HardRecipeCheck;
+    }
 
+    public void StartProcess()
+    {
         PrepareRecipe(Mixer, CurrentRecipe);
     }
 
@@ -180,11 +185,17 @@ public class RecipeCheck : MonoBehaviour
         recipePanel.HidePanel();
         mixer.ShrinkIngredients(recipe.PrepareInstructions.TimeToPrepare);
 
-        yield return new WaitForSeconds(recipe.PrepareInstructions.TimeToPrepare);
+        yield return new WaitForSeconds(0.5f);
+
+        _dish = Instantiate(recipe.PrepareInstructions.DishPrefab, new Vector3(5.7f, -3f, 0f), Quaternion.identity);
+        _dish.transform.localScale = Vector3.zero;
+        iTween.ScaleTo(_dish, Vector3.one, recipe.PrepareInstructions.TimeToPrepare - 0.5f);
+
+        yield return new WaitForSeconds(recipe.PrepareInstructions.TimeToPrepare - 0.5f);
 
         mixer.EmptyMixer();
         Orders.EmptySlot(recipe);
-        mixer.DeliverDish(recipe);
+        mixer.DeliverDish(recipe, _dish);
         preparingHands.SetActive(false);
 
         PrepareCoroutine = null;

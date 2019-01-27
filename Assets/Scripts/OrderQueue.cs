@@ -11,7 +11,7 @@ public class OrderQueue : SlotBehaviour
 
     public List<Recipe> OrderList = new List<Recipe>();
 
-    private float orderInterval = 3f;
+    private float orderInterval;
 
     private List<GameObject> currentLevelOrders;
 
@@ -26,6 +26,7 @@ public class OrderQueue : SlotBehaviour
         UpdateLevels();
         PrepareSlots(StartPosition, SlotsArray, 2f);
         Order = WaitFirstWashToOrder;
+        orderInterval = Random.Range(3f, 6f);
     }
 
     private void Update()
