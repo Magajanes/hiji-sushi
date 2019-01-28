@@ -2,6 +2,8 @@
 
 public class Dirt : MonoBehaviour
 {
+    public bool IsRandom;
+
     [SerializeField]
     private SpriteRenderer dirtRenderer;
     [SerializeField]
@@ -19,7 +21,8 @@ public class Dirt : MonoBehaviour
 
     public void SetRandomSprites()
     {
-        dirtRenderer.sprite = dirtSprites[Random.Range(0, dirtSprites.Length)];
+        if (IsRandom)
+            dirtRenderer.sprite = dirtSprites[Random.Range(0, dirtSprites.Length)];
     }
 
     private void OnDestroy()

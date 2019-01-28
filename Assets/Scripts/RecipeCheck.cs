@@ -81,6 +81,9 @@ public class RecipeCheck : MonoBehaviour
         order.Penalize();
         Orders.EmptySlot(order);
 
+        if (_dish != null)
+            Destroy(_dish);
+
         GameManager.Instance.DelayedDishes++;
         GameManager.Instance.CheckGameEnd();
         ClientsManager.Instance.RemoveRandomClient();
