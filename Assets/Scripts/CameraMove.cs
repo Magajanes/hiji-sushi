@@ -41,6 +41,8 @@ public class CameraMove : MonoBehaviour
                 if (OnFirstWashFinished != null)
                     OnFirstWashFinished();
             }
+            else
+                return;
         }
 
         if (cameraMoveCoroutine == null)
