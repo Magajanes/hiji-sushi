@@ -108,6 +108,7 @@
     <Compile Include="Assets\Scripts\Slot.cs" />
     <Compile Include="Assets\Scripts\SlotBehaviour.cs" />
     <Compile Include="Assets\Scripts\StatsPanel.cs" />
+    <Compile Include="Assets\Scripts\TutorialManager.cs" />
     <Compile Include="Assets\Scripts\Used.cs" />
     <Compile Include="Assets\Scripts\WashManager.cs" />
     <Compile Include="Assets\Scripts\WashStep.cs" />

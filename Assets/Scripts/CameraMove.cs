@@ -47,6 +47,12 @@ public class CameraMove : MonoBehaviour
             cameraMoveCoroutine = StartCoroutine(MoveCamera());
     }
 
+    public void TutorialChangeMode()
+    {
+        if (washManager.HygieneGauge >= 100f)
+            ChangeMode();
+    }
+
     private IEnumerator MoveCamera()
     {
         if (!cookMode && washManager.WashStarted)
