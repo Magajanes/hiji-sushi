@@ -83,8 +83,11 @@ public class CameraMove : MonoBehaviour
 
     private void SetTimeRates()
     {
-        GameManager.Instance.DirtRate = cookMode ? 1f : 0f;
+        if (!GameManager.Instance.TutorialOn)
+        {
+            GameManager.Instance.DirtRate = cookMode ? 1f : 0f;
 
-        GameManager.Instance.WaitRate = cookMode ? 1f : 0.25f;
+            GameManager.Instance.WaitRate = cookMode ? 1f : 0.25f;
+        }
     }
 }

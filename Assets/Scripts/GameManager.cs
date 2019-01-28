@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
 
     public bool SoundFXOn;
     public bool MusicOn;
+    public bool TutorialOn;
     private bool notified = false;
 
     [SerializeField]
@@ -75,6 +76,7 @@ public class GameManager : MonoBehaviour
 
         SoundFXOn = Controller.SoundFXOn;
         MusicOn = Controller.MusicOn;
+        TutorialOn = Controller.TutorialMode;
 
         if (MusicOn)
             PlayMusic(0);
@@ -118,12 +120,15 @@ public class GameManager : MonoBehaviour
 
         ScorePanel.text = Mathf.Ceil(Score).ToString();
 
-        if (OrdersLevel < 7 && Score >= LevelGoalPoints[OrdersLevel])
+        if (!TutorialOn)
         {
-            LevelUp();
+            if (OrdersLevel < 7 && Score >= LevelGoalPoints[OrdersLevel])
+            {
+                LevelUp();
 
-            if (OnLevelChange != null)
-                OnLevelChange();
+                if (OnLevelChange != null)
+                    OnLevelChange();
+            }
         }
     }
 
@@ -135,12 +140,15 @@ public class GameManager : MonoBehaviour
 
         ScorePanel.text = Mathf.Ceil(Score).ToString();
 
-        if(OrdersLevel > 0 && Score < LevelGoalPoints[OrdersLevel - 1])
+        if (!TutorialOn)
         {
-            LevelDown();
+            if (OrdersLevel > 0 && Score < LevelGoalPoints[OrdersLevel - 1])
+            {
+                LevelDown();
 
-            if (OnLevelChange != null)
-                OnLevelChange();
+                if (OnLevelChange != null)
+                    OnLevelChange();
+            }
         }
     }
 
@@ -240,6 +248,20 @@ public class GameManager : MonoBehaviour
 
         gamePanels[2].SetActive(true);
         PlayMusic(1);
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+
+        gamePanels[4].SetActive(true);
+    }
+
+    public void UnpauseGame()
+    {
+        Time.timeScale = 1f;
+
+        gamePanels[4].SetActive(false);
     }
 
     public void ReturnToMenu()

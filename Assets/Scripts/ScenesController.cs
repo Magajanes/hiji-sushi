@@ -9,6 +9,7 @@ public class ScenesController : MonoBehaviour
     public bool MenuOn = false;
     public bool CreditsOn = false;
     public bool NormalMode = true;
+    public bool TutorialMode = false;
 
     public AudioSource Source;
 
@@ -34,9 +35,20 @@ public class ScenesController : MonoBehaviour
 
     public void StartGame()
     {
+        TutorialMode = false;
+
         Source.Stop();
 
         SceneManager.LoadScene("Main");
+    }
+
+    public void StartTutorial()
+    {
+        TutorialMode = true;
+
+        Source.Stop();
+
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void ToggleMenu()
