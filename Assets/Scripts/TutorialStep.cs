@@ -5,6 +5,7 @@ using UnityEngine;
 public class TutorialStep : MonoBehaviour
 {
     public int StepId;
+    public float WaitTime;
     public bool Done;
     public Collider2D StepCollider;
 

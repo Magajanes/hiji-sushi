@@ -3,9 +3,6 @@
 public class StatsPanel : MonoBehaviour
 {
     [SerializeField]
-    private AudioSource source;
-
-    [SerializeField]
     private MedalsPanel medalsPanel;
 
     [SerializeField]
@@ -34,8 +31,6 @@ public class StatsPanel : MonoBehaviour
         {
             foreach (NewsPanel news in newsPanels)
                 news.gameObject.SetActive(false);
-
-            source.Play();
 
             newsPanels[0].gameObject.SetActive(true);
             newsPanels[0].MedalImage.sprite = medalSprites[0];

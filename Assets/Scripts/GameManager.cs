@@ -252,7 +252,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
 
         gamePanels[2].SetActive(true);
-        PlayMusic(4);
         PlayMusic(1);
     }
 

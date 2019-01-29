@@ -8,6 +8,7 @@ public class TutorialManager : MonoBehaviour
     private int nextStep;
 
     public GameObject TutorialRecipePrefab;
+    public Hands TutorialHands;
 
     public GameObject[] arrows;
     public TutorialStep[] tutorialSteps;
@@ -36,14 +37,15 @@ public class TutorialManager : MonoBehaviour
 
         if (step.StepId == nextStep)
         {
-            StepUp();
+            StartCoroutine(StepUp(step.WaitTime));
             nextStep++;
-            return;
         }
     }
 
-    private void StepUp()
+    private IEnumerator StepUp(float time)
     {
+        yield return new WaitForSeconds(time);
+
         arrows[arrowNumber].SetActive(false);
         tutorialSteps[arrowNumber].StepCollider.enabled = false;
 
