@@ -5,29 +5,62 @@ using UnityEngine;
 public class TutorialManager : MonoBehaviour
 {
     private int arrowNumber;
-    private int lastStep;
+    private int nextStep;
+
+    public GameObject TutorialRecipePrefab;
 
     public GameObject[] arrows;
+    public TutorialStep[] tutorialSteps;
 
     private void Start()
     {
+        ReceiveTutorialOrder();
+
         arrowNumber = 0;
-        lastStep = 0;
+        nextStep = 1;
 
         foreach (GameObject arrow in arrows)
             arrow.SetActive(false);
 
-        arrows[0].SetActive(true);
+        foreach (TutorialStep step in tutorialSteps)
+            step.StepCollider.enabled = false;
+
+        arrows[arrowNumber].SetActive(true);
+        tutorialSteps[arrowNumber].StepCollider.enabled = true;
     }
 
-    public void ShowNextArrow(int step)
+    public void EvaluateStep(TutorialStep step)
     {
-        if (lastStep == step)
+        if (step.Done)
+            return;
+
+        if (step.StepId == nextStep)
         {
-            arrows[arrowNumber].SetActive(false);
-            arrowNumber++;
-            lastStep++;
-            arrows[arrowNumber].SetActive(true);
+            StepUp();
+            nextStep++;
+            return;
         }
+    }
+
+    private void StepUp()
+    {
+        arrows[arrowNumber].SetActive(false);
+        tutorialSteps[arrowNumber].StepCollider.enabled = false;
+
+        arrowNumber++;
+
+        if (arrowNumber < tutorialSteps.Length)
+        {
+            arrows[arrowNumber].SetActive(true);
+            tutorialSteps[arrowNumber].StepCollider.enabled = true;
+        }
+    }
+
+    public void ReceiveTutorialOrder()
+    {
+        var recipe = TutorialRecipePrefab.GetComponent<Recipe>();
+        recipe.Initialize();
+
+        ClientsManager.Instance.ReceiveClient();
     }
 }

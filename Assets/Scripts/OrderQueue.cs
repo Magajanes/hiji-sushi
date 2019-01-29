@@ -41,13 +41,7 @@ public class OrderQueue : SlotBehaviour
 
     private void StartOrders()
     {
-        if (!GameManager.Instance.TutorialOn)
-        {
-            Order = OrderNormally;
-            return;
-        }
-
-        ReceiveTutorialOrder();
+        Order = OrderNormally;
     }
 
     private void OrderNormally()
@@ -75,21 +69,6 @@ public class OrderQueue : SlotBehaviour
         int index = Random.Range(0, currentLevelOrders.Count);
 
         var order = Instantiate(currentLevelOrders[index], StartPosition, Quaternion.identity);
-
-        var recipe = order.GetComponent<Recipe>();
-
-        recipe.Initialize();
-
-        OrderList.Add(recipe);
-
-        ScrollOrders();
-
-        ClientsManager.Instance.ReceiveClient();
-    }
-
-    public void ReceiveTutorialOrder()
-    {
-        var order = Instantiate(currentLevelOrders[0], StartPosition, Quaternion.identity);
 
         var recipe = order.GetComponent<Recipe>();
 

@@ -79,7 +79,12 @@ public class GameManager : MonoBehaviour
         TutorialOn = Controller.TutorialMode;
 
         if (MusicOn)
-            PlayMusic(0);
+        {
+            if (!TutorialOn)
+                PlayMusic(0);
+            else
+                PlayMusic(1);
+        }
 
         CurrentLevel = GameLevels[OrdersLevel];
         CreateNewRecipesDictionary();
