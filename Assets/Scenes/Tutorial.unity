@@ -3994,6 +3994,11 @@ Prefab:
       propertyPath: Checker
       value: 
       objectReference: {fileID: 1708922688}
+    - target: {fileID: 114893582171291740, guid: d234fe77df02ce64a940f1841bc2d059,
+        type: 2}
+      propertyPath: timeOpen
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d234fe77df02ce64a940f1841bc2d059, type: 2}
   m_IsPrefabAsset: 0
@@ -4679,6 +4684,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 869f86c56cffad14fb956f0d10104597, type: 3}
   - {fileID: 8300000, guid: 5bee38d4fa97e334eb2fecbcbc60ce86, type: 3}
   - {fileID: 8300000, guid: 7f97bf870ccea9e43aafa1d09ff14388, type: 3}
+  - {fileID: 8300000, guid: c6c15f65ef3c7f74694d4327ddc0b993, type: 3}
   gamePanels:
   - {fileID: 1647605665}
   - {fileID: 88967366}
@@ -8870,6 +8876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108e13791bc85544a9f2ef75115e29a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 0}
   medalsPanel: {fileID: 643687066}
   medalSprites:
   - {fileID: 21300000, guid: 188fd78269ed7264d88206db9c96dbd3, type: 3}

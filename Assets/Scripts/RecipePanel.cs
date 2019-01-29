@@ -14,6 +14,9 @@ public class RecipePanel : MonoBehaviour
     public Text[] Instructions;
     public Image[] IngredientIcons;
 
+    [SerializeField]
+    private float timeOpen;
+
     private Coroutine hintCoroutine = null;
 
     private void Start()
@@ -92,7 +95,7 @@ public class RecipePanel : MonoBehaviour
     {
         MovePanel(SHOWING_POSITION);
 
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(timeOpen);
 
         MovePanel(HIDDEN_POSITION);
 
