@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: MP
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: ESQ/ESQ MP dedao 1
+    localPosition: {x: -1.7419682, y: -6.4970446, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.4233491, w: -0.90596664}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ/ESQ MP dedao 1/ESQ MP dedao 2
+    localPosition: {x: 5.267601, y: -0.00000011920929, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.3647212, w: 0.9311168}
+    localScale: {x: 2.8428, y: 2.8428, z: 2.8428}
+  - path: ESQ/ESQ MP dedao 1/ESQ MP dedo 1
+    localPosition: {x: 6.6809855, y: 3.2438867, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.17060612, w: 0.98533934}
+    localScale: {x: 1.2587, y: 1.2587, z: 1.2587}
+  - path: ESQ/ESQ MP dedao 1/ESQ MP dedo 2
+    localPosition: {x: 5.405676, y: 4.805306, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.13704303, w: 0.9905651}
+    localScale: {x: 1.783, y: 1.783, z: 1.783}
+  - path: ESQ/ESQ MP dedao 1/ESQ MP dedo 3
+    localPosition: {x: 4.219759, y: 6.088911, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.15651526, w: 0.98767555}
+    localScale: {x: 2.046, y: 2.046, z: 2.046}
+  - path: ESQ/ESQ MP dedao 1/ESQ MP dedo 4_1
+    localPosition: {x: 2.4507923, y: 6.32304, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.5422499, w: 0.8402173}
+    localScale: {x: 1.9249, y: 1.9249, z: 1.9249}
+  - path: ESQ/ESQ MP dedao 1/ESQ MP dedo 4_1/ESQ MP dedo 4_2
+    localPosition: {x: 1.2291044, y: 0.00000043351088, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.24352375, w: 0.96989495}
+    localScale: {x: 0.76521, y: 0.76521, z: 0.76521}

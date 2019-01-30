@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: M5
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: ESQ M5/ESQ M5 esq dedao 1
+    localPosition: {x: 6.0986485, y: -2.4887824, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.33320668, w: 0.94285387}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M5/ESQ M5 esq dedao 1/ESQ M5 esq dedao 3
+    localPosition: {x: 4.813502, y: -0.000000059604645, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.2942008, w: 0.9557437}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M5/ESQ M5 esq dedao 1/ESQ M5 esq dedao 3/ESQ M5 esq dedao 3
+    localPosition: {x: 1.5650216, y: -0.0000009983778, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.47445038, w: 0.8802822}
+    localScale: {x: 0.9, y: 0.9, z: 0.9}
+  - path: ESQ M5/ESQ M5 esq dedao 1/ESQ M5 esq centro 1
+    localPosition: {x: 2.0239472, y: 1.0786834, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.5960359, w: 0.80295783}
+    localScale: {x: 1.4893, y: 1.4893, z: 1.4893}
+  - path: ESQ M5/ESQ M5 esq dedao 1/ESQ M5 esq centro 1/ESQ M5 esq centro 2
+    localPosition: {x: 2.3955975, y: -0.00000032017536, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.84992146, w: 0.5269095}
+    localScale: {x: 2.5595067, y: 2.8998966, z: 2.8998966}
+  - path: ESQ M5/ESQ M5 dir dedao  1
+    localPosition: {x: 10.069508, y: -2.7669988, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.95424604, w: 0.2990226}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M5/ESQ M5 dir dedao  1/ESQ M5 dir dedao  2
+    localPosition: {x: 5.2916985, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.1675332, w: 0.9858665}
+    localScale: {x: 2.1735, y: 2.1735, z: 2.1735}
+  - path: ESQ M5/ESQ M5 dir dedao  1/ESQ M5 dir dedao  2/ESQ M5 dir dedao  3
+    localPosition: {x: 0.99999976, y: -0.0000000068558363, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.09211397, w: 0.9957485}
+    localScale: {x: 0.4651472, y: 0.4651472, z: 0.4651472}
+  - path: ESQ M5/ESQ M5 dir dedao  1/ESQ M5 dir dedo I
+    localPosition: {x: 7.072836, y: -3.1606216, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.36946613, w: 0.92924416}
+    localScale: {x: 2.478, y: 2.478, z: 2.478}
+  - path: ESQ M5/ESQ M5 dir dedao  1/ESQ M5 dir dedo Ii
+    localPosition: {x: 6.347968, y: -4.1849365, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.46004274, w: 0.88789684}
+    localScale: {x: 2.6558, y: 2.6558, z: 2.6558}
+  - path: ESQ M5/ESQ M5 dir dedao  1/ESQ M5 dir dedo III
+    localPosition: {x: 5.0409775, y: -5.0307794, z: 0}
+    localRotation: {x: -0, y: -0, z: -0.5523303, w: 0.8336253}
+    localScale: {x: 2.0340927, y: 2.0340927, z: 2.0340917}
+  - path: ESQ M5/ESQ M5 dir dedao  1/ESQ M5 dir dedo IV
+    localPosition: {x: 3.6216178, y: -4.726202, z: 0}
+    localRotation: {x: -0, y: -0, z: -0.6999057, w: 0.71423537}
+    localScale: {x: 1.4729165, y: 2.173501, z: 2.1735}

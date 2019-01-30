@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472d4910ebf461d49a840933ad3c5264, type: 3}
+  m_Name: Ceviche Especial
+  m_EditorClassIdentifier: 
+  TimeToPrepare: 1
+  Points: 45
+  DishPrefab: {fileID: 1110093158954200, guid: d050ea8c05dab074fbc2830f33fe4752, type: 2}
+  IngredientsList:
+  - "Salm\xE3o"
+  - Atum
+  - Gergelim
+  IngredientIconsList:
+  - {fileID: 21300000, guid: 75fd2eff14b6a4145b3d5ac8b390a99e, type: 3}
+  - {fileID: 21300000, guid: bbf1bf6ae31fc7e49aac2f5e8edecb5a, type: 3}
+  - {fileID: 21300000, guid: 21594967c1259eb4cad47cff6acee9df, type: 3}
+  MeasuresList: 020000000200000001000000

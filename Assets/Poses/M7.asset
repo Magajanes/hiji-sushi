@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: M7
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: ESQ M7/ESQ M7 dir dedao 1
+    localPosition: {x: 11.479254, y: -0.033729076, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.99849004, w: -0.05493385}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M7/ESQ M7 dir dedao 1/ESQ M7 dir dedao 2
+    localPosition: {x: 1.9364924, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.28829706, w: 0.95754105}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M7/ESQ M7 dir dedao 1/ESQ M7 dir dedao 2/ESQ M7 dir dedao 3
+    localPosition: {x: 4.6530905, y: -0.0000009834766, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.6308399, w: 0.77591306}
+    localScale: {x: 0.68399, y: 0.68399, z: 0.68399}
+  - path: ESQ M7/ESQ M7 dir dedao 1/ESQ M7 dir centro 1
+    localPosition: {x: 1.983823, y: -1.0936465, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.075145505, w: 0.9971726}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M7/ESQ M7 dir dedao 1/ESQ M7 dir centro 1/ESQ M7 dir centro 2
+    localPosition: {x: 5.054246, y: -0.00000011455268, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.74032485, w: 0.6722493}
+    localScale: {x: 3.7269, y: 3.7269, z: 3.7269}
+  - path: ESQ M7/ESQ M7 esq dedao 1
+    localPosition: {x: -1.5316579, y: 1.1297971, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.14333835, w: 0.98967373}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M7/ESQ M7 esq dedao 1/ESQ M7 esq dedao 2
+    localPosition: {x: 3.5646446, y: -0.000000052154064, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.019142108, w: 0.99981683}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M7/ESQ M7 esq dedao 1/ESQ M7 esq dedao 2/ESQ M7 esq dedao 3
+    localPosition: {x: 3.7186854, y: 0.0000000199434, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.043478694, w: 0.99905443}
+    localScale: {x: 1.3129, y: 1.3129, z: 1.3129}

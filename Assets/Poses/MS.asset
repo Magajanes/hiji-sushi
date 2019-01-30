@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: MS
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: Esqueleto/R-1
+    localPosition: {x: 10.684062, y: -2.4027357, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.85155725, w: 0.5242617}
+    localScale: {x: 5.7144, y: 5.7144, z: 5.7144}
+  - path: Esqueleto/R-2
+    localPosition: {x: 1.257451, y: -2.2680693, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.5757871, w: 0.8175997}
+    localScale: {x: 5.7144017, y: 5.7144017, z: 5.7144}

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: M4
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: ESQ M4/ESQ M4 dir dedao 1
+    localPosition: {x: 10.829487, y: -2.6303535, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.98609984, w: 0.16615412}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M4/ESQ M4 dir dedao 1/ESQ M4 dir dedao 2
+    localPosition: {x: 3.9915338, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.44622347, w: 0.89492166}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M4/ESQ M4 dir dedao 1/ESQ M4 dir dedao 2/ESQ M4 dir dedao 3
+    localPosition: {x: 1.6790307, y: 0.0000015497208, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.04940522, w: 0.9987789}
+    localScale: {x: 1.3383, y: 1.3383, z: 1.3383}
+  - path: ESQ M4/ESQ M4 dir dedao 1/ESQ M4 dir centro 1
+    localPosition: {x: 1.304661, y: -1.2692553, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.40835583, w: 0.9128229}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M4/ESQ M4 dir dedao 1/ESQ M4 dir centro 1/ESQ M4 dir centro 2
+    localPosition: {x: 2.6695113, y: -0.000000059604645, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.18310842, w: 0.9830927}
+    localScale: {x: 3.2360818, y: 3.2360818, z: 3.2360818}
+  - path: ESQ M4/ESQ M4 esq dedao 1
+    localPosition: {x: 3.3339252, y: -1.1437199, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.6597206, w: 0.751511}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M4/ESQ M4 esq dedao 1/ESQ M4 esq dedao 2
+    localPosition: {x: 2.7607768, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.06677259, w: 0.9977682}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M4/ESQ M4 esq dedao 1/ESQ M4 esq dedao 2/ESQ M4 esq dedao 3
+    localPosition: {x: 3.8154309, y: -0.000000070780516, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.20319965, w: 0.97913736}
+    localScale: {x: 1.3342, y: 1.3342, z: 1.3342}
+  - path: ESQ M4/ESQ M4 esq dedao 1/ESQ M4 esq centro 1
+    localPosition: {x: 3.127191, y: -1.402648, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.2472262, w: 0.9689578}
+    localScale: {x: 3.1244, y: 3.1244, z: 3.1244}
+  - path: ESQ M4/ESQ M4 esq dedao 1/ESQ M4 esq centro 1/ESQ M4 esq centro 2
+    localPosition: {x: 1.0537593, y: 0.0000000047692876, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.065335795, w: 0.9978633}
+    localScale: {x: 1, y: 1, z: 1}

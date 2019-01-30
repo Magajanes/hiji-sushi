@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: M3
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: ESQ M3/ESQ M3 dir dedao 1
+    localPosition: {x: 12.963013, y: -2.820929, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.99260634, w: 0.121378526}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M3/ESQ M3 dir dedao 1/ESQ M3 dir dedao 2
+    localPosition: {x: 3.6581936, y: 0.00000023841858, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.20328009, w: 0.9791207}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M3/ESQ M3 dir dedao 1/ESQ M3 dir dedao 2/ESQ M3 dir dedao 3
+    localPosition: {x: 2.488397, y: 0.00000025331974, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.045867167, w: 0.9989476}
+    localScale: {x: 1.8291, y: 1.8291, z: 1.8291}
+  - path: ESQ M3/ESQ M3 dir dedao 1/ESQ M3 dir centro 1
+    localPosition: {x: 2.0725298, y: -1.0835325, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.6524227, w: 0.7578553}
+    localScale: {x: 2.0325546, y: 2.0325546, z: 2.0325546}
+  - path: ESQ M3/ESQ M3 dir dedao 1/ESQ M3 dir centro 1/ESQ M3 dir centro 2
+    localPosition: {x: 1.2701194, y: -0.000000117299955, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.70393014, w: 0.7102692}
+    localScale: {x: 1.4711, y: 1.4711, z: 1.4711}
+  - path: ESQ M3/ESQ M3 esq dedao 1
+    localPosition: {x: 3.291835, y: -2.6546063, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.34758273, w: 0.93764937}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M3/ESQ M3 esq dedao 1/ESQ M3 esq dedao 2
+    localPosition: {x: 3.217671, y: 0.000000059604645, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.30322, w: 0.9529206}
+    localScale: {x: 2.2027, y: 2.2027, z: 2.2027}
+  - path: ESQ M3/ESQ M3 esq dedao 1/ESQ M3 esq centro 1
+    localPosition: {x: 3.7570581, y: 1.2520325, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.13021816, w: 0.9914854}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M3/ESQ M3 esq dedao 1/ESQ M3 esq centro 1/ESQ M3 esq centro 2
+    localPosition: {x: 3.645324, y: -0.000000115484, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.078577, w: 0.99690807}
+    localScale: {x: 3.5423157, y: 3.5423157, z: 3.5423157}

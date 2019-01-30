@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472d4910ebf461d49a840933ad3c5264, type: 3}
+  m_Name: Kani Roll
+  m_EditorClassIdentifier: 
+  TimeToPrepare: 1
+  Points: 30
+  DishPrefab: {fileID: 1587558723263152, guid: 0a12be6da1ea5fb47b01553663e6ea3b, type: 2}
+  IngredientsList:
+  - Alga
+  - Arroz
+  - Kani
+  IngredientIconsList:
+  - {fileID: 21300000, guid: cce5be802b6b675428076cb9a94d3f80, type: 3}
+  - {fileID: 21300000, guid: 07a809f9880fd2348ae98c387ec4a688, type: 3}
+  - {fileID: 21300000, guid: 1502bbef353113a4c8e3643f5e8fa6dc, type: 3}
+  MeasuresList: 010000000200000001000000

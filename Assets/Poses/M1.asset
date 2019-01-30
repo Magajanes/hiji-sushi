@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: M1
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: ESQ M1/ESQ M1 mao esq dedao 1
+    localPosition: {x: 3.2194915, y: -3.0667255, z: 0.41754776}
+    localRotation: {x: 0, y: 0, z: 0.49182317, w: 0.8706951}
+    localScale: {x: 2.8178015, y: 2.8178015, z: 2.8178}
+  - path: ESQ M1/ESQ M1 mao esq dedao 1/ESQ M1 esq dedao 2
+    localPosition: {x: 1.4765425, y: -0.000000042305782, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.2305238, w: 0.97306675}
+    localScale: {x: 0.65375, y: 0.65375, z: 0.65375}
+  - path: ESQ M1/ESQ M1 mao esq dedao 1/ESQ M1 esq dedao 2/ESQ M1 mao esq dedao 3
+    localPosition: {x: 1.1672099, y: -0.00000006268175, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.53106165, w: 0.8473332}
+    localScale: {x: 0.51752, y: 0.51752, z: 0.51752}
+  - path: ESQ M1/ESQ M1 mao esq dedao 1/ESQ M1 mao esq dedo I 1
+    localPosition: {x: 2.841066, y: 0.15972766, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.016716296, w: 0.9998603}
+    localScale: {x: 0.87388, y: 0.87388, z: 0.87388}
+  - path: ESQ M1/ESQ M1 mao esq dedao 1/ESQ M1 mao esq dedo I 1/ESQ M1 mao esq dedo
+      I 2
+    localPosition: {x: 0.24079114, y: 3.8507926e-11, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.016716296, w: 0.9998603}
+    localScale: {x: 0.75909, y: 0.75909, z: 0.75909}
+  - path: ESQ M1/ESQ M1 mao esq dedao 1/ESQ M1 mao esq dedo II 1
+    localPosition: {x: 3.0808249, y: -0.23988216, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.14216834, w: 0.98984253}
+    localScale: {x: 0.23268762, y: 0.23268762, z: 0.23268762}
+  - path: ESQ M1/ESQ M1 mao esq dedao 1/ESQ M1 mao esq dedo II 1/ESQ M1 mao esq dedo
+      II 2
+    localPosition: {x: 1.0000057, y: 0.00000062838603, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.00000079098277, w: 1}
+    localScale: {x: 3.0075, y: 3.0075, z: 3.0075}
+  - path: ESQ M1/ESQ M1 mao esq dedao 1/ESQ M1 mao esq dedo III 1
+    localPosition: {x: 3.0108151, y: -0.7843657, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.27162665, w: 0.9624027}
+    localScale: {x: 0.41850317, y: 0.41850317, z: 0.41850317}
+  - path: ESQ M1/ESQ M1 mao esq dedao 1/ESQ M1 mao esq dedo III 1/ESQ M1 mao esq dedo
+      III 2
+    localPosition: {x: 0.58033323, y: 0.000000013352194, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.11512919, w: 0.99335057}
+    localScale: {x: 1.3336, y: 1.3336, z: 1.3336}
+  - path: ESQ M1/ESQ M1 mao esq dedao 1/ESQ M1 mao esq dedo IV 1
+    localPosition: {x: 2.7016916, y: -1.1079257, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.36959538, w: 0.92919284}
+    localScale: {x: 0.25911948, y: 0.25911948, z: 0.25911948}
+  - path: ESQ M1/ESQ M1 mao esq dedao 1/ESQ M1 mao esq dedo IV 1/ESQ M1 mao esq dedo
+      IV 2
+    localPosition: {x: 1.0896459, y: 0.000000115013826, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.15851183, w: 0.9873571}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M1/ESQ M1 mao dir dedao 1
+    localPosition: {x: 9.23508, y: -3.4799097, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.93640065, w: -0.3509328}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M1/ESQ M1 mao dir dedao 1/ESQ M1 mao dir dedao 2
+    localPosition: {x: 4.4850764, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.10495966, w: 0.9944765}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M1/ESQ M1 mao dir dedao 1/ESQ M1 mao dir dedao 2/ESQ M1 mao dir dedao
+      3
+    localPosition: {x: 1.7803932, y: -0.0000004209578, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.008543529, w: 0.9999635}
+    localScale: {x: 1.413078, y: 1.413078, z: 1.413078}
+  - path: ESQ M1/ESQ M1 mao dir dedao 1/ESQ M1 mao dir dedo I 1
+    localPosition: {x: 6.280894, y: -3.087677, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.22767243, w: 0.9737378}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M1/ESQ M1 mao dir dedao 1/ESQ M1 mao dir dedo I 1/ESQ M1 mao dir dedo
+      I 2
+    localPosition: {x: 2.0284727, y: 0.0000012665987, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.0033320335, w: 0.99999446}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M1/ESQ M1 mao dir dedao 1/ESQ M1 mao dir dedo II 1
+    localPosition: {x: 5.0354376, y: -3.8984528, z: 0}
+    localRotation: {x: 0, y: -0, z: 0.36335537, w: -0.9316506}
+    localScale: {x: 1.0000006, y: 1.0000006, z: 1}
+  - path: ESQ M1/ESQ M1 mao dir dedao 1/ESQ M1 mao dir dedo II 1/ESQ M1 mao dir dedo
+      II 2
+    localPosition: {x: 2.3862479, y: -0.00000023841858, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.0073417025, w: 0.99997306}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M1/ESQ M1 mao dir dedao 1/ESQ M1 mao dir dedo III 1
+    localPosition: {x: 3.8840306, y: -4.258194, z: 0.41754776}
+    localRotation: {x: 0, y: 0, z: 0.37567508, w: -0.9267514}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M1/ESQ M1 mao dir dedao 1/ESQ M1 mao dir dedo III 1/ESQ M1 mao dir dedo
+      III 2
+    localPosition: {x: 1.7782397, y: -0.00000011920929, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.009669685, w: 0.9999533}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M1/ESQ M1 mao dir dedao 1/ESQ M1 mao dir dedo IV 1
+    localPosition: {x: 3.235175, y: -4.285005, z: 0.41754776}
+    localRotation: {x: 0, y: -0, z: 0.49849278, w: -0.8668939}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: ESQ M1/ESQ M1 mao dir dedao 1/ESQ M1 mao dir dedo IV 1/ESQ M1 mao dir dedo
+      IV 2
+    localPosition: {x: 1.0000001, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.03719711, w: 0.999308}
+    localScale: {x: 1.0000001, y: 1.0000001, z: 1}
