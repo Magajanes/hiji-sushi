@@ -28,6 +28,11 @@ public class TutorialManager : MonoBehaviour
 
         arrows[arrowNumber].SetActive(true);
         tutorialSteps[arrowNumber].StepCollider.enabled = true;
+
+        iTween.MoveTo(arrows[arrowNumber], iTween.Hash("x", arrows[arrowNumber].transform.position.x + 0.5f,
+                                                       "easetype", iTween.EaseType.linear,
+                                                       "time", 0.5f,
+                                                       "looptype", iTween.LoopType.pingPong));
     }
 
     public void EvaluateStep(TutorialStep step)
@@ -55,6 +60,11 @@ public class TutorialManager : MonoBehaviour
         {
             arrows[arrowNumber].SetActive(true);
             tutorialSteps[arrowNumber].StepCollider.enabled = true;
+
+            iTween.MoveTo(arrows[arrowNumber], iTween.Hash("x", arrows[arrowNumber].transform.position.x + 0.5f,
+                                               "easetype", iTween.EaseType.linear,
+                                               "time", 0.5f,
+                                               "looptype", iTween.LoopType.pingPong));
         }
     }
 
