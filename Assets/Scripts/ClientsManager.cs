@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class ClientsManager : SlotBehaviour
 {
-    private readonly Vector3 SpawnPosition = new Vector3(-1.5f, 1.8f, 0f);
-    private readonly Vector3 ExitPosition = new Vector3(20f, 2f, 0f);
+    public static Vector3 SpawnPos = new Vector3(-1.5f, 1.8f, 0);
+    public static Vector3 ExitPos = new Vector3(20, 1.8f, 0);
+    public static Vector3 IllPos = new Vector3(10, 1.8f, 0);
+    public static Vector3 IllExitPos = new Vector3(10, -10, 0);
 
     public static ClientsManager Instance;
 
     public List<Client> ClientsInRestaurant = new List<Client>();
-
     public Slot[] SlotsArray = new Slot[6];
-
     public GameObject[] clientPrefabs;
 
     private void Awake()
@@ -22,7 +22,7 @@ public class ClientsManager : SlotBehaviour
 
     private void Start()
     {
-        PrepareSlots(SpawnPosition, SlotsArray, 1.8f);
+        PrepareSlots(SpawnPos, SlotsArray, 1.8f);
     }
     
     public void ReceiveClient()
@@ -38,11 +38,10 @@ public class ClientsManager : SlotBehaviour
         }
         while (SlotsArray[index].CurrentState == Slot.State.Occupied);
 
-        var clientObject = Instantiate(clientPrefabs[Random.Range(0, clientPrefabs.Length)], SpawnPosition, Quaternion.identity);
+        var clientObject = Instantiate(clientPrefabs[Random.Range(0, clientPrefabs.Length)], SpawnPos, Quaternion.identity);
         var client = clientObject.GetComponent<Client>();
 
         client.CurrentSlotIndex = index;
-
         ClientsInRestaurant.Add(client);
 
         iTween.MoveTo(clientObject, iTween.Hash("position", SlotsArray[index].SlotPosition,
@@ -58,19 +57,15 @@ public class ClientsManager : SlotBehaviour
             return;
 
         var client = RandomClient();
-        var clientObject = client.gameObject;
-
         client.Complain();
 
-        iTween.MoveTo(clientObject, iTween.Hash("position", ExitPosition,
-                                                "easetype", iTween.EaseType.easeInExpo,
-                                                "time", 3f));
+        iTween.MoveTo(client.gameObject, iTween.Hash("position", ExitPos,
+                                                     "easetype", iTween.EaseType.easeInExpo,
+                                                     "time", 3f));
 
         ClientsInRestaurant.Remove(client);
-
         SlotsArray[client.CurrentSlotIndex].CurrentState = Slot.State.Empty;
-
-        Destroy(clientObject, 3f);
+        Destroy(client.gameObject, 3f);
     }
 
     public void RemoveClient(Client client)
@@ -78,23 +73,32 @@ public class ClientsManager : SlotBehaviour
         if (ClientsInRestaurant.Count == 0)
             return;
 
-        var clientObject = client.gameObject;
-
-        iTween.MoveTo(clientObject, iTween.Hash("position", ExitPosition,
-                                                "easetype", iTween.EaseType.easeInExpo,
-                                                "time", 3f));
+        iTween.MoveTo(client.gameObject, iTween.Hash("position", ExitPos,
+                                                     "easetype", iTween.EaseType.easeInExpo,
+                                                     "time", 3f));
 
         ClientsInRestaurant.Remove(client);
-
         SlotsArray[client.CurrentSlotIndex].CurrentState = Slot.State.Empty;
+        Destroy(client.gameObject, 3f);
+    }
 
-        Destroy(clientObject, 3f);
+    public void RemoveIllClient(Client client)
+    {
+        if (ClientsInRestaurant.Count == 0)
+            return;
+
+        iTween.MoveTo(client.gameObject, iTween.Hash("position", IllExitPos,
+                                                     "easetype", iTween.EaseType.easeInExpo,
+                                                     "time", 3f));
+
+        ClientsInRestaurant.Remove(client);
+        SlotsArray[client.CurrentSlotIndex].CurrentState = Slot.State.Empty;
+        Destroy(client.gameObject, 3f);
     }
 
     public Client RandomClient()
     {
         int index = Random.Range(0, ClientsInRestaurant.Count);
-
         return ClientsInRestaurant[index];
     }
 }

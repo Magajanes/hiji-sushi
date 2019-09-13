@@ -8,10 +8,8 @@ public class Client : MonoBehaviour
 
     [SerializeField]
     private Animator clientAnimator;
-
     [SerializeField]
     private AudioSource audioSource;
-
     [SerializeField]
     private AudioClip[] audioClips;
 
@@ -37,6 +35,14 @@ public class Client : MonoBehaviour
 
     public void Vomit()
     {
+        iTween.MoveTo(gameObject, iTween.Hash("position", ClientsManager.IllPos,
+                                              "easetype", iTween.EaseType.easeInOutExpo,
+                                              "time", 0.5f,
+                                              "oncomplete", "ExecuteVomit"));
+    }
+
+    private void ExecuteVomit()
+    {
         if (GameManager.Instance.SoundFXOn)
         {
             audioSource.clip = audioClips[2];
@@ -44,5 +50,6 @@ public class Client : MonoBehaviour
         }
 
         clientAnimator.SetTrigger("Vomit");
+        ClientsManager.Instance.RemoveIllClient(this);
     }
 }
