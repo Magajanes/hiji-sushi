@@ -110,11 +110,6 @@ public class IngredientMixer : SlotBehaviour
 
     public void DeliverDish(Recipe recipe, GameObject dish)
     {
-        StartCoroutine(Deliver(recipe, dish));
-    }
-
-    private IEnumerator Deliver(Recipe recipe, GameObject dish)
-    {
         _client = ClientsManager.Instance.RandomClient();
         _clientPosition = ClientsManager.Instance.SlotsArray[_client.CurrentSlotIndex].SlotPosition;
 
@@ -127,6 +122,7 @@ public class IngredientMixer : SlotBehaviour
             _client.Eat();
             GameManager.Instance.PerfectDishes++;
             recipe.GivePoints();
+            ClientsManager.Instance.RemoveClient(_client);
         }
         else
         {
@@ -137,10 +133,6 @@ public class IngredientMixer : SlotBehaviour
         }
 
         GameManager.Instance.CheckGameEnd();
-        ClientsManager.Instance.RemoveClient(_client);
-
-        yield return new WaitForSeconds(0.75f);
-
-        Destroy(dish);
+        Destroy(dish, 0.75f);
     }
 }

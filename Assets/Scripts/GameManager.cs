@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
 
     public float PointsToWin;
 
-    public float DirtRate = 1f;
-    public float WaitRate = 1f;
+    public float DirtRate;
+    public float WaitRate;
 
     public Level CurrentLevel;
     public int OrdersLevel = 0;
@@ -140,9 +140,7 @@ public class GameManager : MonoBehaviour
     public void RemovePoints(float points)
     {
         Score -= points;
-
         Score = Score <= 0f ? 0f : Score;
-
         ScorePanel.text = Mathf.Ceil(Score).ToString();
 
         if (!TutorialOn)
@@ -160,7 +158,6 @@ public class GameManager : MonoBehaviour
     public void LevelUp()
     {
         OrdersLevel++;
-
         CurrentLevel = GameLevels[OrdersLevel];
 
         if (!LevelsReached[OrdersLevel])
