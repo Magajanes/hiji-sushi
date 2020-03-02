@@ -1,7 +1,8 @@
 Temp/UnityLockfile
-.vs/HijiSushi 2.0/v15/Server/sqlite3/storage.ide-wal
-.vs/HijiSushi 2.0/v15/Server/sqlite3/storage.ide-shm
-.vs/HijiSushi 2.0/v15/Server/sqlite3/storage.ide
-.vs/HijiSushi 2.0/v15/Server/sqlite3/db.lock
+.vs/
+.vs/HijiSushi/v5/.suo
 Library/
+Library/LastSceneManagerSetup.txt
+Library/ProjectSettings.asset
 Temp/
+
